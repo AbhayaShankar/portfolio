@@ -7,6 +7,7 @@ import slugify from "slugify";
 
 export const md = new MarkdownIt({
   breaks: true,
+  html: true,
 })
   .use(highlightjs, {
     auto: true,

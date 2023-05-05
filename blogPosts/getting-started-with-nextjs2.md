@@ -39,7 +39,7 @@ In this article, we'll dive into the core concepts and features NextJS has to of
 ... More content ...
 
 
-``` js
+```js
 export function getStaticPaths() {
   const postFileNames = getPostsFiles();
 

@@ -31,6 +31,31 @@
   object-fit: cover;
 }
 
+.markdownContent pre {
+  padding: 20px 25px;
+  background-color: #08080a;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+.markdownContent button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.markdownContent button span::after {
+  content: "Copy";
+  font-size: 14px;
+  background-color: transparent;
+  color: grey;
+  margin-right: 20px;
+}
+
+.markdownContent button span:hover {
+  color: rgb(148, 148, 148);
+}
+
 @media (min-width: 768px) {
   .content {
     padding: var(--size-8);
