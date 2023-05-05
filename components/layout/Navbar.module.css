@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   width: 100%;
-  padding: 15px 80px 15px 50px;
+  padding: 15px 50px 15px 50px;
   background-color: var(--color-primary-2);
   color: white;
   border-bottom: 2px solid #2e2e2e;
@@ -16,7 +16,7 @@
 }
 
 .left_navbar p a {
-  font-size: 34px;
+  font-size: 26px;
   font-family: "Sacramento", cursive;
   letter-spacing: 1.75px;
   font-weight: 500;
@@ -27,17 +27,18 @@
 .right_navbar ul {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
 }
 
 .right_navbar ul li {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Rubik Glitch", cursive;
   color: #b4b4b4;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
   cursor: pointer;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .right_navbar ul li:hover {

@@ -12,6 +12,8 @@ const PostItem = (props) => {
     year: "numeric",
   });
 
+  const textCount = excerpt.length;
+
   const imagePath = `/posts/${slug}/${image}`;
 
   return (
@@ -22,14 +24,14 @@ const PostItem = (props) => {
             src={imagePath}
             alt={title}
             width={275}
-            height={250}
+            height={200}
             // layout="responsive"
           />
         </div>
         <div className={classes.content}>
           <time>{formattedDate}</time>
           <h3>{title}</h3>
-          <p>{excerpt}</p>
+          <p className={textCount > 150 ? classes.ellipsis : ""}>{excerpt}</p>
         </div>
       </Link>
     </li>

@@ -48,3 +48,9 @@
 .content p {
   line-height: var(--size-6);
 }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
