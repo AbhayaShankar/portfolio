@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 80px;
   width: 100%;
   padding: 15px 80px 15px 50px;
   background-color: var(--color-primary-2);
@@ -16,9 +16,9 @@
 }
 
 .left_navbar p a {
-  font-size: 32px;
+  font-size: 34px;
   font-family: "Sacramento", cursive;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.75px;
   font-weight: 500;
   color: #e8e8e8;
   cursor: pointer;

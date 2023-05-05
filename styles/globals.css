@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Cutive&family=Genos:wght@400;600&family=Gloock&family=Inter&family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;800&family=Rampart+One&family=Rubik+Glitch&family=Sacramento&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Cutive&family=Genos:wght@400;600&family=Gloock&family=Inconsolata:wght@300;400&family=Inter&family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;800&family=Rampart+One&family=Rubik+Glitch&family=Sacramento&family=Space+Mono:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -53,6 +53,7 @@ body {
   background-color: var(--color-primary);
   color: #e8e8e8;
   font-family: "Roboto", sans-serif;
+  font-family: "Inconsolata", monospace;
 }
 ::selection {
   background-color: #e8e8e8;

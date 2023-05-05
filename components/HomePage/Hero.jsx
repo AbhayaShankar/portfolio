@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import abhaya from "../../public/abhaya.png";
 
 const Hero = () => {
+  const text =
+    "Hello, I am Abhaya - a Professional Web developer using React and NextJS .";
+  const [splitText, setSplitText] = useState([]);
+
+  useEffect(() => {
+    const textArr = text.split("");
+    console.log(textArr);
+    setSplitText(textArr);
+  }, [text]);
+
   return (
     <section className={classes.hero}>
-      <div className={classes.image}>
-        <Image src={abhaya} alt="image of Abhaya" width={600} height={600} />
+      <div className={classes.circle}>
+        <div className={classes.image}>
+          <Image src={abhaya} alt="image of Abhaya" width={600} height={600} />
+        </div>
+        <div className={classes.text}>
+          {splitText.map((char, i) => (
+            <span key={i} style={{ transform: `rotate(${i * 4.7}deg)` }}>
+              {char}
+            </span>
+          ))}
+        </div>
       </div>
       <h1>Hi! I'm Abhaya. </h1>
       <p>

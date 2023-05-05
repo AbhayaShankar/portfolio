@@ -5,7 +5,7 @@ import PostGrid from "../posts/PostGrid";
 const FeaturedPosts = ({ posts }) => {
   return (
     <section className={classes.latest}>
-      <h2>Featured Posts</h2>
+      <h2>Featured Blogs</h2>
       <PostGrid posts={posts} />
     </section>
   );

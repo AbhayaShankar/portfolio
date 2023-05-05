@@ -4,7 +4,7 @@ import PostGrid from "./PostGrid";
 function AllPosts({ posts }) {
   return (
     <section className={classes.posts}>
-      <h1>All Posts</h1>
+      <h1>All Blogs</h1>
       <PostGrid posts={posts} />
     </section>
   );

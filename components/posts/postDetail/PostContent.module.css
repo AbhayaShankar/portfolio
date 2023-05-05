@@ -26,9 +26,11 @@
 }
 
 .markdownContent img {
-  width: 500px;
-  height: 300px;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  /* object-fit: contain; */
+  padding: 10px 30px;
+  opacity: 0.85;
 }
 
 .markdownContent pre {
