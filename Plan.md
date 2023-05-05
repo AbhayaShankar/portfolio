@@ -72,4 +72,10 @@ Here I will list out all the thought process while I will be building this app a
 
 18. Re-design the Contact form page - go through dribbble and look for a better contact page which I would then implement.
 
-19.  
+19. Select any code.css file from these : 
+
+   - https://highlightjs.org/static/demo/
+   - Search that file in https://github.com/highlightjs/highlight.js/tree/main/src/styles
+   - add that code in code.css in root _app.js file.
+
+## 06.05.23
