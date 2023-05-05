@@ -48,8 +48,9 @@
   content: "Copy";
   font-size: 14px;
   background-color: transparent;
-  color: grey;
+  color: rgb(170, 170, 170);
   margin-right: 20px;
+  letter-spacing: 0.25px;
 }
 
 .markdownContent button span:hover {

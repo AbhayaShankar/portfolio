@@ -5,13 +5,25 @@ import markdownAnchor from "markdown-it-anchor";
 import markdownIframe from "markdown-it-iframe";
 import slugify from "slugify";
 
+// const hljs = require("highlight.js/lib/core");
+
+// hljs.registerLanguage(
+//   "javascript",
+//   require("highlight.js/lib/languages/javascript")
+// );
+
 export const md = new MarkdownIt({
   breaks: true,
-  html: true,
 })
   .use(highlightjs, {
     auto: true,
   })
+  // .use(require("markdown-it-highlightjs"), {
+  //   auto: true,
+  //   inline: true,
+  //   code: true,
+  //   hljs,
+  // })
   .use(markdownCopy, {
     iconClass: "",
     buttonClass: "copyBtn",
