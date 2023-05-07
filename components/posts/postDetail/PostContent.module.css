@@ -27,15 +27,15 @@
 
 .markdownContent img {
   width: 100%;
-  height: auto;
-  /* object-fit: contain; */
+  height: 460px;
+  object-fit: cover;
   padding: 10px 30px;
   opacity: 0.85;
 }
 
 .markdownContent pre {
   padding: 20px 25px;
-  background-color: #000000;
+  background-color: #0d0d10;
   border-radius: 5px;
   white-space: pre-wrap;
 }
