@@ -1,6 +1,6 @@
 .posts {
   width: 90%;
-  max-width: 80rem;
+  max-width: 75rem;
   margin: var(--size-8) auto;
 }
 
@@ -8,6 +8,8 @@
   font-size: var(--size-8);
   color: var(--color-secondary);
   text-align: center;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 768px) {
