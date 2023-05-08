@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import abhaya from "../../public/abhaya.png";
