@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-// import PostGrid from "../../components/posts/PostGrid";
 import AllPosts from "../../components/posts/AllPosts";
 import { getAllPosts } from "../../lib/posts-utils";
 import Head from "next/head";

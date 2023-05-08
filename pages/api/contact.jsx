@@ -51,9 +51,6 @@ async function formHandler(req, res) {
     }
 
     client.close();
-
-    // console.log(newMessage);
-
     res.status(201).json({ message: "Success", message: newMessage });
   }
 }

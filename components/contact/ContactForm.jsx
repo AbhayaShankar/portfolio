@@ -24,11 +24,7 @@ const ContactForm = () => {
 
   async function sendMessageHandler(e) {
     e.preventDefault();
-    // console.log(emailVal, nameVal, messageVal);
-
     setCurrStatus("pending");
-
-    // client side validation...
 
     try {
       const res = await fetch("/api/contact", {

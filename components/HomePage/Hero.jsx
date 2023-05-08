@@ -10,7 +10,6 @@ const Hero = () => {
 
   useEffect(() => {
     const textArr = text.split("");
-    console.log(textArr);
     setSplitText(textArr);
   }, [text]);
 

@@ -14,11 +14,6 @@ const HomePage = ({ posts }) => {
           content="A blog app for developers starting out to web development. here I share blogs related to CSS, JS, React Js and NEXT Js"
         />
       </Head>
-      {/*  
-      This Home Page will have 2 main sections:
-         1. The Hero Section...
-         2. The Featured Posts section. - For now we can show some dummy data, then we can move forward with linking in the future.
-     */}
       <Hero />
       <FeaturedPosts posts={posts} />
     </Fragment>
