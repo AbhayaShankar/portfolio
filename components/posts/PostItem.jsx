@@ -14,6 +14,8 @@ const PostItem = (props) => {
 
   const textCount = excerpt.length;
 
+  const trimmedText = excerpt.substr(0, 150);
+
   const imagePath = `/posts/${slug}/${image}`;
 
   return (
@@ -31,7 +33,8 @@ const PostItem = (props) => {
         <div className={classes.content}>
           <time>{formattedDate}</time>
           <h3>{title}</h3>
-          <p className={textCount > 150 ? classes.ellipsis : ""}>{excerpt}</p>
+          {textCount > 140 ? <p>{trimmedText}...</p> : <p>{excerpt}</p>}
+          {/* <p className={textCount > 150 ? classes.ellipsis : ""}>{excerpt}</p> */}
         </div>
       </Link>
     </li>

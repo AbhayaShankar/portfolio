@@ -18,7 +18,7 @@ const ContactForm = () => {
         </div>
         <div className={classes.control}>
           <label htmlFor="message">Your Message</label>
-          <textarea name="message" id="message" rows="6"></textarea>
+          <textarea name="message" id="message" rows="4"></textarea>
         </div>
 
         <div className={classes.actions}>

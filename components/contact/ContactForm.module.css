@@ -3,11 +3,12 @@
   border-radius: 6px;
   background-color: var(--color-grey-800);
   width: 90%;
-  max-width: 67rem;
+  max-width: 55rem;
   line-height: 35px;
   padding: var(--size-8);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 8px rgba(146, 146, 146, 0.2);
   font-size: var(--size-6);
+  margin-top: 72px;
 }
 
 .contact h2 {
@@ -18,6 +19,8 @@
   letter-spacing: 1.5px;
   font-size: 36px;
   margin-bottom: 20px;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 5px;
 }
 
 .form label {
@@ -27,19 +30,26 @@
   margin: var(--size-2) 0 var(--size-1) 0;
   margin-top: 10px;
   letter-spacing: 1px;
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 2px;
+  font-size: 18px;
 }
 
 .form input,
 .form textarea {
   font: inherit;
-  padding: var(--size-1);
+  padding: var(--size-1) var(--size-2);
   border-radius: 4px;
   width: 100%;
-  border: 1px solid var(--color-grey-400);
-  background-color: var(--color-grey-50);
+  border: none;
+  border: 1px solid var(--color-grey-750);
+  background-color: #272727;
+  color: #fcfcfc;
+  letter-spacing: 1.2px;
   resize: none;
   outline: none;
-  margin-top: 10px;
+  font-size: 18px;
+  /* margin-top: 10px; */
 }
 
 .controls {
@@ -61,18 +71,22 @@
 .form button {
   font: inherit;
   cursor: pointer;
-  background-color: var(--color-primary-700);
-  border: 1px solid var(--color-primary-700);
-  padding: var(--size-2) var(--size-4);
+  background-color: #272727;
+  /* border: 1px solid var(--color-grey-750); */
+  border: none;
+  font-size: 18px;
+  padding: var(--size-1) var(--size-4);
   border-radius: 4px;
-  color: var(--color-primary-50);
+  color: darkgray;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  /* margin-top: 10px; */
 }
 
 .form button:hover {
-  background-color: var(--color-primary-500);
-  border-color: var(--color-primary-500);
+  background-color: #2d2d2d;
+  /* border-color: var(--color-primary-2); */
+  color: white;
 }
 
 @media (min-width: 768px) {
