@@ -4,11 +4,11 @@ date: "2023-05-22"
 slug: "getting-started-with-nextjs2"
 image: "2.jfif"
 excerpt: "NEXTJS is the React framework for production - it makes building fullstack React apps and sites a breeze  and ships with built-in SSR/SSG."
-isFeatured: false
+isFeatured: true
 
 ---
 
-## This is a Blog Post for Node.js
+# 🖊️This is a Blog Post for Node.js
 
 Welcome to Abhaya's Blog where you get access to all the latest tech Abhaya is learning and sharing. This is the starter course for people learning and starting out to Node.js
 
@@ -20,7 +20,7 @@ Well ... first of all, React is a "library" for JavaScript. That seems to be imp
 
 Not for me, but still, there is a valid point: React already is a framework / library for JavaScript. So it's already an extra layer on top of JS.
 
-## Why would we then need NextJS?
+## ❓Why would we then need NextJS?
 
 Because NextJS makes building React apps easier - especially React apps that should have server-side rendering (though it does way more than just take care of that).
 
@@ -32,12 +32,13 @@ In this article, we'll dive into the core concepts and features NextJS has to of
 - Image Optimization
 - Much More
 
-## File-based Routing
+## 📁 File-based Routing
 
 ![Create routes via your file + folder structure](/posts/getting-started-with-nextjs2/FBR.png)
 
-... More content ...
+![Home Page](/home.jpg)
 
+![Home Page](/home2.jpg)
 
 ```js
 export function getStaticPaths() {

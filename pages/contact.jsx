@@ -12,7 +12,7 @@ const ContactPage = () => {
           content="Subscribe to the blog app so that you never miss any latest blog."
         />
       </Head>
-      <ContactForm />;
+      <ContactForm />
     </Fragment>
   );
 };
