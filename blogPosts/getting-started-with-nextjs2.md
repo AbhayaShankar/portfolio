@@ -1,5 +1,5 @@
 ---
-title: "MY BLOG FOR NEXT JS"
+title: "My Blog for Next Js"
 date: "2023-05-22"
 slug: "getting-started-with-nextjs2"
 image: "2.jfif"
@@ -8,11 +8,11 @@ isFeatured: false
 
 ---
 
-# This is a Blog Post for Node.js
+## This is a Blog Post for Node.js
 
 Welcome to Abhaya's Blog where you get access to all the latest tech Abhaya is learning and sharing. This is the starter course for people learning and starting out to Node.js
 
-NextJS is a &nbsp;**framework for ReactJS**.
+NextJS is a&nbsp;**framework for ReactJS**.
 
 Wait a second ... a "framework" for React? Isn't React itself already a framework for JavaScript?
 
