@@ -11,7 +11,7 @@ isFeatured: true
 
 # The Future of Web Development: Web Assembly
 
-Welcome to Abhaya's Blog where you get access to all the latest tech Abhaya is learning and sharing. This is the starter course for people learning and starting out to Node.js
+Welcome to Abhaya's Blog where you get access to all the latest tech Abhaya is learning and sharing. This is the starter course for people learning and starting out to Web Assembly.
 
 ## ❓What is Web Assembly?
 

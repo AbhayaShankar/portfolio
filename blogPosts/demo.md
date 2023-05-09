@@ -1,10 +1,10 @@
 ---
 title: "My Blog for Next Js"
 date: "2023-05-22"
-slug: "getting-started-with-nextjs2"
+slug: "demo"
 image: "2.jfif"
 excerpt: "NEXTJS is the React framework for production - it makes building fullstack React apps and sites a breeze  and ships with built-in SSR/SSG."
-isFeatured: true
+isFeatured: false
 
 ---
 
@@ -73,4 +73,6 @@ sol2 = (-b+cmath.sqrt(d))/(2*a)
 
 print('The solution are {0} and {1}'.format(sol1,sol2))
 ```
+
+P.s. :- This is just the trial demo version while designing this app.
  
