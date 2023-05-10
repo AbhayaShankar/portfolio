@@ -6,7 +6,9 @@
   max-width: 55rem;
   line-height: 35px;
   padding: var(--size-8);
-  box-shadow: 0 1px 8px rgba(146, 146, 146, 0.2);
+  -webkit-box-shadow: 6px 5px 12px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 6px 5px 12px 0px rgba(0, 0, 0, 1);
+  box-shadow: 6px 5px 12px 0px rgba(0, 0, 0, 1);
   font-size: var(--size-6);
   margin-top: 72px;
 }
