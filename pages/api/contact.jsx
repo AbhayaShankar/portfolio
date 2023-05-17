@@ -32,7 +32,7 @@ async function formHandler(req, res) {
 
     try {
       client = await MongoClient.connect(
-        `mongodb+srv://Abhaya:${process.env.NEXT_PUBLIC_PASSWORD}@cluster0.rcblahe.mongodb.net/blog-app?retryWrites=true&w=majority`
+        `mongodb+srv://${process.env.blog_app_username}:${process.env.blog_app_password}@${process.env.blog_app_cluster}.rcblahe.mongodb.net/${process.env.blog_app_database}?retryWrites=true&w=majority`
       );
     } catch (error) {
       res.status(500).json({ message: "Could not connect to DB" });
@@ -51,6 +51,9 @@ async function formHandler(req, res) {
     }
 
     client.close();
+
+    // console.log(newMessage);
+
     res.status(201).json({ message: "Success", message: newMessage });
   }
 }
