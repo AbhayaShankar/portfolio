@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
+import { Analytics } from "@vercel/analytics/react";
 import "../styles/code.css";
 import Head from "next/head";
 
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
         {/* another meta data can be added regarding the favicon. */}
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </Layout>
   );
 }

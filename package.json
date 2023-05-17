@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.1",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.8.0",
     "markdown-it": "^13.0.1",
