@@ -1,5 +1,5 @@
 .content {
-  width: 90%;
+  width: 95%;
   max-width: 70rem;
   margin: var(--size-8) auto;
   font-size: var(--size-5);
@@ -106,16 +106,20 @@
   background-color: transparent;
   border: 0;
   outline: none;
+  position: relative;
 }
 
 .markdownContent button span::after {
   content: "Copy";
   font-size: 14px;
+  margin-top: -10px;
   background-color: transparent;
   color: rgb(170, 170, 170);
-  margin-right: 20px;
+  margin-right: 0px;
   letter-spacing: 0.25px;
   transition: color 0.05s ease-in-out;
+  position: absolute;
+  left: -25px;
 }
 
 .markdownContent button span:hover::after {
@@ -153,5 +157,11 @@
     font-size: 38px;
     text-align: center;
     line-height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .markdownContent button span::after {
+    margin-right: 20px;
   }
 }

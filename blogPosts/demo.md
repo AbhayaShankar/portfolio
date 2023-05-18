@@ -50,6 +50,12 @@ export function getStaticPaths() {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: "blocking",
   };
+
+  // why is this string not wrapping?
+
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  const posts = await res.json()
+
 }   
 ```
 
