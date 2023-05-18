@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Navbar.module.css";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
   return (
     <header className={classes.header}>
       <div className={classes.left_navbar}>
@@ -24,6 +26,12 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+      <img
+        onClick={() => setIsMenuActive(true)}
+        className={classes.menu}
+        src="/menu.png"
+        alt=""
+      />
     </header>
   );
 };

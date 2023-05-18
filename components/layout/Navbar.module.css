@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: 60px;
   width: 100%;
-  padding: 15px 50px 15px 50px;
+  padding: 15px 25px 15px 25px;
   background-color: var(--color-primary-2);
   color: white;
   border-bottom: 2px solid #2e2e2e;
@@ -25,9 +25,7 @@
 }
 
 .right_navbar ul {
-  display: flex;
-  align-items: center;
-  gap: 60px;
+  display: none;
 }
 
 .right_navbar ul li {
@@ -53,4 +51,26 @@
 
 .right_navbar ul li a:hover {
   color: #e2e2e2;
+}
+
+.menu {
+  display: block;
+  width: 32px;
+  color: #e8e8e8;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 15px 50px 15px 50px;
+  }
+
+  .right_navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .menu {
+    display: none;
+  }
 }
