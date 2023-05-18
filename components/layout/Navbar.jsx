@@ -30,8 +30,38 @@ const Navbar = () => {
         onClick={() => setIsMenuActive(true)}
         className={classes.menu}
         src="/menu.png"
-        alt=""
+        alt="menu-btn"
       />
+      {isMenuActive && (
+        <>
+          <nav className={classes.menu_right_navbar}>
+            <ul className="">
+              <li>
+                <Link onClick={() => setIsMenuActive(false)} href="/">
+                  Home
+                </Link>
+              </li>
+              <li onClick={() => setIsMenuActive(false)}>Projects</li>
+              <li>
+                <Link onClick={() => setIsMenuActive(false)} href="/posts">
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link onClick={() => setIsMenuActive(false)} href="/contact">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <img
+            onClick={() => setIsMenuActive(false)}
+            className={classes.close_btn}
+            src="/close.png"
+            alt="close-btn"
+          />
+        </>
+      )}
     </header>
   );
 };
