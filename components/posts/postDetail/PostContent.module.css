@@ -1,5 +1,5 @@
 .content {
-  width: 65%;
+  width: 90%;
   max-width: 70rem;
   margin: var(--size-8) auto;
   font-size: var(--size-5);
@@ -15,7 +15,7 @@
 
 .content .image {
   margin: var(--size-4) auto;
-  width: 100%;
+  width: 80%;
   max-width: 600px;
 }
 
@@ -32,11 +32,13 @@
 .markdownContent h1 {
   font-family: "Inconsolata", monospace;
   letter-spacing: 1.5px;
-  font-size: 38px;
+  font-size: 33px;
+  text-align: center;
+  line-height: 40px;
 }
 
 .markdownContent h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Inconsolata", monospace;
   /* font-weight: 400; */
   letter-spacing: 1px;
@@ -70,7 +72,7 @@
 }
 
 .markdownContent pre {
-  padding: 20px 25px;
+  padding: 20px 20px;
   background-color: #0d0d10;
   border-radius: 5px;
   white-space: pre-wrap;
@@ -80,6 +82,7 @@
 
 .markdownContent code {
   background-color: #0d0d10;
+  font-size: 14px;
   padding: 3px 8px;
   border-radius: 4px;
 }
@@ -121,6 +124,34 @@
 
 @media (min-width: 768px) {
   .content {
+    width: 65%;
     padding: var(--size-8);
+  }
+
+  .markdownContent pre {
+    padding: 20px 25px;
+    background-color: #0d0d10;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .markdownContent code {
+    font-size: 15px;
+  }
+
+  .markdownContent h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .markdownContent h1 {
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1.5px;
+    font-size: 38px;
+    text-align: center;
+    line-height: 40px;
   }
 }

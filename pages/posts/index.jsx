@@ -10,7 +10,7 @@ const AllPostsPage = ({ posts }) => {
         <title>Blogs - Abhaya Shankar</title>
         <meta name="description" content="Blogs by Abhaya Shankar" />
       </Head>
-      <AllPosts posts={posts} />;
+      <AllPosts posts={posts} />
     </Fragment>
   );
 };

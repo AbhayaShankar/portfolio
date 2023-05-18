@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
         <div className={classes.text}>
           {splitText.map((char, i) => (
-            <span key={i} style={{ transform: `rotate(${i * 4.7}deg)` }}>
+            <span key={i} style={{ transform: `rotate(${i * 4.75}deg)` }}>
               {char}
             </span>
           ))}

@@ -1,5 +1,5 @@
 .hero {
-  --radius: 38vmin;
+  --radius: 35vmin;
   --frame-size: calc(var(--radius) / 3);
   --d-outer: calc(var(--radius) * 2);
   --d-inner: calc(var(--d-outer) - var(--frame-size));
@@ -10,7 +10,6 @@
   text-align: center;
   background-color: var(--color-primary);
   padding: var(--size-12) 0 var(--size-20);
-  height: 100vh;
 }
 
 .circle {
@@ -43,15 +42,15 @@
   width: 100%;
   height: 100%;
   font-family: "Inconsolata", monospace;
-  animation: rotateText 18s linear infinite;
+  animation: rotateText 20s linear infinite;
 }
 
 .text span {
   position: absolute;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.5px;
   left: 50%;
   font-size: 16px;
-  transform-origin: 0 var(--radius);
+  transform-origin: 0 calc(var(--radius));
   font-weight: 300;
   filter: brightness(1.9);
   color: #ffffff;
@@ -99,30 +98,14 @@
 @media (min-width: 768px) {
   .hero {
     --radius: 25vmin;
-    --frame-size: calc(var(--radius) / 3);
-    --d-outer: calc(var(--radius) * 2);
-    --d-inner: calc(var(--d-outer) - var(--frame-size));
-    --font-size: calc(var(--radius) / 10);
+    height: 100vh;
   }
 
   .hero h1 {
     font-size: var(--size-12);
-    margin: var(--size-4) 0;
-    color: var(--color-secondary);
-    font-family: "Inconsolata", monospace;
-    letter-spacing: 2px;
-    margin-top: 50px;
-    margin-bottom: 25px;
   }
 
   .hero p {
     font-size: var(--size-5);
-    color: var(--color-grey-200);
-    width: 100%;
-    text-align: center;
-    max-width: 70rem;
-    margin: auto;
-    line-height: 34px;
-    word-spacing: 2px;
   }
 }
