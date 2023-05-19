@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import classes from "./ContactForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Context } from "../../context/context";
 
 const ContactForm = () => {
   const [emailVal, setEmailVal] = useState("");
@@ -9,6 +10,7 @@ const ContactForm = () => {
   const [messageVal, setMessageVal] = useState("");
   const [currStatus, setCurrStatus] = useState();
   const [reqError, setReqError] = useState();
+  const { setIsMenuActive } = useContext(Context);
 
   const pendingNotif = (text) => toast(text);
   const errorNotif = (text) => toast.error(text);
@@ -77,7 +79,10 @@ const ContactForm = () => {
     <section className={classes.contact}>
       <h2>Contact Form</h2>
       <form className={classes.form} onSubmit={sendMessageHandler}>
-        <div className={classes.controls}>
+        <div
+          className={classes.controls}
+          onClick={() => setIsMenuActive(false)}
+        >
           <div className={classes.control}>
             <label htmlFor="email">Your Email</label>
             <input
@@ -99,7 +104,7 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={classes.control}>
+        <div className={classes.control} onClick={() => setIsMenuActive(false)}>
           <label htmlFor="message">Your Message</label>
           <textarea
             name="message"
@@ -111,7 +116,7 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        <div className={classes.actions}>
+        <div className={classes.actions} onClick={() => setIsMenuActive(false)}>
           <button>Send Message</button>
         </div>
       </form>

@@ -1,19 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import classes from "./Navbar.module.css";
 import Link from "next/link";
+import { Context } from "../../context/context";
 
 const Navbar = () => {
-  const [isMenuActive, setIsMenuActive] = useState(false);
+  const { isMenuActive, setIsMenuActive } = useContext(Context);
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (!clsMenuOnOutsideClickRef.current.contains(event.target)) {
+  //       setIsMenuActive(false);
+  //     }
+  //   };
+  //   document.addEventListener("click", handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener("click", handleClickOutside);
+  //   };
+  // }, [clsMenuOnOutsideClickRef]);
 
   return (
     <header className={classes.header}>
       <div className={classes.left_navbar}>
         <p>
-          <Link href="/">Abhaya's Blog</Link>
+          <Link href="/" onClick={() => setIsMenuActive(false)}>
+            Abhaya's Blog
+          </Link>
         </p>
       </div>
       <nav className={classes.right_navbar}>
-        <ul className="">
+        <ul>
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -33,7 +48,7 @@ const Navbar = () => {
         alt="menu-btn"
       />
       {isMenuActive && (
-        <>
+        <div className={classes.stickyMenu}>
           <nav className={classes.menu_right_navbar}>
             <ul className="">
               <li>
@@ -60,7 +75,7 @@ const Navbar = () => {
             src="/close.png"
             alt="close-btn"
           />
-        </>
+        </div>
       )}
     </header>
   );

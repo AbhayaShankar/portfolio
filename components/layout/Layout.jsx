@@ -1,13 +1,13 @@
-import { Fragment } from "react";
 import Navbar from "./Navbar";
 import React from "react";
+import AppContext from "../../context/context";
 
 function Layout(props) {
   return (
-    <Fragment>
+    <AppContext>
       <Navbar />
       <main>{props.children}</main>
-    </Fragment>
+    </AppContext>
   );
 }
 

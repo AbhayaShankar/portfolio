@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./PostItem.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { Context } from "../../context/context";
 
 const PostItem = (props) => {
+  const { setIsMenuActive } = useContext(Context);
   const { title, image, excerpt, date, slug } = props.post;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -19,7 +21,7 @@ const PostItem = (props) => {
   const imagePath = `/posts/${slug}/${image}`;
 
   return (
-    <li className={classes.post}>
+    <li className={classes.post} onClick={() => setIsMenuActive(false)}>
       <Link href={`/posts/${slug}`}>
         <div className={classes.image}>
           <Image
@@ -34,7 +36,6 @@ const PostItem = (props) => {
           <time>{formattedDate}</time>
           <h3>{title}</h3>
           {textCount > 140 ? <p>{trimmedText}...</p> : <p>{excerpt}</p>}
-          {/* <p className={textCount > 150 ? classes.ellipsis : ""}>{excerpt}</p> */}
         </div>
       </Link>
     </li>

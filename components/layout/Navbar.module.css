@@ -54,27 +54,31 @@
 }
 
 .menu {
-  display: block;
+  position: absolute;
   width: 32px;
   color: #e8e8e8;
+  right: 25px;
+}
+
+.stickyMenu {
+  position: sticky;
 }
 
 .menu_right_navbar {
   width: 100%;
-  /* background-color: #1e1e1e; */
   color: white;
   height: 300px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -20px;
+  left: -10px;
 }
 
 .close_btn {
   position: absolute;
   z-index: 10;
   width: 32px;
-  right: 25px;
-  top: 13px;
+  right: 0;
+  top: -15px;
   border-radius: 50%;
   /* margin-bottom: 50px; */
   animation: showClose 0.4s ease-in forwards;
@@ -85,6 +89,7 @@
   flex-direction: column;
   align-items: flex-end;
   animation: showMenu 0.4s ease-in forwards;
+  gap: 35px;
 }
 
 .menu_right_navbar ul li {
@@ -96,8 +101,8 @@
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 500;
-  line-height: 25px;
-  margin-top: 30px;
+  /* line-height: 25px; */
+  /* margin-top: 30px; */
   text-align: right;
   margin-right: 20px;
   width: fit-content;
@@ -111,7 +116,7 @@
 }
 
 .menu_right_navbar ul:first-child {
-  margin-top: 40px;
+  margin-top: 65px;
 }
 
 .menu_right_navbar ul li:hover {
