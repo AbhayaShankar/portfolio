@@ -4,6 +4,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        {/* <link rel="shortcut icon" href="/Logo.png" /> */}
         <Head />
         <body>
           <Main />
