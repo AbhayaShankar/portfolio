@@ -16,12 +16,6 @@ const PostContent = ({ post }) => {
   return (
     <article className={classes.content}>
       <PostHeader title={title} image={imagePath} />
-      {/* <ReactMarkdown
-        className={classes.markdownContent}
-        components={customRenderers}
-        // renderers={customRenderers}
-        children={content}
-      /> */}
       <div
         dangerouslySetInnerHTML={{ __html: displayContent }}
         className={classes.markdownContent}
