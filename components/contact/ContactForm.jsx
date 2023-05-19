@@ -75,15 +75,6 @@ const ContactForm = () => {
     errorNotif(reqError);
   }
 
-  // const contextClass = {
-  //   success: "bg-blue-200",
-  //   error: "bg-red-600",
-  //   info: "bg-gray-200",
-  //   warning: "bg-orange-400",
-  //   default: "bg-indigo-600",
-  //   dark: "bg-white-600 font-gray-300",
-  // };
-
   return (
     <section className={classes.contact}>
       <h2>Contact Form</h2>
@@ -132,10 +123,6 @@ const ContactForm = () => {
 
       <ToastContainer
         style={{ fontSize: 15, width: 400 }}
-        // toastClassName={({ type }) =>
-        //   contextClass[type || "default"] +
-        //   " relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer"
-        // }
         position="top-center"
         autoClose={3000}
         hideProgressBar={false}
