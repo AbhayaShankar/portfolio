@@ -47,6 +47,7 @@
   .header img {
     margin-bottom: 40px;
     width: 500px;
+    height: 270px;
     object-fit: cover;
   }
 }

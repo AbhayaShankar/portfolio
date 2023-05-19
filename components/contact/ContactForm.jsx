@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ContactForm.module.css";
 import Notification from "../ui/Notification";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
   const [emailVal, setEmailVal] = useState("");
@@ -8,6 +10,10 @@ const ContactForm = () => {
   const [messageVal, setMessageVal] = useState("");
   const [currStatus, setCurrStatus] = useState();
   const [reqError, setReqError] = useState();
+
+  const pendingNotif = (text) => toast(text);
+  const errorNotif = (text) => toast.error(text);
+  const successNotif = (text) => toast.success(text);
 
   useEffect(() => {
     if (currStatus === "success" || currStatus === "error") {
@@ -59,26 +65,29 @@ const ContactForm = () => {
   let notification;
 
   if (currStatus === "pending") {
-    notification = {
-      status: "pending",
-      title: "Sending Message",
-      message: "Your data is being submitted!",
-    };
+    pendingNotif("Your data is being submitted!");
+    // notification = {
+    //   status: "pending",
+    //   title: "Sending Message",
+    //   message: "Your data is being submitted!",
+    // };
   }
 
   if (currStatus === "success") {
-    notification = {
-      status: "success",
-      title: "Message sent",
-      message: "Your message has been sent successfully!",
-    };
+    successNotif("Your message has been sent successfully!");
+    // notification = {
+    //   status: "success",
+    //   title: "Message sent",
+    //   message: "Your message has been sent successfully!",
+    // };
   }
   if (currStatus === "error") {
-    notification = {
-      status: "error",
-      title: "Oops... Error",
-      message: reqError,
-    };
+    errorNotif(reqError);
+    // notification = {
+    //   status: "error",
+    //   title: "Oops... Error",
+    //   message: reqError,
+    // };
   }
 
   return (
@@ -130,6 +139,21 @@ const ContactForm = () => {
           status={notification.status}
         />
       )}
+
+      {/* <button onClick={() => successNotif("Success")}>Notify</button> */}
+      <ToastContainer
+        style={{ fontSize: 12 }}
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </section>
   );
 };
