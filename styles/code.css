@@ -5,7 +5,7 @@
 /* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #9c9c9c8a;
+  color: #a9a9a974;
 }
 
 /* Tomorrow Red */
@@ -42,6 +42,7 @@
 .hljs-bullet,
 .hljs-addition {
   color: #a1ca4a;
+  word-break: break-all;
 }
 
 /* Tomorrow Blue */

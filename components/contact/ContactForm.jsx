@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ContactForm.module.css";
-import Notification from "../ui/Notification";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -62,32 +61,16 @@ const ContactForm = () => {
     setNameVal("");
   }
 
-  let notification;
-
   if (currStatus === "pending") {
     pendingNotif("Your data is being submitted!");
-    // notification = {
-    //   status: "pending",
-    //   title: "Sending Message",
-    //   message: "Your data is being submitted!",
-    // };
   }
 
   if (currStatus === "success") {
     successNotif("Your message has been sent successfully!");
-    // notification = {
-    //   status: "success",
-    //   title: "Message sent",
-    //   message: "Your message has been sent successfully!",
-    // };
   }
+
   if (currStatus === "error") {
     errorNotif(reqError);
-    // notification = {
-    //   status: "error",
-    //   title: "Oops... Error",
-    //   message: reqError,
-    // };
   }
 
   return (
@@ -132,15 +115,7 @@ const ContactForm = () => {
           <button>Send Message</button>
         </div>
       </form>
-      {notification && (
-        <Notification
-          title={notification.title}
-          message={notification.message}
-          status={notification.status}
-        />
-      )}
 
-      {/* <button onClick={() => successNotif("Success")}>Notify</button> */}
       <ToastContainer
         style={{ fontSize: 12 }}
         position="top-center"
