@@ -1,7 +1,7 @@
 :root{
-      --toastify-color-light: #fff;
-  --toastify-color-dark: #d34040;
-  --toastify-color-info: #e22f29;
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #434343;
+  --toastify-color-info: #3498db;
   --toastify-color-success: #07bc0c;
   --toastify-color-warning: #f1c40f;
   --toastify-color-error: #e74c3c;
@@ -43,9 +43,31 @@
     #ff2d55
   );
   // Used when no type is provided
-  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-dark: #83dcff;
   --toastify-color-progress-info: var(--toastify-color-info);
   --toastify-color-progress-success: var(--toastify-color-success);
   --toastify-color-progress-warning: var(--toastify-color-warning);
   --toastify-color-progress-error: var(--toastify-color-error);
+}
+
+.Toastify__toast {
+  position: relative;
+  min-height: var(--toastify-toast-min-height);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.05);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: var(--toastify-toast-max-height);
+  overflow: hidden;
+  font-family: var(--toastify-font-family);
+  cursor: default;
+  direction: ltr;
+  /* webkit only issue #791 */
+  z-index: 0;
+  letter-spacing: 0.35px;
 }

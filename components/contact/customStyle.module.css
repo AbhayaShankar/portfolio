@@ -1,0 +1,11 @@
+/* MyComponent.module.css */
+
+.customToastifyContainer {
+  /* Override the background color */
+  background-color: #a0c4ff; /* Your custom background color */
+}
+
+.Toastifytheme {
+  background: #616161;
+  color: #fff;
+}
