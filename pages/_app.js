@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import Layout from "../components/layout/Layout";
 import "../styles/code.css";
 import Head from "next/head";
-import "../styles/variable.scss";
+import "../styles/_variable.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
