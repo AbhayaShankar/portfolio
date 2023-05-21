@@ -11,11 +11,14 @@ const PostContent = ({ post }) => {
 
   const imagePath = `/posts/${slug}/${image}`;
 
+  const shareUrl = `abhayablog.vercel.app/posts/${slug}`;
+  console.log(shareUrl);
+
   const displayContent = md.render(content);
 
   return (
     <article className={classes.content}>
-      <PostHeader title={title} image={imagePath} />
+      <PostHeader title={title} image={imagePath} shareUrl={shareUrl} />
       <div
         dangerouslySetInnerHTML={{ __html: displayContent }}
         className={classes.markdownContent}
