@@ -14,15 +14,14 @@
 }
 
 .contact h2 {
-  font-size: var(--size-8);
   margin: var(--size-4) 0 var(--size-2);
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1.5px;
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
   font-family: "Inconsolata", monospace;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 .form label {
@@ -35,16 +34,33 @@
   font-family: "Inconsolata", monospace;
   letter-spacing: 2px;
   font-size: 18px;
+  color: #fcfcfc9d;
 }
 
-.form input,
+.form input {
+  font: inherit;
+  padding: var(--size-1) var(--size-2) 4px;
+  /* border-radius: 4px; */
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-grey-400);
+  /* border: 1px solid var(--color-grey-750); */
+  background-color: transparent;
+  color: #fcfcfc;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  resize: none;
+  outline: none;
+  font-size: 18px;
+  /* margin-top: 10px; */
+}
+
 .form textarea {
   font: inherit;
   padding: var(--size-1) var(--size-2);
-  border-radius: 4px;
+  border-radius: 5px;
   width: 100%;
   border: none;
-  border: 1px solid var(--color-grey-750);
   background-color: #272727;
   color: #fcfcfc;
   letter-spacing: 1.2px;
@@ -56,7 +72,7 @@
 
 .controls {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -82,6 +98,8 @@
   color: darkgray;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  box-shadow: 2px 2px 2px #ffffffb1;
+  transition: box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
   /* margin-top: 10px; */
 }
 
@@ -89,6 +107,11 @@
   background-color: #2d2d2d;
   /* border-color: var(--color-primary-2); */
   color: white;
+  box-shadow: 2px 2px 2px #f58f29;
+}
+
+.star2 {
+  display: none;
 }
 
 @media (min-width: 768px) {
