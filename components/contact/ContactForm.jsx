@@ -3,6 +3,7 @@ import classes from "./ContactForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Context } from "../../context/context";
+import { BsStars } from "react-icons/bs";
 
 const ContactForm = () => {
   const [emailVal, setEmailVal] = useState("");
@@ -37,6 +38,10 @@ const ContactForm = () => {
     e.preventDefault();
     setCurrStatus("pending");
 
+    if (!validPhoneNumber) {
+      setCurrStatus("error");
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -56,9 +61,6 @@ const ContactForm = () => {
 
       if (!res.ok) {
         throw new Error(data.message || "Something went wrong...");
-      }
-      if (!validPhoneNumber) {
-        setCurrStatus("error");
       }
     } catch (error) {
       setReqError(error.message);
@@ -87,7 +89,11 @@ const ContactForm = () => {
 
   return (
     <section className={classes.contact}>
-      <h2>Contact Form</h2>
+      <h2>
+        Contact Form
+        <BsStars style={{ marginLeft: 20 }} color="#FFB627" size={20} />
+      </h2>
+
       <form className={classes.form} onSubmit={sendMessageHandler}>
         <div
           className={classes.controls}
@@ -148,6 +154,14 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
+        <BsStars color="#F58F29" size={30} />
+        <BsStars
+          style={{ position: "absolute", top: 100, left: 320 }}
+          color="#FFB627"
+          size={50}
+        />
+
+        <BsStars style={{}} color="#F58F29" size={30} />
         <div className={classes.actions} onClick={() => setIsMenuActive(false)}>
           <button>Send Message</button>
         </div>
