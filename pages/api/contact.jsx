@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 async function formHandler(req, res) {
   if (req.method === "POST") {
-    const { email, name, message } = req.body;
+    const { email, name, message, phoneNumber } = req.body;
 
     // Backend Validation check...
 
@@ -14,7 +14,9 @@ async function formHandler(req, res) {
         /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
       ) ||
       name.trim === "" ||
-      message.trim === ""
+      message.trim === "" ||
+      !phoneNumber ||
+      !phoneNumber.match(/^[6-9]\d{9}$/)
     ) {
       res.status(422).json({ message: "Invalid Input" });
       return;
@@ -26,6 +28,7 @@ async function formHandler(req, res) {
       email,
       name,
       message,
+      phoneNumber,
     };
 
     let client;
@@ -51,8 +54,6 @@ async function formHandler(req, res) {
     }
 
     client.close();
-
-    // console.log(newMessage);
 
     res.status(201).json({ message: "Success", message: newMessage });
   }

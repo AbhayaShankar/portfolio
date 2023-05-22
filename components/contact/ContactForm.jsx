@@ -6,7 +6,9 @@ import { Context } from "../../context/context";
 
 const ContactForm = () => {
   const [emailVal, setEmailVal] = useState("");
-  const [nameVal, setNameVal] = useState("");
+  const [firstNameVal, setFirstNameVal] = useState("");
+  const [lastNameVal, setLastNameVal] = useState("");
+  const [numberVal, setNumberVal] = useState("");
   const [messageVal, setMessageVal] = useState("");
   const [currStatus, setCurrStatus] = useState();
   const [reqError, setReqError] = useState();
@@ -15,6 +17,8 @@ const ContactForm = () => {
   const pendingNotif = (text) => toast(text);
   const errorNotif = (text) => toast.error(text);
   const successNotif = (text) => toast.success(text);
+
+  const validPhoneNumber = numberVal.match(/^[6-9]\d{9}$/);
 
   useEffect(() => {
     if (currStatus === "success" || currStatus === "error") {
@@ -38,7 +42,8 @@ const ContactForm = () => {
         method: "POST",
         body: JSON.stringify({
           email: emailVal,
-          name: nameVal,
+          name: firstNameVal + " " + lastNameVal,
+          phoneNumber: numberVal,
           message: messageVal,
         }),
 
@@ -52,6 +57,9 @@ const ContactForm = () => {
       if (!res.ok) {
         throw new Error(data.message || "Something went wrong...");
       }
+      if (!validPhoneNumber) {
+        setCurrStatus("error");
+      }
     } catch (error) {
       setReqError(error.message);
       setCurrStatus("error");
@@ -60,7 +68,9 @@ const ContactForm = () => {
     setCurrStatus("success");
     setEmailVal("");
     setMessageVal("");
-    setNameVal("");
+    setFirstNameVal("");
+    setLastNameVal("");
+    setNumberVal("");
   }
 
   if (currStatus === "pending") {
@@ -84,6 +94,28 @@ const ContactForm = () => {
           onClick={() => setIsMenuActive(false)}
         >
           <div className={classes.control}>
+            <label htmlFor="First Name">First Name</label>
+            <input
+              type="text"
+              id="First Name"
+              required
+              value={firstNameVal}
+              onChange={(e) => setFirstNameVal(e.target.value)}
+            />
+          </div>
+          <div className={classes.control}>
+            <label htmlFor="Last Name">Last Name</label>
+            <input
+              type="text"
+              id="Last Name"
+              required
+              value={lastNameVal}
+              onChange={(e) => setLastNameVal(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className={classes.controls}>
+          <div className={classes.control}>
             <label htmlFor="email">Your Email</label>
             <input
               type="email"
@@ -94,13 +126,13 @@ const ContactForm = () => {
             />
           </div>
           <div className={classes.control}>
-            <label htmlFor="name">Your Name</label>
+            <label htmlFor="number">Phone Number</label>
             <input
-              type="text"
-              id="name"
+              type="number"
+              id="number"
               required
-              value={nameVal}
-              onChange={(e) => setNameVal(e.target.value)}
+              value={numberVal}
+              onChange={(e) => setNumberVal(e.target.value)}
             />
           </div>
         </div>
