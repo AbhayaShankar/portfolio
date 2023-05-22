@@ -91,7 +91,12 @@ const ContactForm = () => {
     <section style={{ position: "relative" }} className={classes.contact}>
       <h2>
         Contact Form
-        <BsStars style={{ marginLeft: 20 }} color="#FFB627" size={20} />
+        <BsStars
+          className={classes.star1}
+          style={{ marginLeft: 20 }}
+          color="#FFB627"
+          size={20}
+        />
       </h2>
 
       <form className={classes.form} onSubmit={sendMessageHandler}>
@@ -158,11 +163,13 @@ const ContactForm = () => {
           style={{ position: "absolute", top: 182, left: 428 }}
           color="#FFB627"
           size={25}
+          className={classes.star2}
         />
         <BsStars
           style={{ position: "absolute", top: -25, left: 20 }}
           color="#FFB627"
           size={50}
+          className={classes.star3}
         />
 
         {/* <BsStars style={{}} color="#F58F29" size={30} /> */}

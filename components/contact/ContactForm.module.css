@@ -14,12 +14,11 @@
 }
 
 .contact h2 {
-  font-size: var(--size-8);
   margin: var(--size-4) 0 var(--size-2);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 1.5px;
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
   font-family: "Inconsolata", monospace;
   letter-spacing: 2px;
@@ -109,6 +108,10 @@
   /* border-color: var(--color-primary-2); */
   color: white;
   box-shadow: 2px 2px 2px #f58f29;
+}
+
+.star2 {
+  display: none;
 }
 
 @media (min-width: 768px) {
