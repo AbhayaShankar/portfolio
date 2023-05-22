@@ -88,7 +88,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className={classes.contact}>
+    <section style={{ position: "relative" }} className={classes.contact}>
       <h2>
         Contact Form
         <BsStars style={{ marginLeft: 20 }} color="#FFB627" size={20} />
@@ -154,14 +154,18 @@ const ContactForm = () => {
           ></textarea>
         </div>
 
-        <BsStars color="#F58F29" size={30} />
         <BsStars
-          style={{ position: "absolute", top: 100, left: 320 }}
+          style={{ position: "absolute", top: 182, left: 428 }}
+          color="#FFB627"
+          size={25}
+        />
+        <BsStars
+          style={{ position: "absolute", top: -25, left: 20 }}
           color="#FFB627"
           size={50}
         />
 
-        <BsStars style={{}} color="#F58F29" size={30} />
+        {/* <BsStars style={{}} color="#F58F29" size={30} /> */}
         <div className={classes.actions} onClick={() => setIsMenuActive(false)}>
           <button>Send Message</button>
         </div>
