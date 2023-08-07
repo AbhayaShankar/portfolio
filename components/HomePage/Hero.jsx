@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import abhaya from "../../public/abhaya.png";
+import abhayaS from "../../public/abhayaS.png";
 
 const Hero = () => {
   const text =
@@ -17,7 +18,7 @@ const Hero = () => {
     <section className={classes.hero}>
       <div className={classes.circle}>
         <div className={classes.image}>
-          <Image src={abhaya} alt="image of Abhaya" width={600} height={600} />
+          <Image src={abhayaS} alt="image of Abhaya" width={600} height={600} />
         </div>
         <div className={classes.text}>
           {splitText.map((char, i) => (
