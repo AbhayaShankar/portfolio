@@ -1,5 +1,19 @@
 .project {
-  border: 1px solid #cbcbcb7c;
   padding: 0.4rem;
   border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.project img {
+  max-width: 70rem;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #cbcbcb7c;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 5px;
 }

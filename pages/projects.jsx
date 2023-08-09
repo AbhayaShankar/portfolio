@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import classes from "../components/Project/Project.module.css";
 import Project from "../components/Project/Project";
+import animxstore from "../public/projects/animxstore.png";
 
 const Projects = () => {
   return (
@@ -13,9 +14,9 @@ const Projects = () => {
         experiences.
       </p>
       <div className={classes.projects}>
-        <Project />
-        <Project />
-        <Project />
+        <Project url={animxstore} />
+        <Project url={animxstore} />
+        <Project url={animxstore} />
       </div>
     </section>
   );

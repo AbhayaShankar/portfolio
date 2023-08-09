@@ -1,0 +1,13 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about img {
+  border-radius: 12px;
+  margin-right: 35px;
+}
