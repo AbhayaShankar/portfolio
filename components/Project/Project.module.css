@@ -1,0 +1,51 @@
+.hero {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 24px;
+  margin: var(--size-4) 0;
+  color: var(--color-secondary);
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.text {
+  font-size: var(--size-4);
+  color: var(--color-grey-200);
+  width: 100%;
+  text-align: center;
+  max-width: 70rem;
+  margin: auto;
+  line-height: 34px;
+  word-spacing: 2px;
+  padding: 0 25px;
+  text-align: justify;
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    --radius: 25vmin;
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: var(--size-12);
+  }
+
+  .hero p {
+    font-size: var(--size-5);
+  }
+}
