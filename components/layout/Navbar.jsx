@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className={classes.left_navbar}>
         <p>
           <Link href="/" onClick={() => setIsMenuActive(false)}>
-            Abhaya's Blog
+            Abhaya Shankar
           </Link>
         </p>
       </div>
@@ -38,6 +38,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
           </li>
           <li>
             <Link href="/contact">Contact</Link>
