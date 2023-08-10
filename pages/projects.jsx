@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import classes from "../components/Project/Project.module.css";
 import Project from "../components/Project/Project";
 import animxstore from "../public/projects/animxstore.png";
-import ProjectsList from "../helpers/ProjectList";
+import { ProjectsList } from "../helpers/ProjectList";
 
 const Projects = () => {
   return (

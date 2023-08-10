@@ -6,7 +6,7 @@ import { BiLinkExternal } from "react-icons/bi";
 const Project = ({ id, url, name, desc }) => {
   return (
     <div className={classes.project} id={id}>
-      <Image src={url} width={600} height={600} />
+      <Image src={url} width={900} height={7500} />
       <h2>{name}</h2>
       <p>{desc}</p>
       <div className={classes.link}>
