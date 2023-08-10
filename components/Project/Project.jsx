@@ -3,9 +3,9 @@ import classes from "./SingleProject.module.css";
 import Image from "next/image";
 import { BiLinkExternal } from "react-icons/bi";
 
-const Project = ({ url, name, desc }) => {
+const Project = ({ id, url, name, desc }) => {
   return (
-    <div className={classes.project}>
+    <div className={classes.project} id={id}>
       <Image src={url} width={600} height={600} />
       <h2>{name}</h2>
       <p>{desc}</p>
