@@ -33,4 +33,12 @@ const ProjectsList = [
   },
 ];
 
+const workExp = [
+  {
+    id: 1,
+    company : "Capgemini",
+    position: "React Developer",
+  }
+]
+
 export default ProjectsList;
