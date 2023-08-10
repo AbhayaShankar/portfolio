@@ -19,6 +19,7 @@ const Projects = () => {
         <Project url={animxstore} />
         <Project url={animxstore} />
       </div> */}
+
       <div className={classes.projects}>
         {ProjectsList.map((proj) => {
           const { id, name, desc, skills, link, url } = proj;
