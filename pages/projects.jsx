@@ -24,7 +24,9 @@ const Projects = () => {
         {ProjectsList.map((proj) => {
           const { id, name, desc, skills, link, url } = proj;
 
-          return <Project id={id} name={name} url={url} desc={desc} />;
+          return (
+            <Project id={id} name={name} url={url} desc={desc} link={link} />
+          );
         })}
       </div>
     </section>

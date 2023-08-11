@@ -14,6 +14,20 @@
 .link {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   gap: 5px;
+  border: 1px solid #e1cacab5;
+  padding: 5px 8px;
+  border-radius: 12px;
+  max-width: fit-content;
+  background-color: #3e3e3e51;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: #5c5b5b51;
+}
+
+.link a {
+  color: #fcfcfc;
 }
