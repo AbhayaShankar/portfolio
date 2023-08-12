@@ -26,6 +26,7 @@ const ProjectsList = [
     link: "https://cinetrek.netlify.app/",
     featured: true,
   },
+
   //   {
   //     id: 4,
   //     name: "Estates Empire",
