@@ -15,6 +15,7 @@ const Project = ({ id, url, name, desc, link, skills }) => {
         <h2>{name}</h2>
         <p>{desc}</p>
         <div className={classes.skills}>
+          Skills :
           {skills.map((skill) => (
             <li>{skill}</li>
           ))}

@@ -13,7 +13,15 @@ const ProjectsList = [
     name: "AnimxStore",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
     url: "/projects/animxstore.png",
-    skills: ["NextJS", "ChakraUI", "RapidAPI"],
+    skills: [
+      "React JS",
+      "SASS",
+      "Strapi",
+      "Cloudinary",
+      "Stripe",
+      "MUI",
+      "Email JS",
+    ],
     link: "https://animxstore.vercel.app/",
     featured: true,
   },
@@ -22,20 +30,19 @@ const ProjectsList = [
     name: "Cinetrek",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
     url: "/projects/cinetrek.png",
-    skills: ["NextJS", "ChakraUI", "RapidAPI"],
+    skills: ["React JS", "TMDB API", "React-Carousel", "MaterialUI"],
     link: "https://cinetrek.netlify.app/",
     featured: true,
   },
-
-  //   {
-  //     id: 4,
-  //     name: "Estates Empire",
-  //     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
-  //     url: "/projects/animxstore.png",
-  //     skills: ["NextJS", "ChakraUI", "RapidAPI"],
-  //     link: "https://estates-empire.vercel.app/",
-  //     featured: true,
-  //   },
+  {
+    id: 4,
+    name: "MERN Quizzies",
+    desc: "A Quiz App for MERN using React and Redux",
+    url: "/projects/cinetrek.png",
+    skills: ["React JS", "REDUX"],
+    link: "https://mern-quizzies.vercel.app/",
+    featured: true,
+  },
 ];
 
 const workExp = [
