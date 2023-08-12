@@ -1,6 +1,23 @@
 const ProjectsList = [
   {
     id: 1,
+    name: "Jobster - JobQuest",
+    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
+    url: "/projects/jobster.png",
+    skills: [
+      "React JS",
+      "Express JS",
+      "Mongo DB",
+      "Redux",
+      "JWT",
+      "ReCharts",
+      "Styled Components",
+    ],
+    link: "https://jobquest-h6so.onrender.com/",
+    featured: true,
+  },
+  {
+    id: 2,
     name: "Estates Empire",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
     url: "/projects/estate-empires.png",
@@ -9,9 +26,9 @@ const ProjectsList = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     name: "AnimxStore",
-    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
+    desc: "Your Everyday go-to E-commerce Website. Offering a wide-range of High Quality Products. Filter from categories, Add to Cart, Checkout and Pay to get your Product. ",
     url: "/projects/animxstore.png",
     skills: [
       "React JS",
@@ -26,22 +43,22 @@ const ProjectsList = [
     featured: true,
   },
   {
-    id: 3,
+    id: 4,
     name: "Cinetrek",
-    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
+    desc: "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek.",
     url: "/projects/cinetrek.png",
     skills: ["React JS", "TMDB API", "React-Carousel", "MaterialUI"],
     link: "https://cinetrek.netlify.app/",
-    featured: true,
+    featured: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "MERN Quizzies",
-    desc: "A Quiz App for MERN using React and Redux",
-    url: "/projects/cinetrek.png",
+    desc: "A Simple Quiz App for MCQ Tests using React and Redux -  ",
+    url: "/projects/mern-quizz.png",
     skills: ["React JS", "REDUX"],
     link: "https://mern-quizzies.vercel.app/",
-    featured: true,
+    featured: false,
   },
 ];
 

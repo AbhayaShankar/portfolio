@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import abhaya from "../public/abhaya.png";
+import abhaya from "../public/about.png";
 import classes from "../components/About/About.module.css";
 
 const about = () => {

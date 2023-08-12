@@ -2,12 +2,108 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   max-width: 70rem;
   margin: 0 auto;
   padding: 20px;
 }
 
 .about img {
+  margin-top: 20px;
   border-radius: 12px;
   margin-right: 35px;
+  width: 800px;
+  height: auto;
+  animation: aboutImg 1s;
+  object-fit: contain;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.intro h3 {
+  font-size: 24px;
+  margin: var(--size-4) 0;
+  color: var(--color-secondary);
+  font-family: "Inconsolata", monospace;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.intro p {
+  font-size: var(--size-4);
+  color: var(--color-grey-200);
+  width: 100%;
+  text-align: center;
+  max-width: 70rem;
+  margin: auto;
+  line-height: 34px;
+  word-spacing: 2px;
+  padding: 0 25px;
+  text-align: justify;
+}
+
+@keyframes aboutImg {
+  0% {
+    filter: blur(60px);
+    opacity: 0.1;
+  }
+  10% {
+    filter: blur(54px);
+    opacity: 0.14;
+  }
+  20% {
+    filter: blur(48px);
+    opacity: 0.2;
+  }
+  30% {
+    filter: blur(42px);
+    opacity: 0.38;
+  }
+  40% {
+    filter: blur(36px);
+    opacity: 0.48;
+  }
+  50% {
+    filter: blur(30px);
+    opacity: 0.6;
+  }
+  60% {
+    filter: blur(20px);
+    opacity: 0.72;
+  }
+  70% {
+    filter: blur(12px);
+    opacity: 0.8;
+  }
+  80% {
+    filter: blur(8px);
+    opacity: 0.85;
+  }
+  90% {
+    filter: blur(4px);
+    opacity: 0.9;
+  }
+  95% {
+    filter: blur(2px);
+    opacity: 0.9;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .intro {
+    --radius: 25vmin;
+    height: 100vh;
+  }
+
+  .intro h3 {
+    font-size: var(--size-8);
+  }
+
+  .intro p {
+    font-size: var(--size-5);
+  }
 }

@@ -10,14 +10,14 @@ const Project = ({ id, url, name, desc, link, skills }) => {
 
   return (
     <div className={classes.project} id={id}>
-      <Image src={url} width={900} height={7500} />
+      <Image src={url} width={900} height={7500} alt={name} />
       <div className={classes.projDetails}>
         <h2>{name}</h2>
         <p>{desc}</p>
         <div className={classes.skills}>
           Skills :
           {skills.map((skill) => (
-            <li>{skill}</li>
+            <li key={skill}>{skill}</li>
           ))}
         </div>
         <Link href={link} target="blank" className={classes.link}>

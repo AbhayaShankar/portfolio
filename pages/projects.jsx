@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import classes from "../components/Project/Project.module.css";
 import Project from "../components/Project/Project";
-import animxstore from "../public/projects/animxstore.png";
 import { ProjectsList } from "../helpers/ProjectList";
 
 const Projects = () => {
@@ -14,19 +13,13 @@ const Projects = () => {
         Real Estate Websites. Here is a collection of some of my projects and
         experiences.
       </p>
-      {/* <div className={classes.projects}>
-        <Project url={animxstore} />
-        <Project url={animxstore} />
-        <Project url={animxstore} />
-      </div> */}
 
       <div className={classes.projects}>
         {ProjectsList.map((proj) => {
-          const { id, name, desc, skills, link, url } = proj;
-
+          const { id, name, desc, skills, link, url, featured } = proj;
           return (
             <Project
-              id={id}
+              key={id}
               name={name}
               url={url}
               desc={desc}

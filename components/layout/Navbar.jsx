@@ -69,6 +69,16 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
+                <Link onClick={() => setIsMenuActive(false)} href="/projects">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link onClick={() => setIsMenuActive(false)} href="/about">
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link onClick={() => setIsMenuActive(false)} href="/contact">
                   Contact
                 </Link>
