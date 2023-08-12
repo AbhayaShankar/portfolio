@@ -25,7 +25,14 @@ const Projects = () => {
           const { id, name, desc, skills, link, url } = proj;
 
           return (
-            <Project id={id} name={name} url={url} desc={desc} link={link} />
+            <Project
+              id={id}
+              name={name}
+              url={url}
+              desc={desc}
+              link={link}
+              skills={skills}
+            />
           );
         })}
       </div>

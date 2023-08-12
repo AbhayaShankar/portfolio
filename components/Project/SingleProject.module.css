@@ -11,23 +11,50 @@
   border: 1px solid #cbcbcb7c;
 }
 
+.projDetails {
+  max-width: 800px;
+  margin: auto;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.skills li {
+  /* color: red; */
+  padding-bottom: 5px;
+  border-bottom: 2px solid #5c5b5b51;
+}
+
 .link {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   border: 1px solid #e1cacab5;
-  padding: 5px 8px;
-  border-radius: 12px;
+  padding: 8px 12px;
+  border-radius: 20px;
   max-width: fit-content;
   background-color: #3e3e3e51;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease-in-out;
+  color: rgb(199, 199, 199);
 }
 
 .link:hover {
   background-color: #5c5b5b51;
+  color: #fcfcfc;
 }
 
 .link a {
+  /* color: #fcfcfc; */
+  color: rgb(199, 199, 199);
+}
+
+.link a:hover {
+  /* color: #fcfcfc; */
   color: #fcfcfc;
 }

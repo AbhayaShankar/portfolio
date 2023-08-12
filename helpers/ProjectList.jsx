@@ -14,7 +14,7 @@ const ProjectsList = [
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
     url: "/projects/animxstore.png",
     skills: ["NextJS", "ChakraUI", "RapidAPI"],
-    link: "https://estates-empire.vercel.app/",
+    link: "https://animxstore.vercel.app/",
     featured: true,
   },
   {
@@ -23,7 +23,7 @@ const ProjectsList = [
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
     url: "/projects/cinetrek.png",
     skills: ["NextJS", "ChakraUI", "RapidAPI"],
-    link: "https://estates-empire.vercel.app/",
+    link: "https://cinetrek.netlify.app/",
     featured: true,
   },
   //   {
