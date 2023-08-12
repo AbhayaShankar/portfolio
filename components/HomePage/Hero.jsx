@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
-import abhaya from "../../public/abhaya.png";
 import abhayaS from "../../public/abhayaS.png";
 
 const Hero = () => {
@@ -30,9 +29,17 @@ const Hero = () => {
       </div>
       <h1>Hi! I'm Abhaya. </h1>
       <p>
-        I am a professional Web Developer who excels in creating responsive Web
-        Apps focusing on user Interfaces and User Experience. These are Blog
-        posts where I share Important Topics as I go learning various technology
+        I'm Abhaya, an India based professional Frontend Developer with over 1
+        &#189; years of experience in ReactJS/NextJS Development. I specialize
+        in creating responsive user interfaces for web-based applications that
+        prioritize design and user experience.
+        <br />
+        <br />I love building projects and contributing to Open Source. I am
+        learning and getting more hands-on expertise on Backend Technologies
+        using Express JS.
+        <br />
+        <br />
+        Currently I am working at Capgemini Inc. as a React Frontend Developer.
       </p>
     </section>
   );

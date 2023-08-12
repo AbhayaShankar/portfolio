@@ -98,7 +98,6 @@
 @media (min-width: 768px) {
   .hero {
     --radius: 25vmin;
-    height: 100vh;
   }
 
   .hero h1 {

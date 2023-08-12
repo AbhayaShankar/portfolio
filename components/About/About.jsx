@@ -12,9 +12,16 @@ const About = () => {
         <p>
           I'm Abhaya, an India based professional Frontend Developer with over 1
           &#189; years of experience in ReactJS/NextJS Development. I specialize
-          in creating responsive user interfaces for webbased applications that
+          in creating responsive user interfaces for web-based applications that
           prioritize design and user experience.
           <br />
+          <br />I love building projects and contributing to Open Source. I am
+          learning and getting more hands-on expertise on Backend Technologies
+          using Express JS.
+          <br />
+          <br />
+          Currently I am working at Capgemini Inc. as a React Frontend
+          Developer.
         </p>
       </div>
     </div>
