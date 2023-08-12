@@ -17,6 +17,7 @@ body {
   --color-grey-300: hsl(265, 6%, 66%);
   --color-grey-400: hsl(265, 4%, 57%);
   --color-grey-500: hsl(265, 3%, 53%);
+  --color-grey-550: hsl(0, 1%, 60%);
   --color-grey-600: hsla(263, 4%, 42%, 0.5);
   --color-grey-700: hsl(265, 4%, 31%);
   --color-grey-750: #413e3e;

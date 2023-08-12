@@ -12,10 +12,13 @@ import {
   LinkedinIcon,
 } from "react-share";
 
-const PostHeader = ({ image, title, shareUrl }) => {
+const PostHeader = ({ image, title, shareUrl, timeToRead, date }) => {
   return (
     <header className={classes.header}>
       <h1>{title}</h1>
+      <span className={classes.time}>
+        {timeToRead} min read | {date}
+      </span>
       <Image src={image} alt={title} width={800} height={800} />
       Click to Share
       <div style={{ display: "flex", alignItems: "center", gap: 15 }}>
