@@ -5,6 +5,7 @@ slug: "demo"
 image: "2.jfif"
 excerpt: "NEXTJS is the React framework for production - it makes building fullstack React apps and sites a breeze  and ships with built-in SSR/SSG."
 isFeatured: false
+isPublished: true
 
 ---
 

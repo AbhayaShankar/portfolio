@@ -90,7 +90,7 @@ const ContactForm = () => {
   return (
     <section style={{ position: "relative" }} className={classes.contact}>
       <h2>
-        Contact Form
+        Contact Me
         <BsStars
           className={classes.star1}
           style={{ marginLeft: 20 }}
@@ -144,6 +144,7 @@ const ContactForm = () => {
               required
               value={numberVal}
               onChange={(e) => setNumberVal(e.target.value)}
+              inputMode="numeric"
             />
           </div>
         </div>

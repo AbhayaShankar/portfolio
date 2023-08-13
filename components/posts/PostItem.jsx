@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import classes from "./PostItem.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import { Context } from "../../context/context";
 
 const PostItem = (props) => {
   const { setIsMenuActive } = useContext(Context);
-  const { title, image, excerpt, date, slug } = props.post;
+  const { title, image, excerpt, date, slug, isPublished } = props.post;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     day: "numeric",
@@ -21,24 +21,57 @@ const PostItem = (props) => {
   const imagePath = `/posts/${slug}/${image}`;
 
   return (
-    <li className={classes.post} onClick={() => setIsMenuActive(false)}>
-      <Link href={`/posts/${slug}`}>
-        <div className={classes.image}>
-          <Image
-            src={imagePath}
-            alt={title}
-            width={275}
-            height={200}
-            // layout="responsive"
-          />
-        </div>
-        <div className={classes.content}>
-          <time>{formattedDate}</time>
-          <h3>{title}</h3>
-          {textCount > 140 ? <p>{trimmedText}...</p> : <p>{excerpt}</p>}
-        </div>
-      </Link>
-    </li>
+    <Fragment>
+      {isPublished ? (
+        // For published blog
+        <li className={classes.post} onClick={() => setIsMenuActive(false)}>
+          <Link href={`/posts/${slug}`}>
+            {/* <Link href={isPublished ? `/posts/${slug}` : ""}> */}
+            <div className={classes.image}>
+              <Image
+                src={imagePath}
+                alt={title}
+                width={275}
+                height={200}
+                // layout="responsive"
+              />
+            </div>
+            <div className={classes.content}>
+              {isPublished ? (
+                <time>{formattedDate}</time>
+              ) : (
+                <time>Coming soon...</time>
+              )}
+              <h3>{title}</h3>
+              {textCount > 140 ? <p>{trimmedText}...</p> : <p>{excerpt}</p>}
+            </div>
+          </Link>
+        </li>
+      ) : (
+        // UnPublished blog
+        <li className={classes.post2} onClick={() => setIsMenuActive(false)}>
+          {/* <Link href={isPublished ? `/posts/${slug}` : ""}> */}
+          <div className={classes.image}>
+            <Image
+              src={imagePath}
+              alt={title}
+              width={275}
+              height={200}
+              // layout="responsive"
+            />
+          </div>
+          <div className={classes.content}>
+            {isPublished ? (
+              <time>{formattedDate}</time>
+            ) : (
+              <time>Coming soon...</time>
+            )}
+            <h3>{title}</h3>
+            {textCount > 140 ? <p>{trimmedText}...</p> : <p>{excerpt}</p>}
+          </div>
+        </li>
+      )}
+    </Fragment>
   );
 };
 

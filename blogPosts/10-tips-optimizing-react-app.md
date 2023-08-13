@@ -5,6 +5,7 @@ slug: "10-tips-optimizing-react-app"
 image: "1.webp"
 excerpt: "Optimizing your React app can have a big impact on its performance and user experience."
 isFeatured: false
+isPublished: true
 
 
 ---

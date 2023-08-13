@@ -5,6 +5,7 @@ slug: "future-of-web-development-webassembly"
 image: "1.webp"
 excerpt: "WebAssembly is a low-level bytecode format for the web that promises to bring native-like performance to web applications."
 isFeatured: true
+isPublished: false
 
 
 ---
