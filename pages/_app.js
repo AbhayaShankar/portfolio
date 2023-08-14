@@ -5,7 +5,6 @@ import Head from "next/head";
 import "../styles/_variable.scss";
 import NProgress from "nprogress";
 import { Router } from "next/router";
-import "nprogress/nprogress.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -33,6 +32,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* another meta data can be added regarding the favicon. */}
+
         <link rel="shortcut icon" href="/Logo.png" />
       </Head>
       <Component {...pageProps} />
