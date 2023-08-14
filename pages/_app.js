@@ -18,13 +18,16 @@ function MyApp({ Component, pageProps }) {
 
   Router.events.on("routeChangeStart", () => {
     NProgress.set(0);
-    NProgress.start();
+    // NProgress.start();
     NProgress.configure({ trickleRate: 0.02, trickleSpeed: 1000 });
   });
 
   Router.events.on("routeChangeComplete", () => {
-    // NProgress.done();
     NProgress.set(0.99);
+  });
+
+  Router.events.on("routeChangeError", () => {
+    NProgress.done();
   });
 
   return (
