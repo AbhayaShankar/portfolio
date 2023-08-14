@@ -5,7 +5,7 @@ import Head from "next/head";
 import "../styles/_variable.scss";
 import NProgress from "nprogress";
 import { Router } from "next/router";
-import "../node_modules/nprogress/nprogress.css";
+import "nprogress/nprogress.css";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
