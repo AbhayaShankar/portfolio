@@ -1,13 +1,8 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useContext,
-  Fragment,
-} from "react";
+import React, { useContext, Fragment } from "react";
 import classes from "./Navbar.module.css";
 import Link from "next/link";
 import { Context } from "../../context/context";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { isMenuActive, setIsMenuActive } = useContext(Context);
@@ -24,6 +19,12 @@ const Navbar = () => {
   //   };
   // }, [clsMenuOnOutsideClickRef]);
 
+  const router = useRouter();
+
+  const isActive = (path) => {
+    return router.pathname === path ? classes.active : "";
+  };
+
   return (
     <Fragment>
       {/* <header className={classes.upperheader}></header> */}
@@ -38,20 +39,29 @@ const Navbar = () => {
         <nav className={classes.right_navbar}>
           <ul>
             <li>
-              <Link href="/">Home</Link>
-            </li>
-            {/* <li>Projects</li> */}
-            <li>
-              <Link href="/posts">Blogs</Link>
+              <Link className={isActive("/")} href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link className={isActive("/posts")} href="/posts">
+                Blogs
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link className={isActive("/projects")} href="/projects">
+                Projects
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link className={isActive("/about")} href="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className={isActive("/contact")} href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </nav>
@@ -70,7 +80,6 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                {/* <li onClick={() => setIsMenuActive(false)}>Projects</li> */}
                 <li>
                   <Link onClick={() => setIsMenuActive(false)} href="/posts">
                     Blogs

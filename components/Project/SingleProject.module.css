@@ -5,7 +5,8 @@
 }
 
 .project img {
-  max-width: 70rem;
+  /* max-width: 70rem; */
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   background-color: transparent;
@@ -45,11 +46,13 @@
 .skills {
   display: flex;
   gap: 20px;
+  flex-flow: wrap;
   list-style-type: none;
   margin: 20px 0;
   font-family: "PT Mono", monospace;
   font-size: 17.5px;
   color: var(--color-grey-200);
+  filter: brightness(1.5);
 }
 
 .skills li {
@@ -59,10 +62,12 @@
   font-family: "PT Mono", monospace;
   font-size: 17.5px;
   letter-spacing: 0.25px;
+  filter: brightness(0.7);
 }
 
 .skills li:hover {
   border-bottom: 2px solid #fcfcfc;
+  filter: brightness(0.7);
 }
 
 .link {
@@ -108,5 +113,14 @@
   .project p {
     font-size: var(--size-5);
     font-size: 18px;
+  }
+
+  .skills {
+    flex-direction: row;
+  }
+
+  .skills li {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #5c5b5b51;
   }
 }

@@ -48,7 +48,7 @@
   font-size: 16px;
   font-family: "Rubik Glitch", cursive;
   color: #b4b4b4;
-  letter-spacing: 3.5px;
+  letter-spacing: 2.5px;
   cursor: pointer;
   transition: color 0.3s ease;
   font-weight: 500;
@@ -61,11 +61,22 @@
 .right_navbar ul li a {
   text-decoration: none;
   color: #b4b4b4;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
 .right_navbar ul li a:hover {
+  background-color: var(--color-grey-800a);
   color: #e2e2e2;
+}
+
+.right_navbar ul li a.active {
+  transition: all 0.3s ease;
+  /* padding: 8px 12px; */
+  border-radius: 8px;
+  background-color: var(--color-grey-800a);
+  filter: brightness(1.12);
 }
 
 .menu {
@@ -95,7 +106,6 @@
   right: 0;
   top: -15px;
   border-radius: 50%;
-  /* margin-bottom: 50px; */
   animation: showClose 0.4s ease-in forwards;
 }
 
@@ -115,9 +125,6 @@
   letter-spacing: 3.5px;
   cursor: pointer;
   transition: color 0.3s ease;
-  font-weight: 500;
-  /* line-height: 25px; */
-  /* margin-top: 30px; */
   text-align: right;
   margin-right: 20px;
   width: fit-content;
@@ -159,7 +166,7 @@
   .right_navbar ul {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 20px;
   }
 
   .menu {
