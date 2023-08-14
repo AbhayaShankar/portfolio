@@ -28,13 +28,7 @@ const PostItem = (props) => {
           <Link href={`/posts/${slug}`}>
             {/* <Link href={isPublished ? `/posts/${slug}` : ""}> */}
             <div className={classes.image}>
-              <Image
-                src={imagePath}
-                alt={title}
-                width={275}
-                height={200}
-                // layout="responsive"
-              />
+              <Image src={imagePath} alt={title} width={275} height={200} />
             </div>
             <div className={classes.content}>
               {isPublished ? (
@@ -50,15 +44,8 @@ const PostItem = (props) => {
       ) : (
         // UnPublished blog
         <li className={classes.post2} onClick={() => setIsMenuActive(false)}>
-          {/* <Link href={isPublished ? `/posts/${slug}` : ""}> */}
           <div className={classes.image}>
-            <Image
-              src={imagePath}
-              alt={title}
-              width={275}
-              height={200}
-              // layout="responsive"
-            />
+            <Image src={imagePath} alt={title} width={275} height={200} />
           </div>
           <div className={classes.content}>
             {isPublished ? (

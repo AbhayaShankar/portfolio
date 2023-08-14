@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Cutive&family=Genos:wght@400;600&family=Gloock&family=Inconsolata:wght@300;400&family=Inter&family=Montserrat:wght@400;700;900&family=Poppins:wght@400;600;800&family=Rampart+One&family=Rubik+Glitch&family=Sacramento&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Cutive&family=Genos:wght@400;600&family=Gloock&family=Inconsolata:wght@300;400&family=Inter&family=Montserrat:wght@400;700;900&family=PT+Mono&family=Poppins:wght@400;600;800&family=Rampart+One&family=Rubik+Glitch&family=Sacramento&family=Space+Mono:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
   --color-grey-700: hsl(265, 4%, 31%);
   --color-grey-750: #413e3e;
   --color-grey-800: #212121e0;
+  --color-grey-800a: #2a2a2abe;
   --color-grey-900: hsl(280, 5%, 13%);
 
   --color-primary-50: #c8b3ce;
@@ -57,6 +59,7 @@ body {
   color: #e8e8e8;
   font-family: "Roboto", sans-serif;
   font-family: "Inconsolata", monospace;
+  /* font-family: "PT Mono", monospace; */
 }
 ::selection {
   background-color: #e8e8e8;
@@ -67,6 +70,7 @@ h1,
 h2,
 h3 {
   font-family: "Oswald", "Roboto", sans-serif;
+  font-family: "PT Mono", monospace;
 }
 
 a {
