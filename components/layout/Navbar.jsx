@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useContext,
+  Fragment,
+} from "react";
 import classes from "./Navbar.module.css";
 import Link from "next/link";
 import { Context } from "../../context/context";
@@ -19,81 +25,84 @@ const Navbar = () => {
   // }, [clsMenuOnOutsideClickRef]);
 
   return (
-    <header className={classes.header}>
-      <div className={classes.left_navbar}>
-        <p>
-          <Link href="/" onClick={() => setIsMenuActive(false)}>
-            Abhaya Shankar
-          </Link>
-        </p>
-      </div>
-      <nav className={classes.right_navbar}>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          {/* <li>Projects</li> */}
-          <li>
-            <Link href="/posts">Blogs</Link>
-          </li>
-          <li>
-            <Link href="/projects">Projects</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-      <img
-        onClick={() => setIsMenuActive(true)}
-        className={classes.menu}
-        src="/menu.png"
-        alt="menu-btn"
-      />
-      {isMenuActive && (
-        <div className={classes.stickyMenu}>
-          <nav className={classes.menu_right_navbar}>
-            <ul className="">
-              <li>
-                <Link onClick={() => setIsMenuActive(false)} href="/">
-                  Home
-                </Link>
-              </li>
-              {/* <li onClick={() => setIsMenuActive(false)}>Projects</li> */}
-              <li>
-                <Link onClick={() => setIsMenuActive(false)} href="/posts">
-                  Blogs
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setIsMenuActive(false)} href="/projects">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setIsMenuActive(false)} href="/about">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link onClick={() => setIsMenuActive(false)} href="/contact">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-          <img
-            onClick={() => setIsMenuActive(false)}
-            className={classes.close_btn}
-            src="/close.png"
-            alt="close-btn"
-          />
+    <Fragment>
+      {/* <header className={classes.upperheader}></header> */}
+      <header className={classes.header}>
+        <div className={classes.left_navbar}>
+          <p>
+            <Link href="/" onClick={() => setIsMenuActive(false)}>
+              Abhaya Shankar
+            </Link>
+          </p>
         </div>
-      )}
-    </header>
+        <nav className={classes.right_navbar}>
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            {/* <li>Projects</li> */}
+            <li>
+              <Link href="/posts">Blogs</Link>
+            </li>
+            <li>
+              <Link href="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+        <img
+          onClick={() => setIsMenuActive(true)}
+          className={classes.menu}
+          src="/menu.png"
+          alt="menu-btn"
+        />
+        {isMenuActive && (
+          <div className={classes.stickyMenu}>
+            <nav className={classes.menu_right_navbar}>
+              <ul className="">
+                <li>
+                  <Link onClick={() => setIsMenuActive(false)} href="/">
+                    Home
+                  </Link>
+                </li>
+                {/* <li onClick={() => setIsMenuActive(false)}>Projects</li> */}
+                <li>
+                  <Link onClick={() => setIsMenuActive(false)} href="/posts">
+                    Blogs
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => setIsMenuActive(false)} href="/projects">
+                    Projects
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => setIsMenuActive(false)} href="/about">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link onClick={() => setIsMenuActive(false)} href="/contact">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <img
+              onClick={() => setIsMenuActive(false)}
+              className={classes.close_btn}
+              src="/close.png"
+              alt="close-btn"
+            />
+          </div>
+        )}
+      </header>
+    </Fragment>
   );
 };
 

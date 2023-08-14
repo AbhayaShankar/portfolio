@@ -3,8 +3,31 @@ import Layout from "../components/layout/Layout";
 import "../styles/code.css";
 import Head from "next/head";
 import "../styles/_variable.scss";
+import NProgress from "nprogress";
+import { Router } from "next/router";
+import "../node_modules/nprogress/nprogress.css";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+  NProgress.configure({ showSpinner: false, easing: "ease", speed: 1000 });
+
+  useEffect(() => {
+    NProgress.set(0.99);
+  }, [Router.events]);
+
+  // Router.events.on("hashChangeStart")
+
+  Router.events.on("routeChangeStart", () => {
+    NProgress.set(0);
+    NProgress.start();
+    NProgress.configure({ trickleRate: 0.02, trickleSpeed: 1000 });
+  });
+
+  Router.events.on("routeChangeComplete", () => {
+    // NProgress.done();
+    NProgress.set(0.99);
+  });
+
   return (
     <Layout>
       <Head>
