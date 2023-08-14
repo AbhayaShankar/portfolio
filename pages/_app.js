@@ -10,11 +10,11 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false, easing: "ease", speed: 1000 });
 
+  // Make sure progress bar starts from 0. its just static routes close so early.
+
   useEffect(() => {
     NProgress.set(0.99);
-  }, [Router.events]);
-
-  // Router.events.on("hashChangeStart")
+  }, []);
 
   Router.events.on("routeChangeStart", () => {
     NProgress.set(0);
@@ -23,7 +23,9 @@ function MyApp({ Component, pageProps }) {
   });
 
   Router.events.on("routeChangeComplete", () => {
-    NProgress.set(0.99);
+    setTimeout(() => {
+      NProgress.set(0.99);
+    }, 600);
   });
 
   Router.events.on("routeChangeError", () => {
