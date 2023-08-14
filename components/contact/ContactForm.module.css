@@ -18,9 +18,11 @@
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 1.5px;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 25px;
   font-family: "Inconsolata", monospace;
+  font-family: "PT Mono", monospace;
+  font-weight: 600;
   letter-spacing: 2px;
 }
 
@@ -31,28 +33,26 @@
   margin: var(--size-2) 0 var(--size-1) 0;
   margin-top: 10px;
   letter-spacing: 1px;
-  font-family: "Inconsolata", monospace;
+  font-family: "PT Mono", monospace;
   letter-spacing: 2px;
-  font-size: 18px;
+  font-size: 17px;
   color: #fcfcfc9d;
 }
 
 .form input {
   font: inherit;
   padding: var(--size-1) var(--size-2) 4px;
-  /* border-radius: 4px; */
   width: 100%;
   border: none;
   border-bottom: 1px solid var(--color-grey-400);
-  /* border: 1px solid var(--color-grey-750); */
   background-color: transparent;
   color: #fcfcfc;
-  letter-spacing: 1.2px;
+  letter-spacing: 2px;
   font-weight: 500;
   resize: none;
   outline: none;
   font-size: 18px;
-  /* margin-top: 10px; */
+  font-family: "PT Mono", monospace;
 }
 
 .form textarea {
@@ -67,6 +67,7 @@
   resize: none;
   outline: none;
   font-size: 18px;
+  font-family: "PT Mono", monospace;
   /* margin-top: 10px; */
 }
 
@@ -115,8 +116,8 @@
 }
 
 @media (min-width: 768px) {
-  .contact h1 {
-    font-size: var(--size-16);
+  .contact h2 {
+    font-size: var(--size-8);
     text-align: center;
   }
 }

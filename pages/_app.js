@@ -10,15 +10,13 @@ import { useEffect } from "react";
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false, easing: "ease", speed: 1000 });
 
-  // Make sure progress bar starts from 0. its just static routes close so early.
-
+  // For first time loading of Progressbar
   useEffect(() => {
     NProgress.set(0.99);
   }, []);
 
   Router.events.on("routeChangeStart", () => {
     NProgress.set(0);
-    // NProgress.start();
     NProgress.configure({ trickleRate: 0.02, trickleSpeed: 1000 });
   });
 
