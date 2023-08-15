@@ -1,23 +1,8 @@
-.upperheader {
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 4px;
-  z-index: 20;
-  background: linear-gradient(
-    45deg,
-    #1a79d7,
-    #bc72de 33.65%,
-    #cb4b73 62.81%,
-    #cc9e07
-  );
-}
-
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 70px;
   width: 100%;
   padding: 15px 25px 15px 25px;
   background-color: var(--color-primary-2);
@@ -31,7 +16,7 @@
 }
 
 .left_navbar p a {
-  font-size: 26px;
+  font-size: 28px;
   font-family: "Sacramento", cursive;
   letter-spacing: 1.75px;
   font-weight: 500;
@@ -121,7 +106,7 @@
   list-style-type: none;
   font-size: 16px;
   font-family: "PT Mono", monospace;
-  font-weight: 600;
+  font-weight: 800;
   /* font-family: "Rubik Glitch", cursive; */
   color: #b4b4b4;
   letter-spacing: 3.5px;
@@ -132,11 +117,12 @@
   width: fit-content;
   background-color: #e2e2e2;
   border-radius: 4px;
+  padding: 3px 8px;
   color: #191919;
 }
 
 .menu_right_navbar ul li:nth-child(2) {
-  padding: 2px 8px;
+  padding: 3px 8px;
 }
 
 .menu_right_navbar ul:first-child {
@@ -152,7 +138,7 @@
   color: #b4b4b4;
   transition: color 0.3s ease;
   color: #191919;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border-radius: 80px;
 }
 
@@ -162,7 +148,7 @@
 
 @media (min-width: 768px) {
   .header {
-    padding: 15px 50px 15px 50px;
+    padding: 20px 50px 15px 50px;
   }
 
   .right_navbar ul {

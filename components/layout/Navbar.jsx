@@ -6,18 +6,6 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
   const { isMenuActive, setIsMenuActive } = useContext(Context);
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (!clsMenuOnOutsideClickRef.current.contains(event.target)) {
-  //       setIsMenuActive(false);
-  //     }
-  //   };
-  //   document.addEventListener("click", handleClickOutside);
-
-  //   return () => {
-  //     document.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, [clsMenuOnOutsideClickRef]);
 
   const router = useRouter();
 
@@ -27,7 +15,6 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      {/* <header className={classes.upperheader}></header> */}
       <header className={classes.header}>
         <div className={classes.left_navbar}>
           <p>
