@@ -88,6 +88,12 @@
   scale: 1 1;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -121,7 +127,7 @@
 
 @media (min-width: 768px) {
   .project {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .project h2 {
@@ -140,5 +146,10 @@
   .skills li {
     padding-bottom: 5px;
     border-bottom: 2px solid #5c5b5b51;
+  }
+
+  .links {
+    flex-direction: row;
+    gap: 25px;
   }
 }

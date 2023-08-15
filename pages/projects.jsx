@@ -16,7 +16,7 @@ const Projects = () => {
 
       <div className={classes.projects}>
         {ProjectsList.map((proj) => {
-          const { id, name, desc, skills, link, url, featured } = proj;
+          const { id, name, desc, skills, link, url, note, source } = proj;
           return (
             <Project
               key={id}
@@ -25,6 +25,8 @@ const Projects = () => {
               desc={desc}
               link={link}
               skills={skills}
+              note={note}
+              source={source}
             />
           );
         })}

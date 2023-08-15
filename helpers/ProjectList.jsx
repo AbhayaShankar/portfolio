@@ -14,6 +14,8 @@ const ProjectsList = [
     ],
     link: "https://jobquest-h6so.onrender.com/",
     featured: true,
+    note: "",
+    source: "https://github.com/AbhayaShankar/Jobster",
   },
   {
     id: 2,
@@ -23,6 +25,8 @@ const ProjectsList = [
     skills: ["NextJS", "ChakraUI", "RapidAPI"],
     link: "https://estates-empire.vercel.app/",
     featured: true,
+    note: "",
+    source: "https://github.com/AbhayaShankar/estate-empires",
   },
   {
     id: 3,
@@ -40,6 +44,8 @@ const ProjectsList = [
     ],
     link: "https://animxstore.vercel.app/",
     featured: true,
+    note: "App is hoster on free Heroku server. Please give it 15-30s to spin up.",
+    source: "https://github.com/AbhayaShankar/AnimxStore",
   },
   {
     id: 4,
@@ -49,6 +55,8 @@ const ProjectsList = [
     skills: ["ReactJS", "TMDB API", "React-Carousel", "MaterialUI"],
     link: "https://cinetrek.netlify.app/",
     featured: false,
+    note: "",
+    source: "https://github.com/AbhayaShankar/Cinetrek",
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ const ProjectsList = [
     skills: ["ReactJS", "Redux"],
     link: "https://mern-quizzies.vercel.app/",
     featured: false,
+    note: "",
+    source: "https://github.com/AbhayaShankar/Assessment-App",
   },
 ];
 
