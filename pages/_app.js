@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
   Router.events.on("routeChangeComplete", () => {
     setTimeout(() => {
       NProgress.set(0.99);
-    }, 400);
+    }, 600);
   });
 
   Router.events.on("routeChangeError", () => {

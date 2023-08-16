@@ -44,7 +44,7 @@ const ProjectsList = [
     ],
     link: "https://animxstore.vercel.app/",
     featured: true,
-    note: "App is hoster on free Heroku server. Please give it 15-30s to spin up.",
+    note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/AnimxStore",
   },
   {

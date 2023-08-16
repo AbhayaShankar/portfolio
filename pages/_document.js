@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         {/* <link rel="shortcut icon" href="/Logo.png" /> */}
-        <link rel="stylesheet" type="text/css" href="../styles/nprogress.css" />
+        {/* <link rel="stylesheet" type="text/css" href="../styles/nprogress.css" /> */}
         <Head />
         <body>
           <Main />
