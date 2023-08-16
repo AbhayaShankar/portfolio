@@ -19,7 +19,14 @@ const ContactForm = () => {
   const errorNotif = (text) => toast.error(text);
   const successNotif = (text) => toast.success(text);
 
-  const validPhoneNumber = numberVal.match(/^[6-9]\d{9}$/);
+  const handleNumberChange = (e) => {
+    const inputVal = e.target.value;
+    const truncatedVal = inputVal.slice(0, 10); // Truncate to 10 characters
+    setNumberVal(truncatedVal);
+  };
+
+  // Valid Phone number should be Phone Nunber starting with 6-9 and then having total 10 digits.
+  const validPhoneNumber = numberVal.length === 10;
 
   useEffect(() => {
     if (currStatus === "success" || currStatus === "error") {
@@ -143,8 +150,12 @@ const ContactForm = () => {
               id="number"
               required
               value={numberVal}
-              onChange={(e) => setNumberVal(e.target.value)}
+              onChange={(e) => {
+                setNumberVal(e.target.value);
+                handleNumberChange;
+              }}
               inputMode="numeric"
+              maxLength={10}
             />
           </div>
         </div>
@@ -173,7 +184,6 @@ const ContactForm = () => {
           className={classes.star3}
         />
 
-        {/* <BsStars style={{}} color="#F58F29" size={30} /> */}
         <div className={classes.actions} onClick={() => setIsMenuActive(false)}>
           <button>Send Message</button>
         </div>

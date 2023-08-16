@@ -16,7 +16,7 @@ async function formHandler(req, res) {
       name.trim === "" ||
       message.trim === "" ||
       !phoneNumber ||
-      !phoneNumber.match(/^[6-9]\d{9}$/)
+      !phoneNumber.length === 10
     ) {
       res.status(422).json({ message: "Invalid Input" });
       return;
