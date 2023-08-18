@@ -18,4 +18,12 @@ These are Priorities for now. Will Wirte down more if I need to...
 10. Add project route and show active projects... OR ELSE Remove projects routes... ❓
 11. Add toasts to contact page ✅
 12. Change toastify designs ❌
-13. Change conatct form page (Design first) ❌
+13. Change contact form page (Design first) ❌
+
+Contact Idea - 
+
+Contact
+
+You can contact me vvia my social handles and also feel free to talk about projects and ventures. Drop a Hi! to connect and we can discuss all about javascript and the world around it.
+
+Any Feedbacks for me... Drop your message here. like this
