@@ -58,17 +58,17 @@ const ProjectsList = [
     note: "",
     source: "https://github.com/AbhayaShankar/Cinetrek",
   },
-  {
-    id: 5,
-    name: "MERN Quizzies",
-    desc: "A Simple Quiz App for MCQ Tests using React and Redux -  ",
-    url: "/projects/mern-quizz.png",
-    skills: ["ReactJS", "Redux"],
-    link: "https://mern-quizzies.vercel.app/",
-    featured: false,
-    note: "",
-    source: "https://github.com/AbhayaShankar/Assessment-App",
-  },
+  // {
+  //   id: 5,
+  //   name: "MERN Quizzies",
+  //   desc: "A Simple Quiz App for MCQ Tests using React and Redux  ",
+  //   url: "/projects/mern-quizz.png",
+  //   skills: ["ReactJS", "Redux"],
+  //   link: "https://mern-quizzies.vercel.app/",
+  //   featured: false,
+  //   note: "",
+  //   source: "https://github.com/AbhayaShankar/Assessment-App",
+  // },
 ];
 
 const workExp = [
