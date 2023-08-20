@@ -20,10 +20,22 @@ These are Priorities for now. Will Wirte down more if I need to...
 12. Change toastify designs ❌
 13. Change contact form page (Design first) ❌
 
-Contact Idea - 
+Contact Idea - ✅ done
 
 Contact
 
 You can contact me vvia my social handles and also feel free to talk about projects and ventures. Drop a Hi! to connect and we can discuss all about javascript and the world around it.
 
 Any Feedbacks for me... Drop your message here. like this
+
+### Changing Blog App to Portfolio Website - 15.08.2023
+
+- Project Routes added
+- About Section added
+  
+
+Things to do tomorrow - 21.08.2023
+
+1. Change the font of Project section to proper fz and everything
+2. Add details in About section
+3. Project List helper - Title Desc and correct texts. 
