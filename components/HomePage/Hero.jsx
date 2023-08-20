@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import abhayaS from "../../public/abhayaS.png";
+import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Hero = () => {
   const text =
@@ -41,6 +43,13 @@ const Hero = () => {
         <br />
         Currently I am working at Capgemini Inc. as a React Frontend Developer.
       </p>
+      <div className={classes.socials}>
+        <FaGithub fontSize={43} />
+        <FaLinkedinIn fontSize={43} />
+        <FaTwitter fontSize={43} />
+        <FaInstagram fontSize={43} />
+        <AiOutlineMail fontSize={43} />
+      </div>
     </section>
   );
 };

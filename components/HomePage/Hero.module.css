@@ -7,6 +7,8 @@
 }
 
 .hero {
+  max-width: 70rem;
+  margin: 0 auto;
   text-align: center;
   background-color: var(--color-primary);
   padding: var(--size-12) 0 var(--size-20);
@@ -84,6 +86,24 @@
   word-spacing: 2px;
   padding: 0 25px;
   text-align: justify;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0 0 25px;
+}
+
+.socials svg {
+  color: var(--color-grey-200);
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.socials svg:hover {
+  background-color: var(--color-grey-600);
+  color: var(--color-grey-100);
 }
 
 @keyframes rotateText {
