@@ -7,8 +7,11 @@
 }
 
 body {
-  --color-primary: #191919;
-  --color-primary-2: #191919ae;
+  /* --color-primary: #191919;
+  --color-primary-2: #191919ae; */
+
+  --color-primary: #111;
+  --color-primary-2: #141414ae;
 
   --color-secondary: #e8e8e8;
 
@@ -24,7 +27,8 @@ body {
   --color-grey-750: #413e3e;
   --color-grey-800: #212121e0;
   --color-grey-800a: #2a2a2abe;
-  --color-grey-900: hsl(280, 5%, 13%);
+  --color-grey-900: #1b1a1b;
+  --color-disabled: #191919;
 
   --color-primary-50: #c8b3ce;
   --color-primary-100: #a07aaa;

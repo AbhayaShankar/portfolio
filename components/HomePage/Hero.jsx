@@ -44,11 +44,11 @@ const Hero = () => {
         Currently I am working at Capgemini Inc. as a React Frontend Developer.
       </p>
       <div className={classes.socials}>
-        <FaGithub fontSize={43} />
-        <FaLinkedinIn fontSize={43} />
-        <FaTwitter fontSize={43} />
-        <FaInstagram fontSize={43} />
-        <AiOutlineMail fontSize={43} />
+        <FaGithub />
+        <FaLinkedinIn />
+        <FaTwitter />
+        <FaInstagram />
+        <AiOutlineMail />
       </div>
     </section>
   );

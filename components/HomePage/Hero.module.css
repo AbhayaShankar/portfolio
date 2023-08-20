@@ -99,6 +99,7 @@
   transition: all 0.3s ease;
   padding: 8px;
   border-radius: 6px;
+  font-size: 36px;
 }
 
 .socials svg:hover {
@@ -126,5 +127,9 @@
 
   .hero p {
     font-size: var(--size-5);
+  }
+
+  .socials svg {
+    font-size: 43px;
   }
 }

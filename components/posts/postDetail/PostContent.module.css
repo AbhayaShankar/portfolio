@@ -73,7 +73,7 @@
 
 .markdownContent pre {
   padding: 20px 20px;
-  background-color: #0d0d10;
+  background-color: #050505;
   border-radius: 5px;
   white-space: pre-wrap;
   font-size: 16px;
@@ -81,7 +81,7 @@
 }
 
 .markdownContent code {
-  background-color: #0d0d10;
+  background-color: #050505;
   font-size: 14px;
   padding: 3px 8px;
   border-radius: 4px;
@@ -134,7 +134,7 @@
 
   .markdownContent pre {
     padding: 20px 25px;
-    background-color: #0d0d10;
+    background-color: #050505;
     border-radius: 5px;
     white-space: pre-wrap;
     font-size: 16px;
