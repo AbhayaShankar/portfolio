@@ -5,6 +5,7 @@ import abhayaS from "../../public/abhayaS.png";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
+import Wavy from "../Wrapper/Wavy";
 
 const Hero = () => {
   const text =
@@ -80,7 +81,7 @@ const Hero = () => {
           <AiOutlineMail />
         </Link>
       </div>
-      <div className={classes.box} />
+      <Wavy />
     </section>
   );
 };

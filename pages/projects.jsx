@@ -3,6 +3,7 @@ import classes from "../components/Project/Project.module.css";
 import Project from "../components/Project/Project";
 import { ProjectsList } from "../helpers/ProjectList";
 import Wrapper from "../components/Wrapper/Wrapper";
+import Wavy from "../components/Wrapper/Wavy";
 
 const Projects = () => {
   return (
@@ -13,8 +14,7 @@ const Projects = () => {
           Real Estate Websites. Here is a collection of some of my projects and
           experiences.`}
     >
-      <div className={classes.box} />
-
+      <Wavy />
       <div className={classes.projects}>
         {ProjectsList.map((proj) => {
           const { id, name, desc, skills, link, url, note, source } = proj;

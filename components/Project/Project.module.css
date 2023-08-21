@@ -5,4 +5,5 @@
   gap: 50px;
   flex-direction: column;
   margin-top: 20px;
+  padding: var(--size-12) 0 var(--size-20);
 }

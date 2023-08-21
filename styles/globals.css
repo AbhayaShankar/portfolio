@@ -113,33 +113,6 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #3b3b3b;
 }
 
-.box {
-  color: var(--color-grey-200);
-  opacity: 0.3;
-  margin-top: 40px;
-  width: 100%;
-  /* animation: wave 2s ease forwards; */
-
-  --mask: radial-gradient(
-        22.86px at 50% calc(100% + 20px),
-        #0000 calc(99% - 1px),
-        #000 calc(101% - 1px) 99%,
-        #0000 101%
-      )
-      calc(50% - 20px) calc(50% - 5.5px + 0.5px) / 40px 11px repeat-x,
-    radial-gradient(
-        22.86px at 50% -20px,
-        #0000 calc(99% - 1px),
-        #000 calc(101% - 1px) 99%,
-        #0000 101%
-      )
-      50% calc(50% + 5.5px) / 40px 11px repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  background: var(--color-grey-200);
-  height: 20px;
-}
-
 /* Make clicks pass-through */
 #nprogress {
   pointer-events: none;
