@@ -83,11 +83,11 @@ const ContactForm = () => {
   }
 
   if (currStatus === "pending") {
-    pendingNotif("Your data is being submitted!");
+    pendingNotif("Thankyou for connecting with me!");
   }
 
   if (currStatus === "success") {
-    successNotif("Your message has been sent successfully!");
+    successNotif("I will get back to you shortly!");
   }
 
   if (currStatus === "error") {
@@ -97,7 +97,7 @@ const ContactForm = () => {
   return (
     <section style={{ position: "relative" }} className={classes.contact}>
       <h2>
-        Contact Me
+        I'd Love to hear from you
         <BsStars
           className={classes.star1}
           style={{ marginLeft: 20 }}

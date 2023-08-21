@@ -15,10 +15,7 @@ const ContactPage = () => {
       </Head>
       <Wrapper
         title={"Contact"}
-        desc={`You can contact me via my social handles and also feel free to talk
-          about projects and ventures. Drop a Hi! to connect and we can discuss
-          all about javascript and the world around it. Any Feedbacks for me...
-          Drop your message here.`}
+        desc={`You can contact me via my social handles,  I am open to discussing various projects and business ventures. Feel free to initiate a conversation with a simple 'Hi/Hello' and we can delve into topics related to JavaScript and the world around it. Your feedback is also valuable to me; you can leave your message here`}
       >
         <ContactForm />
       </Wrapper>
