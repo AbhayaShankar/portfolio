@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { redirect } from "next/navigation";
 
 const Error = () => {
   const [redirect, setRedirect] = useState("");
