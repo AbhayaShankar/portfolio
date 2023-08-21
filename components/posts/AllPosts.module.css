@@ -16,6 +16,19 @@
   margin-bottom: 25px;
 }
 
+.blogdesc {
+  font-size: var(--size-4);
+  color: var(--color-grey-200);
+  width: 100%;
+  text-align: center;
+  max-width: 70rem;
+  margin: auto;
+  line-height: 34px;
+  word-spacing: 2px;
+  padding: 0 25px;
+  text-align: justify;
+}
+
 @media (min-width: 768px) {
   .posts {
     margin: var(--size-8) auto;
@@ -24,5 +37,9 @@
   .posts h1 {
     font-size: var(--size-9);
     margin-bottom: 30px;
+  }
+
+  .blogdesc {
+    font-size: var(--size-5);
   }
 }

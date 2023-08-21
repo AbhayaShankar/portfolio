@@ -7,7 +7,7 @@
   padding: 15px 25px 15px 25px;
   background-color: var(--color-primary-2);
   color: white;
-  border-bottom: 2px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;

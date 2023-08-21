@@ -15,10 +15,10 @@ These are Priorities for now. Will Wirte down more if I need to...
 
 8. Responsive ✅
 9. Framer motion div animating text. ✅ (Not framer motion but js and css)
-10. Add project route and show active projects... OR ELSE Remove projects routes... ❓
+10. Add project route and show active projects... OR ELSE Remove projects routes... ✅
 11. Add toasts to contact page ✅
 12. Change toastify designs ❌
-13. Change contact form page (Design first) ❌
+13. Change contact form page (Design first) ✅
 
 Contact Idea - ✅ done
 
@@ -30,8 +30,8 @@ Any Feedbacks for me... Drop your message here. like this
 
 ### Changing Blog App to Portfolio Website - 15.08.2023
 
-- Project Routes added
-- About Section added
+- Project Routes added ✅
+- About Section added ✅
   
 
 Things to do tomorrow - 21.08.2023
@@ -43,8 +43,10 @@ Things to do tomorrow - 21.08.2023
 ------------------------------
 
 1. Note in projects add a different color for better experience.
-2. links in social icons...
+2. links in social icons... ✅
 3. Live Link and source code design fix
 4. Conatct page - Image on the right - lets see if it looks good...
 5. About update...
 6. Error Page - Redirect back to home page after 10sec.
+7. Wavy curve ✅
+8. 

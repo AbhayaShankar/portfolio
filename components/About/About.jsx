@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import abhaya from "../../public/about.png";
 import classes from "./About.module.css";
+import Wavy from "../Wrapper/Wavy";
 
 const About = () => {
   return (
@@ -24,6 +25,7 @@ const About = () => {
           Developer.
         </p>
       </div>
+      <Wavy />
     </div>
   );
 };

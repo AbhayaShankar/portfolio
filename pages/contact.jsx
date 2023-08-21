@@ -15,7 +15,7 @@ const ContactPage = () => {
       </Head>
       <Wrapper
         title={"Contact"}
-        desc={`You can contact me vvia my social handles and also feel free to talk
+        desc={`You can contact me via my social handles and also feel free to talk
           about projects and ventures. Drop a Hi! to connect and we can discuss
           all about javascript and the world around it. Any Feedbacks for me...
           Drop your message here.`}
