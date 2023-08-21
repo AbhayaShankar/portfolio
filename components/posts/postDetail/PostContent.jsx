@@ -15,14 +15,10 @@ const PostContent = ({ post }) => {
   const day = moment(date, "YYYY-MM-DD");
   const formattedDate = day.format("MMMM DD, YYYY");
 
-  console.log(formattedDate);
-
   const shareUrl = `abhayablog.vercel.app/posts/${slug}`;
-  console.log(shareUrl);
 
   const words = content.split(" ").length;
   const timeToRead = words / 200;
-  console.log(timeToRead);
 
   const displayContent = md.render(content);
 
