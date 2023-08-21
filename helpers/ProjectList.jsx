@@ -85,16 +85,24 @@ const workExp = [
     company: "AnimxStore",
     position: "Full Stack Developer",
     jobType: "Full-time",
-    startDate: "April 2023",
+    startDate: "Apr 2023",
     endDate: "Aug 2023",
   },
   {
     id: 3,
+    company: "Memsaab",
+    position: "Frontend Developer",
+    jobType: "Freelance",
+    startDate: "Dec 2022",
+    endDate: "Jan 2023",
+  },
+  {
+    id: 4,
     company: "Scrollify",
     position: "Frontend Developer",
     jobType: "Freelance",
-    startDate: "Feb 2023",
-    endDate: "May 2023",
+    startDate: "Jun 2022",
+    endDate: "Aug 2022",
   },
 ];
 

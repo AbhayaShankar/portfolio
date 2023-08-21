@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 70rem;
+  max-width: 60rem;
   margin: 0 auto;
   padding: 20px;
 }
@@ -103,11 +103,12 @@
   }
 
   .intro p {
-    font-size: var(--size-5);
+    font-size: 18px;
+    letter-spacing: 0.35px;
   }
 
   .about img {
     margin-right: 35px;
-    width: 800px;
+    width: 57.5rem;
   }
 }

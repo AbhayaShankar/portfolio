@@ -47,6 +47,9 @@ Things to do tomorrow - 21.08.2023
 3. Live Link and source code design fix
 4. Conatct page - Image on the right - lets see if it looks good...
 5. About update...
-6. Error Page - Redirect back to home page after 10sec.
+6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
-8. 
+8. 404.js ✅
+9. 500.js page deisgn 
+10. Redirect feature implementation ✅
+11. 

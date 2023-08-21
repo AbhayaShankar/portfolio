@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Error = () => {
-  const [redirect, setRedirect] = useState("");
+  const router = useRouter();
+  const [redirect, setRedirect] = useState("6");
 
   useEffect(() => {
     let time = 5;
@@ -12,7 +13,7 @@ const Error = () => {
         setRedirect(time);
         time--;
       } else {
-        setRedirect("Now");
+        router.push("/");
       }
     }, 1000);
 

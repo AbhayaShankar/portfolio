@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
 import abhayaS from "../../public/abhayaS.png";
+import profileImg from "../../public/profile.png";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
@@ -21,7 +22,12 @@ const Hero = () => {
     <section className={classes.hero}>
       <div className={classes.circle}>
         <div className={classes.image}>
-          <Image src={abhayaS} alt="image of Abhaya" width={600} height={600} />
+          <Image
+            src={profileImg}
+            alt="image of Abhaya"
+            width={600}
+            height={600}
+          />
         </div>
         <div className={classes.text}>
           {splitText.map((char, i) => (
