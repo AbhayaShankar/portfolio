@@ -28,11 +28,9 @@
 .image {
   width: 300px;
   height: 300px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   overflow: hidden;
   background-color: transparent;
-  /* left: 0px; */
   margin: auto;
   position: absolute;
   width: var(--d-inner);
@@ -50,13 +48,13 @@
 
 .text span {
   position: absolute;
-  letter-spacing: 1.5px;
+  letter-spacing: 5px;
   left: 50%;
-  font-size: 16px;
+  font-size: 14px;
   transform-origin: 0 calc(var(--radius));
   font-weight: 300;
   filter: brightness(1.9);
-  color: #ffffff;
+  color: var(--color-grey-700);
 }
 
 .image img {
@@ -128,6 +126,17 @@
 
   .hero p {
     font-size: var(--size-5);
+  }
+
+  .text span {
+    position: absolute;
+    letter-spacing: 2px;
+    left: 50%;
+    font-size: 16px;
+    transform-origin: 0 calc(var(--radius));
+    font-weight: 300;
+    filter: brightness(1.9);
+    color: var(--color-grey-700);
   }
 
   .socials svg {
