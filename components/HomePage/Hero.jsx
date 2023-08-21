@@ -4,6 +4,7 @@ import Image from "next/image";
 import abhayaS from "../../public/abhayaS.png";
 import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import Link from "next/link";
 
 const Hero = () => {
   const text =
@@ -44,12 +45,42 @@ const Hero = () => {
         Currently I am working at Capgemini Inc. as a React Frontend Developer.
       </p>
       <div className={classes.socials}>
-        <FaGithub />
-        <FaLinkedinIn />
-        <FaTwitter />
-        <FaInstagram />
-        <AiOutlineMail />
+        <Link href={"https://github.com/AbhayaShankar"} target="blank">
+          <FaGithub />
+        </Link>
+        <Link
+          href={"https://www.linkedin.com/in/abhayashankar/"}
+          target="blank"
+        >
+          <FaLinkedinIn />
+        </Link>
+        <Link href={"https://twitter.com/AbhayaShankar2"} target="blank">
+          {/* twitter Icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 512 512"
+            fill="#b2adb8"
+          >
+            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+          </svg>
+        </Link>
+        <Link
+          href={"https://www.instagram.com/abhaya_shankar05/"}
+          target="blank"
+        >
+          <FaInstagram />
+        </Link>
+        <Link
+          href={
+            "mailto:shankarabhaya9@gmail.com?subject=Mail%20for%20Hiring%20you&body=Hi%20Abhaya"
+          }
+          target="blank"
+        >
+          <AiOutlineMail />
+        </Link>
       </div>
+      <div className={classes.box} />
     </section>
   );
 };

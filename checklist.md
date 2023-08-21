@@ -36,6 +36,15 @@ Any Feedbacks for me... Drop your message here. like this
 
 Things to do tomorrow - 21.08.2023
 
-1. Change the font of Project section to proper fz and everything
+1. Change the font of Project section to proper fz and everything ✅
 2. Add details in About section
 3. Project List helper - Title Desc and correct texts. 
+
+------------------------------
+
+1. Note in projects add a different color for better experience.
+2. links in social icons...
+3. Live Link and source code design fix
+4. Conatct page - Image on the right - lets see if it looks good...
+5. About update...
+6. Error Page - Redirect back to home page after 10sec.

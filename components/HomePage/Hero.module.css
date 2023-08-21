@@ -107,6 +107,16 @@
   color: var(--color-grey-100);
 }
 
+@keyframes wave {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
 @keyframes rotateText {
   0% {
     transform: rotate(360deg);

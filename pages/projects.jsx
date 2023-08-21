@@ -13,6 +13,8 @@ const Projects = () => {
           Real Estate Websites. Here is a collection of some of my projects and
           experiences.`}
     >
+      <div className={classes.box} />
+
       <div className={classes.projects}>
         {ProjectsList.map((proj) => {
           const { id, name, desc, skills, link, url, note, source } = proj;
