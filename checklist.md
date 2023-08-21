@@ -32,24 +32,25 @@ Any Feedbacks for me... Drop your message here. like this
 
 - Project Routes added ✅
 - About Section added ✅
+- Animations for Postfolio
   
 
 Things to do tomorrow - 21.08.2023
 
 1. Change the font of Project section to proper fz and everything ✅
-2. Add details in About section
+2. Add details in About section ✅
 3. Project List helper - Title Desc and correct texts. 
 
 ------------------------------
 
-1. Note in projects add a different color for better experience.
+1. Note in projects add a different color for better experience. 
 2. links in social icons... ✅
-3. Live Link and source code design fix
-4. Conatct page - Image on the right - lets see if it looks good...
-5. About update...
+3. Live Link and source code design fix ✅
+4. Conatct page - Image on the right - lets see if it looks good... 
+5. About update... 
 6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
-8. 404.js ✅
-9. 500.js page deisgn 
+8. 404.js Left...
+9. 500.js page design.. 
 10. Redirect feature implementation ✅
-11. 
+11. Featured Blogs and Projects - h1 tag : fz change.
