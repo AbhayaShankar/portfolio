@@ -1,24 +1,27 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Error = () => {
-  const [redirect, setRedirect] = useState(false);
+  const [redirect, setRedirect] = useState("");
 
-  const timer = (n) => {
-    setInterval(() => {
-      n = n - 1;
-      //   console.log(n);
+  useEffect(() => {
+    let time = 5;
+    const timer = setInterval(() => {
+      if (time > 0) {
+        setRedirect(time);
+        time--;
+      } else {
+        setRedirect("Now");
+      }
     }, 1000);
 
-    return () => {
-      clearInterval(timer);
-    };
-  };
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div>
       <h1>Oops! The page you are trying to find is unavailable.</h1>
-      <p>Redirecting back to home in {timer(5)} </p>
+      <p>Redirecting back to home in {redirect} </p>
       <Link href="/"></Link>
     </div>
   );
