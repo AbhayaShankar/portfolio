@@ -18,6 +18,10 @@
   margin: auto;
 }
 
+.note {
+  color: #d094ea !important;
+}
+
 .project h2 {
   font-size: 24px;
   margin: var(--size-4) 0;
@@ -65,6 +69,7 @@
 
 .skills li:hover {
   filter: brightness(0.7);
+  color: #d094ea !important;
 }
 
 .skills li::after {
@@ -81,6 +86,7 @@
 
 .skills li:hover::after {
   background: #fcfcfc;
+  background: #d094ea !important;
   scale: 1 1;
 }
 
@@ -133,6 +139,10 @@
   .project p {
     font-size: var(--size-5);
     font-size: 18px;
+  }
+
+  .note {
+    font-size: 17px !important;
   }
 
   .skills {

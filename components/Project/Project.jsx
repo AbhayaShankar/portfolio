@@ -23,7 +23,7 @@ const Project = ({ id, url, name, desc, link, skills, note, source }) => {
         <div className={classes.projDetails}>
           <h2>{name}</h2>
           <p>{desc}</p>
-          {note?.length ? <p>Note : {note}</p> : ""}
+          {note?.length ? <p className={classes.note}>( Note : {note})</p> : ""}
           <div className={classes.skills}>
             Tech Stack :
             {skills.map((skill) => (

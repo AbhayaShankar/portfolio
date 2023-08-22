@@ -4,6 +4,7 @@ import Project from "../components/Project/Project";
 import { ProjectsList } from "../helpers/ProjectList";
 import Wrapper from "../components/Wrapper/Wrapper";
 import Wavy from "../components/Wrapper/Wavy";
+import Graveyard from "../components/Project/Graveyard";
 
 const Projects = () => {
   return (
@@ -31,6 +32,8 @@ const Projects = () => {
             />
           );
         })}
+        <Wavy />
+        <Graveyard />
       </div>
     </Wrapper>
   );

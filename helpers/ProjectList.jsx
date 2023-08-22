@@ -2,7 +2,7 @@ const ProjectsList = [
   {
     id: 1,
     name: "Jobster - JobQuest",
-    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
+    desc: "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS. Full stack app that includes login/register, Create, update, and delete job entries based on status: applied, Interviewed, or Declined and finally visual insights for analyzing your application history. ",
     url: "/projects/jobster.png",
     skills: [
       "ReactJS",
@@ -14,13 +14,13 @@ const ProjectsList = [
     ],
     link: "https://jobquest-h6so.onrender.com/",
     featured: true,
-    note: "",
+    note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/Jobster",
   },
   {
     id: 2,
     name: "Estates Empire",
-    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI",
+    desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your dream space using the features of this app, where you can filter based upon various choices like area, ratings, price and sort them according to your needs.",
     url: "/projects/estate-empires.png",
     skills: ["NextJS", "ChakraUI", "RapidAPI"],
     link: "https://estates-empire.vercel.app/",
@@ -31,11 +31,11 @@ const ProjectsList = [
   {
     id: 3,
     name: "AnimxStore",
-    desc: "Your Everyday go-to E-commerce Website. Offering a wide-range of High Quality Products. Filter from categories, Add to Cart, Checkout and Pay to get your Product. ",
+    desc: "Your Everyday go-to Anime E-commerce Website built using React JS and Sass, Backend using strapi and cloudinary - deployed on render. Offering a wide-range of High Quality Products. Filter from categories, Add to Cart, Checkout and Pay to get your Product. Payment is integrated using Stripe",
     url: "/projects/animxstore.png",
     skills: [
       "ReactJS",
-      "SASS",
+      "Sass",
       "Strapi",
       "Cloudinary",
       "Stripe",
@@ -50,7 +50,7 @@ const ProjectsList = [
   {
     id: 4,
     name: "Cinetrek",
-    desc: "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek.",
+    desc: "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek. Search, look for popular movies and read out reviews of the movie and decide your poison.",
     url: "/projects/cinetrek.png",
     skills: ["ReactJS", "TMDB API", "React-Carousel", "MaterialUI"],
     link: "https://cinetrek.netlify.app/",
@@ -106,4 +106,12 @@ const workExp = [
   },
 ];
 
-export { workExp, ProjectsList };
+const graveyard = [
+  {
+    id: 1,
+    name: "Memsaab",
+    desc: "An online Saree E-commerce store where user can explore varieties of sarees.",
+  },
+];
+
+export { workExp, ProjectsList, graveyard };

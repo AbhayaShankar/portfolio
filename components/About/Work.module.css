@@ -8,12 +8,15 @@
 .work {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
 }
 
-.work p {
+.work + p {
   color: var(--color-grey-200);
+  margin: 10px 0;
+  font-weight: 600;
 }
 
 .jobType {
@@ -22,5 +25,27 @@
 
 .position {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.position > p {
+  margin: 4px 0;
+  font-weight: 400;
+  color: var(--color-grey-600);
+}
+
+@media (min-width: 768px) {
+  .work {
+    flex-direction: row;
+  }
+
+  .position {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .position p {
+    margin: 10px 0;
+  }
 }

@@ -7,3 +7,23 @@
   margin-top: 20px;
   padding: var(--size-12) 0 var(--size-20);
 }
+
+.graveyard {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+.graveyard p {
+  padding: 0 !important;
+}
+
+.graveItem {
+  margin-top: 40px;
+}
+
+.graveItem h3 {
+  font-size: 18px;
+}
