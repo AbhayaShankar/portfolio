@@ -10,12 +10,12 @@ const PostContent = ({ post }) => {
   const { title, image, content, slug, date } = post;
   const { setIsMenuActive } = useContext(Context);
 
-  const imagePath = `/posts/${slug}/${image}`;
+  const imagePath = `/blogs/${slug}/${image}`;
 
   const day = moment(date, "YYYY-MM-DD");
   const formattedDate = day.format("MMMM DD, YYYY");
 
-  const shareUrl = `abhayablog.vercel.app/posts/${slug}`;
+  const shareUrl = `abhayablog.vercel.app/blogs/${slug}`;
 
   const words = content.split(" ").length;
   const timeToRead = words / 200;

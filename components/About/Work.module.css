@@ -11,16 +11,21 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.work + p {
+.work > p {
   color: var(--color-grey-200);
-  margin: 10px 0;
+  margin: 10px 0 0;
   font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.4px;
 }
 
 .jobType {
   color: var(--color-grey-700);
+  letter-spacing: 0;
+  font-weight: 400;
 }
 
 .position {
@@ -30,14 +35,20 @@
 }
 
 .position > p {
-  margin: 4px 0;
+  margin: 2px 0;
   font-weight: 400;
-  color: var(--color-grey-600);
+  color: #b1b1b1;
+  font-size: 18px;
+}
+
+.position p:nth-child(2) {
+  margin-top: 0px !important;
 }
 
 @media (min-width: 768px) {
   .work {
     flex-direction: row;
+    margin-bottom: 0;
   }
 
   .position {
@@ -47,5 +58,9 @@
 
   .position p {
     margin: 10px 0;
+  }
+
+  .position p:nth-child(2) {
+    margin-top: 10px !important;
   }
 }

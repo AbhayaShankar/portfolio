@@ -75,7 +75,7 @@ const workExp = [
   {
     id: 1,
     company: "Capgemini",
-    position: "React Developer",
+    position: "Frontend Developer",
     jobType: "Full-time",
     startDate: "Sept 2022",
     endDate: "Present",

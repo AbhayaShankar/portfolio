@@ -40,6 +40,7 @@ Things to do tomorrow - 21.08.2023
 1. Change the font of Project section to proper fz and everything ✅
 2. Add details in About section ✅
 3. Project List helper - Title Desc and correct texts. ✅
+4. route change from posts --> blogs
 
 ------------------------------
 
@@ -47,7 +48,7 @@ Things to do tomorrow - 21.08.2023
 2. links in social icons... ✅
 3. Live Link and source code design fix ✅
 4. Conatct page - Image on the right - lets see if it looks good... 
-5. About update... 
+5. About update... (About this site remaining)
 6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
 8. 404.js Left...

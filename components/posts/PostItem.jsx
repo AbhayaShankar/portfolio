@@ -18,15 +18,15 @@ const PostItem = (props) => {
 
   const trimmedText = excerpt.substr(0, 150);
 
-  const imagePath = `/posts/${slug}/${image}`;
+  const imagePath = `/blogs/${slug}/${image}`;
 
   return (
     <Fragment>
       {isPublished ? (
         // For published blog
         <li className={classes.post} onClick={() => setIsMenuActive(false)}>
-          <Link href={`/posts/${slug}`}>
-            {/* <Link href={isPublished ? `/posts/${slug}` : ""}> */}
+          <Link href={`/blogs/${slug}`}>
+            {/* <Link href={isPublished ? `/blogs/${slug}` : ""}> */}
             <div className={classes.image}>
               <Image src={imagePath} alt={title} width={275} height={200} />
             </div>

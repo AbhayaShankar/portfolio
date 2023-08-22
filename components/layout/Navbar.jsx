@@ -31,7 +31,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link className={isActive("/posts")} href="/posts">
+              <Link className={isActive("/blogs")} href="/blogs">
                 Blogs
               </Link>
             </li>
@@ -68,7 +68,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link onClick={() => setIsMenuActive(false)} href="/posts">
+                  <Link onClick={() => setIsMenuActive(false)} href="/blogs">
                     Blogs
                   </Link>
                 </li>
