@@ -26,7 +26,6 @@ const PostItem = (props) => {
         // For published blog
         <li className={classes.post} onClick={() => setIsMenuActive(false)}>
           <Link href={`/blogs/${slug}`}>
-            {/* <Link href={isPublished ? `/blogs/${slug}` : ""}> */}
             <div className={classes.image}>
               <Image src={imagePath} alt={title} width={275} height={200} />
             </div>

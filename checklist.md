@@ -40,7 +40,7 @@ Things to do tomorrow - 21.08.2023
 1. Change the font of Project section to proper fz and everything ✅
 2. Add details in About section ✅
 3. Project List helper - Title Desc and correct texts. ✅
-4. route change from posts --> blogs
+4. route change from posts --> blogs ✅
 
 ------------------------------
 
