@@ -73,6 +73,32 @@ body {
   color: #000;
 }
 
+.error {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--size-5) var(--size-4);
+}
+
+.error h1 {
+  font-size: 24px;
+}
+
+.error p {
+  font-family: "PT Mono", monospace;
+  color: var(--color-grey-200);
+}
+
+@media (min-width: 768px) {
+  .error {
+    max-width: 70rem;
+    padding: var(--size-12) var(--size-20);
+  }
+
+  .error h1 {
+    font-size: 32px;
+  }
+}
+
 h1,
 h2,
 h3 {

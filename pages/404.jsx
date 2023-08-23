@@ -11,7 +11,7 @@ const Error = () => {
     const timer = setInterval(() => {
       if (time > 0) {
         setRedirect(time);
-        time--;
+        // time--;
       } else {
         router.push("/");
       }
@@ -21,7 +21,7 @@ const Error = () => {
   }, []);
 
   return (
-    <div>
+    <div className="error">
       <h1>Oops! The page you are trying to find is unavailable.</h1>
       <p>Redirecting back to home in {redirect} </p>
       <Link href="/"></Link>
