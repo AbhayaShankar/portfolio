@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import error from "../public/404.png";
+import Image from "next/image";
 
 const Error = () => {
   const router = useRouter();
@@ -11,7 +13,7 @@ const Error = () => {
     const timer = setInterval(() => {
       if (time > 0) {
         setRedirect(time);
-        // time--;
+        time--;
       } else {
         router.push("/");
       }
@@ -24,7 +26,8 @@ const Error = () => {
     <div className="error">
       <h1>Oops! The page you are trying to find is unavailable.</h1>
       <p>Redirecting back to home in {redirect} </p>
-      <Link href="/"></Link>
+      <Image src={error} width={250} height={250} alt="error-img" />
+      {/* <Link href="/"></Link> */}
     </div>
   );
 };

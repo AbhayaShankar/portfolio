@@ -1,3 +1,6 @@
+import FeaturedProject from "../components/Project/FeaturedProject";
+import Project from "../components/Project/Project";
+
 const ProjectsList = [
   {
     id: 1,
@@ -114,4 +117,16 @@ const graveyard = [
   },
 ];
 
-export { workExp, ProjectsList, graveyard };
+const FeaturedProjects = () => {
+  return (
+    <>
+      {ProjectsList.map((proj) => {
+        if (proj.featured) {
+          return <FeaturedProject />;
+        }
+      })}
+    </>
+  );
+};
+
+export { workExp, ProjectsList, graveyard, FeaturedProjects };

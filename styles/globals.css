@@ -77,6 +77,7 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: var(--size-5) var(--size-4);
+  position: relative;
 }
 
 .error h1 {
@@ -88,6 +89,13 @@ body {
   color: var(--color-grey-200);
 }
 
+.error img {
+  position: absolute;
+  top: 200px;
+  right: 17%;
+  opacity: 0.6;
+}
+
 @media (min-width: 768px) {
   .error {
     max-width: 70rem;
@@ -96,6 +104,12 @@ body {
 
   .error h1 {
     font-size: 32px;
+  }
+
+  .error img {
+    top: 50px;
+    right: -20px;
+    opacity: 0.6;
   }
 }
 

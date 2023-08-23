@@ -51,7 +51,7 @@ Things to do tomorrow - 21.08.2023
 5. About update... (About this site remaining)
 6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
-8. 404.js Left...
+8. 404.js ... ✅
 9. 500.js page design.. 
 10. Redirect feature implementation ✅
 11. Featured Blogs and Projects - h1 tag : fz change.
