@@ -27,3 +27,47 @@
 .graveItem h3 {
   font-size: 18px;
 }
+
+.featuredProj {
+  width: 85%;
+  max-width: 70rem;
+  margin: var(--size-5) auto;
+}
+
+.featuredProj h1 {
+  font-size: 26px;
+  color: var(--color-secondary);
+  text-align: center;
+  font-family: "PT Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.featured {
+  text-align: left !important;
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  align-content: center;
+  padding: var(--size-12) 0 var(--size-20);
+  /* pointer-events: none; */
+}
+
+@media (min-width: 768px) {
+  .featuredProj {
+    margin: var(--size-8) auto;
+    max-width: 75rem;
+  }
+  .featuredProj h1 {
+    font-size: var(--size-9);
+    margin-bottom: 30px;
+  }
+}

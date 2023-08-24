@@ -3,7 +3,7 @@ import Hero from "../components/HomePage/Hero";
 import FeaturedPosts from "../components/HomePage/FeaturedPosts";
 import { getFeaturedPosts } from "../lib/posts-utils";
 import Head from "next/head";
-import { FeaturedProjects } from "../helpers/ProjectList";
+import FeaturedProject from "../components/Project/FeaturedProject";
 
 const HomePage = ({ posts }) => {
   return (
@@ -16,7 +16,7 @@ const HomePage = ({ posts }) => {
         />
       </Head>
       <Hero />
-      <FeaturedProjects />
+      <FeaturedProject />
       <FeaturedPosts posts={posts} />
     </Fragment>
   );

@@ -5,9 +5,9 @@
 }
 
 .latest h2 {
-  font-size: var(--size-8);
+  font-size: 26px;
   color: var(--color-secondary);
-  text-align: center;
+  text-align: left;
   font-family: "PT Mono", monospace;
   letter-spacing: 2px;
   margin-bottom: 35px;

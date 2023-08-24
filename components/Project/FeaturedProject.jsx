@@ -1,10 +1,19 @@
 import React from "react";
+import { ProjectsList } from "../../helpers/ProjectList";
+import classes from "./Project.module.css";
 
 const FeaturedProject = () => {
   return (
-    <div>
-      <h1>Featured Projects</h1>
-    </div>
+    <section className={classes.featuredProj}>
+      <h1 className={classes.featured}>Featured Projects</h1>
+      <div className={classes.grid}>
+        {ProjectsList.map((proj) => {
+          if (proj.featured) {
+            return <p>project</p>;
+          }
+        })}
+      </div>
+    </section>
   );
 };
 

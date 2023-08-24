@@ -117,16 +117,16 @@ const graveyard = [
   },
 ];
 
-const FeaturedProjects = () => {
-  return (
-    <>
-      {ProjectsList.map((proj) => {
-        if (proj.featured) {
-          return <FeaturedProject />;
-        }
-      })}
-    </>
-  );
-};
+// const FeaturedProjects = () => {
+//   return (
+//     <div>
+//       {ProjectsList.map((proj) => {
+//         if (proj.featured) {
+//           return <FeaturedProject />;
+//         }
+//       })}
+//     </div>
+//   );
+// };
 
-export { workExp, ProjectsList, graveyard, FeaturedProjects };
+export { workExp, ProjectsList, graveyard };
