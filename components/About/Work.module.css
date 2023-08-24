@@ -77,7 +77,7 @@
   color: var(--color-grey-200);
 }
 
-.works span {
+.works text {
   padding-bottom: 5px;
   border-bottom: 2px solid #5c5b5b51;
   transition: all 0.35s ease-in-out;
@@ -87,12 +87,12 @@
   filter: brightness(1.5);
 }
 
-.works span:hover {
+.works text:hover {
   filter: brightness(1.1);
   color: #c274e3 !important;
 }
 
-.works span::after {
+.works text::after {
   content: "";
   position: absolute;
   left: 0;
@@ -104,15 +104,15 @@
   scale: 0 1;
 }
 
-.works span:hover::after {
+.works text:hover::after {
   /* background: #fcfcfc; */
   background: #c274e3 !important;
   scale: 1 1;
 }
 
-.works span:hover,
-.works span:hover::after,
-.works span:hover a {
+.works text:hover,
+.works text:hover::after,
+.works text:hover a {
   filter: brightness(1.1);
   color: #c274e3 !important;
 }

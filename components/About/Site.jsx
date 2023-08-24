@@ -13,16 +13,18 @@ const Site = () => {
       <ul>
         <li>
           Designed by{" "}
-          <span>
-            <Link href={"#"}>Harsh Kumar Pandey</Link>
-          </span>
+          <text>
+            <Link href={"https://www.harshkumarpandey.com/"}>
+              Harsh Kumar Pandey
+            </Link>
+          </text>
         </li>
         <li>
-          Developed and design tweaked by me using <span> NextJS</span>
+          Developed and design tweaked by me using <text> NextJS</text>
         </li>
         <li>
-          Hosted by <span> Hostinger </span>with deployment via{" "}
-          <span> Vercel</span>
+          Hosted by <text> Hostinger </text>with deployment via{" "}
+          <text> Vercel</text>
         </li>
       </ul>
     </div>
