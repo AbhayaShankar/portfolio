@@ -7,14 +7,14 @@ const Site = () => {
     <div className={classes.works}>
       <h1>About this Site</h1>
       <p className={classes.aboutSite}>
-        In case you are wondering, this site is{" "}
+        In case you were wondering, this site is{" "}
       </p>
 
       <ul>
         <li>
           Designed by{" "}
           <text>
-            <Link href={"https://www.harshkumarpandey.com/"}>
+            <Link href={"https://www.harshkumarpandey.com/"} target="blank">
               Harsh Kumar Pandey
             </Link>
           </text>

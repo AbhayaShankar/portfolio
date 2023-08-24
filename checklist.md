@@ -56,3 +56,7 @@ Things to do tomorrow - 21.08.2023
 10. Redirect feature implementation ✅
 11. Featured Blogs and Projects - h1 tag : fz change. 
 12. Featured project section - ✅
+13. Contact form on hover tilting effect 
+14. A button on the bottom right corner - i - In Case you wanted to - idea need to think it through.
+15. Resume Tab for people who want to download my resume.
+16. Cross-check once before finalizing if there's anything changes to be done in mobile screen. 
