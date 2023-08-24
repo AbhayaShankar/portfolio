@@ -6,6 +6,8 @@ const ProjectsList = [
     id: 1,
     name: "Jobster - JobQuest",
     desc: "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS. Full stack app that includes login/register, Create, update, and delete job entries based on status: applied, Interviewed, or Declined and finally visual insights for analyzing your application history. ",
+    shortdesc:
+      "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS.",
     url: "/projects/jobster.png",
     skills: [
       "ReactJS",
@@ -24,6 +26,8 @@ const ProjectsList = [
     id: 2,
     name: "Estates Empire",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your dream space using the features of this app, where you can filter based upon various choices like area, ratings, price and sort them according to your needs.",
+    shortdesc:
+      "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your Dream Home.",
     url: "/projects/estate-empires.png",
     skills: ["NextJS", "ChakraUI", "RapidAPI"],
     link: "https://estates-empire.vercel.app/",
@@ -35,6 +39,8 @@ const ProjectsList = [
     id: 3,
     name: "AnimxStore",
     desc: "Your Everyday go-to Anime E-commerce Website built using React JS and Sass, Backend using strapi and cloudinary - deployed on render. Offering a wide-range of High Quality Products. Filter from categories, Add to Cart, Checkout and Pay to get your Product. Payment is integrated using Stripe",
+    shortdesc:
+      "Your Everyday go-to Anime E-commerce Website built using React JS and Sass, Backend using strapi and cloudinary - deployed on render.",
     url: "/projects/animxstore.png",
     skills: [
       "ReactJS",
@@ -54,6 +60,8 @@ const ProjectsList = [
     id: 4,
     name: "Cinetrek",
     desc: "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek. Search, look for popular movies and read out reviews of the movie and decide your poison.",
+    shortdesc:
+      "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek.",
     url: "/projects/cinetrek.png",
     skills: ["ReactJS", "TMDB API", "React-Carousel", "MaterialUI"],
     link: "https://cinetrek.netlify.app/",
@@ -116,17 +124,5 @@ const graveyard = [
     desc: "An online Saree E-commerce store where user can explore varieties of sarees.",
   },
 ];
-
-// const FeaturedProjects = () => {
-//   return (
-//     <div>
-//       {ProjectsList.map((proj) => {
-//         if (proj.featured) {
-//           return <FeaturedProject />;
-//         }
-//       })}
-//     </div>
-//   );
-// };
 
 export { workExp, ProjectsList, graveyard };

@@ -54,4 +54,5 @@ Things to do tomorrow - 21.08.2023
 8. 404.js ... ✅
 9. 500.js page design.. 
 10. Redirect feature implementation ✅
-11. Featured Blogs and Projects - h1 tag : fz change.
+11. Featured Blogs and Projects - h1 tag : fz change. 
+12. Featured project section - ✅
