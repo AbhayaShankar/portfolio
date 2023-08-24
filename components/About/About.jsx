@@ -4,6 +4,7 @@ import abhaya from "../../public/about.png";
 import classes from "./About.module.css";
 import Wavy from "../Wrapper/Wavy";
 import Work from "./Work";
+import Site from "./Site";
 
 const About = () => {
   return (
@@ -51,6 +52,7 @@ const About = () => {
       <Wavy />
       <Work />
       <Wavy />
+      <Site />
     </div>
   );
 };

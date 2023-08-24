@@ -7,7 +7,7 @@ const Graveyard = () => {
     <div className={classes.graveyard}>
       <h2>Graveyard</h2>
       <p>
-        Significant projects I worked on that are now retired but plays vital
+        Significant projects I worked on that are now retired but played vital
         role in my development journey.
       </p>
       {graveyard.map((item) => {
