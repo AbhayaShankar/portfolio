@@ -9,7 +9,7 @@ import Site from "./Site";
 const About = () => {
   return (
     <div className={classes.about}>
-      <Image src={abhaya} alt="" />
+      <Image src={abhaya} alt="" width={900} height={900} />
       <div className={classes.intro}>
         <h3>Hey! Folks on the Web...</h3>
         <p>
