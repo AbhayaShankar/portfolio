@@ -3,6 +3,7 @@ import classes from "./Navbar.module.css";
 import Link from "next/link";
 import { Context } from "../../context/context";
 import { useRouter } from "next/router";
+import { BsDownload } from "react-icons/bs";
 
 const Navbar = () => {
   const { isMenuActive, setIsMenuActive } = useContext(Context);
@@ -11,6 +12,10 @@ const Navbar = () => {
 
   const isActive = (path) => {
     return router.pathname === path ? classes.active : "";
+  };
+
+  const handleResume = () => {
+    window.open("Resume.pdf", "_blank");
   };
 
   return (
@@ -50,6 +55,11 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li onClick={handleResume}>
+              <Link href={"/"}>
+                Resume <BsDownload />
+              </Link>
+            </li>
           </ul>
         </nav>
         <img
@@ -85,6 +95,11 @@ const Navbar = () => {
                 <li>
                   <Link onClick={() => setIsMenuActive(false)} href="/contact">
                     Contact
+                  </Link>
+                </li>
+                <li onClick={handleResume}>
+                  <Link href={"/"}>
+                    Resume <BsDownload />
                   </Link>
                 </li>
               </ul>
