@@ -35,6 +35,7 @@
   position: absolute;
   width: var(--d-inner);
   height: var(--d-inner);
+  filter: brightness(1.1) contrast(0.96);
 }
 
 .text {
@@ -126,6 +127,10 @@
 
   .hero p {
     font-size: var(--size-5);
+  }
+
+  .image {
+    filter: brightness(1) contrast(1);
   }
 
   .text span {

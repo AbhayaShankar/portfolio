@@ -71,7 +71,7 @@ const Navbar = () => {
         {isMenuActive && (
           <div className={classes.stickyMenu}>
             <nav className={classes.menu_right_navbar}>
-              <ul className="">
+              <ul>
                 <li>
                   <Link onClick={() => setIsMenuActive(false)} href="/">
                     Home
@@ -97,7 +97,7 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li onClick={handleResume}>
+                <li className={classes.resume} onClick={handleResume}>
                   <Link href={"/"}>
                     Resume <BsDownload />
                   </Link>

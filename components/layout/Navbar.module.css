@@ -51,6 +51,12 @@
   border-radius: 8px;
 }
 
+.right_navbar ul:last-child li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .right_navbar ul li a:hover {
   background-color: var(--color-grey-800a);
   color: #e2e2e2;
@@ -144,6 +150,13 @@
 
 .menu_right_navbar ul li a:hover {
   /* color: #e2e2e2; */
+}
+
+.menu_right_navbar .resume a {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  gap: 10px;
 }
 
 @media (min-width: 768px) {
