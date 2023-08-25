@@ -15,6 +15,11 @@ const ContactForm = () => {
   const [reqError, setReqError] = useState();
   const { setIsMenuActive } = useContext(Context);
 
+  // Hover Effect
+  const [cardStyle, setCardStyle] = useState({
+    transform: `perspective(0) rotateX(0deg) rotateY(0deg)`,
+  });
+
   const pendingNotif = (text) => toast(text);
   const errorNotif = (text) => toast.error(text);
   const successNotif = (text) => toast.success(text);
@@ -94,8 +99,37 @@ const ContactForm = () => {
     errorNotif(reqError);
   }
 
+  const THRESHOLD = 4;
+
+  const handleHover = (e) => {
+    const { clientX, clientY, currentTarget } = e;
+    const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+
+    const horizontal = (clientX - offsetLeft) / clientWidth;
+    const vertical = (clientY - offsetTop) / clientHeight;
+
+    const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
+    const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+
+    setCardStyle({
+      transform: `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`,
+    });
+  };
+
+  const resetStyles = () => {
+    setCardStyle({
+      transform: `perspective(0) rotateX(0deg) rotateY(0deg)`,
+    });
+  };
+
   return (
-    <section style={{ position: "relative" }} className={classes.contact}>
+    <section
+      // style={{ position: "relative" }}
+      className={classes.contact}
+      onMouseMove={handleHover}
+      onMouseLeave={resetStyles}
+      style={cardStyle}
+    >
       <h2>
         I'd Love to hear from you
         <BsStars
