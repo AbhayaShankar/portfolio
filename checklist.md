@@ -32,7 +32,7 @@ Any Feedbacks for me... Drop your message here. like this
 
 - Project Routes added ✅
 - About Section added ✅
-- Animations for Postfolio
+- Animations for Portfolio
   
 
 Things to do tomorrow - 21.08.2023
@@ -47,8 +47,8 @@ Things to do tomorrow - 21.08.2023
 1. Note in projects add a different color for better experience. ✅
 2. links in social icons... ✅
 3. Live Link and source code design fix ✅
-4. Conatct page - Image on the right - lets see if it looks good... 
-5. About update... (About this site remaining)
+4. Contact page - Image on the right - lets see if it looks good... 
+5. About update... (About this site remaining) ✅
 6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
 8. 404.js ... ✅

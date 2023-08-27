@@ -75,13 +75,14 @@
 .works a {
   text-decoration: none;
   color: var(--color-grey-200);
+  font-size: 17.5px;
 }
 
 .works text {
   padding-bottom: 5px;
   border-bottom: 2px solid #5c5b5b51;
-  transition: all 0.35s ease-in-out;
   font-size: 17.5px;
+  transition: all 0.35s ease-in-out;
   font-size: var(--size-4);
   letter-spacing: 0.25px;
   filter: brightness(1.5);
