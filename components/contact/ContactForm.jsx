@@ -16,6 +16,7 @@ const ContactForm = () => {
   const { setIsMenuActive } = useContext(Context);
 
   // Hover Effect
+  const [isDesktop, setIsDesktop] = useState(true);
   const [cardStyle, setCardStyle] = useState({
     transform: `perspective(0) rotateX(0deg) rotateY(0deg)`,
   });
@@ -29,6 +30,12 @@ const ContactForm = () => {
     const truncatedVal = inputVal.slice(0, 10); // Truncate to 10 characters
     setNumberVal(truncatedVal);
   };
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsDesktop(false);
+    } else setIsDesktop(true);
+  }, [isDesktop]);
 
   // Valid Phone number should be Phone Nunber starting with 6-9 and then having total 10 digits.
   const validPhoneNumber = numberVal.length === 10;
@@ -128,7 +135,7 @@ const ContactForm = () => {
       className={classes.contact}
       onMouseMove={handleHover}
       onMouseLeave={resetStyles}
-      style={cardStyle}
+      style={isDesktop ? cardStyle : null}
     >
       <h2>
         I'd Love to hear from you
