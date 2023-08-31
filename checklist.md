@@ -52,13 +52,14 @@ Things to do tomorrow - 21.08.2023
 6. Error Page - Redirect back to home page after 6sec. ✅
 7. Wavy curve ✅
 8. 404.js ... ✅
-9. 500.js page design.. 
+9. 500.js page design.. ❗
 10. Redirect feature implementation ✅
 11. Featured Blogs and Projects - h1 tag : fz change. ✅
 12. Featured project section - ✅
 13. Contact form on hover tilting effect ✅
 14. A button on the bottom right corner - i - In Case you wanted to - idea need to think it through.
 15. Resume Tab for people who want to download my resume. ✅
-16. Cross-check once before finalizing if there's anything changes to be done in mobile screen.
+16. Cross-check once before finalizing if there's anything changes to be done in mobile screen. ❗
 17. Check why was contact details not going... ✅
-18. Resume download from inside blogs also. 
+18. Resume download from inside blogs also. ❌
+19. Format the sorted date utility function such that first unpublished blogs come first. ❗

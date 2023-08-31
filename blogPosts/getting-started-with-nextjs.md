@@ -4,7 +4,7 @@ date: "2023-05-02"
 slug: "getting-started-with-nextjs"
 image: "1.avif"
 excerpt: "NEXTJS is the React framework for production - it makes building fullstack React apps and sites a breeze  and ships with built-in SSR/SSG."
-isFeatured: true
+isFeatured: false
 isPublished: true
 
 ---

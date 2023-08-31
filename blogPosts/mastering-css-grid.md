@@ -4,7 +4,7 @@ date: "2023-05-15"
 slug: "mastering-css-grid"
 image: "1.png"
 excerpt: "CSS Grid is a powerful layout system that allows you to create complex, responsive layouts with ease."
-isFeatured: true
+isFeatured: false
 isPublished: true
 
 ---
