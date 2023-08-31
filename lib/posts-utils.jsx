@@ -34,18 +34,29 @@ export function getAllPosts() {
     postA.date > postB.date ? -1 : 1
   );
 
-  // Array of objects
-  // console.log(sortedPosts);
-
   let NewSortedPosts = [];
 
+  /*
+
   const notPublishedBlog = sortedPosts.find((elem) => !elem.isPublished);
-
+  
   console.log(notPublishedBlog);
-
+  
   NewSortedPosts.push(notPublishedBlog);
+  
+  */
 
-  NewSortedPosts.push(sortedPosts);
+  sortedPosts.map((item) => {
+    if (!item.isPublished) {
+      NewSortedPosts.push(item);
+    }
+  });
+
+  sortedPosts.map((item) => {
+    if (item.isPublished) {
+      NewSortedPosts.push(item);
+    }
+  });
 
   // NewSortedPosts.push({ ...sortedPosts }.filter(sortedPosts.isPublished));
 

@@ -63,3 +63,4 @@ Things to do tomorrow - 21.08.2023
 17. Check why was contact details not going... ✅
 18. Resume download from inside blogs also. ❌
 19. Format the sorted date utility function such that first unpublished blogs come first. ❗
+20. Custom cursor with round circular button and a big transparent circle following around him with a delay .❗

@@ -18,7 +18,7 @@ const PostContent = ({ post }) => {
   const shareUrl = `abhayablog.vercel.app/blogs/${slug}`;
 
   const words = content.split(" ").length;
-  const timeToRead = words / 200;
+  const timeToRead = (words / 150).toPrecision(2);
 
   const displayContent = md.render(content);
 

@@ -19,7 +19,7 @@ My name is Abhaya Shankar and I'll be guiding you for this short project.
 ## 🤏 Prerequisites
 
 - If you have worked with javascript and React, then you will be good to go.
-- You need to have <a href="https://nodejs.org/en"> Node </a> installed.
+- You need to have [Node](https://nodejs.org/en) installed.
 - Make sure you install the dependent packages.
 - And a cup of coffee. ☕
 
