@@ -132,6 +132,15 @@ and add the following **script** in the `package.json` file
   },
 ```
 
+One final thing to do before we start implementing our backend logic. Create a `.gitignore` file inside both **Backend** root folder and **Frontend** root folder and add these below code inside them both.
+
+```js
+/node_modules
+/.env
+```
+
+This will ensure that when you will be publishing your project to maybe your github repo or while deployment, items inside .gitignore will be ignored and will not be accessible to other people. This is crucial as you don't want your secret keys being open to other developers and also you don't want to push your node_modules to your github repo as well.
+
 Well Kudos! You successfully created the backend setup for this project. Give yourself a pat on the back, and lets move forward with the backend logic.
 
 ## 🧠 Backend Logic
@@ -233,3 +242,24 @@ This will spin up the server, open up the console and if you can see `Server is 
 Now inorder to use Stripe, you need to first create an account on [Stripe](https://dashboard.stripe.com/register). If you have an account already then you can login and access the stripe dashboard which will look something like this.
 
 ![Stripe Dashboard](/blogs/stripe-payment-integration/dashboard.png)
+
+Now once you have successfully created an account, move into **Developers** tab and look for two things mainly -
+- Publishable Key
+- Secret Key
+
+![Secret Keys](/blogs/stripe-payment-integration/secretKeys.png)
+
+Take these two values and save this somewhere safe and we will use these later in the `index.js` backend setup. Make sure you don't share these keys specially the secret keys as this would lead to security issue for your configuration.
+
+Now move back into your **Backend** folder where we have just created our basic route. There you want to add a function at the very top of the `index.js` file.
+
+```js
+require("dotenv").config();
+```
+
+This bit of code will enable us to access our `.env` variables in our project so as to keep our secret keys as a secret.
+Create a new file inside the **Backend** folder and name it `.env` like this : 
+
+![Secret Keys](/blogs/stripe-payment-integration/env.png)
+
+Copy your secret key from Stripe Developers dashboard and paste it inside the .env variable just like in the above presented example.
