@@ -80,16 +80,22 @@
   line-height: 30px;
 }
 
+.markdownContent pre code {
+  padding: 0;
+  color: #4fb4d7;
+}
+
 .markdownContent code {
   background-color: #050505;
   font-size: 14px;
   padding: 3px 8px;
   border-radius: 4px;
+  color: rgba(109, 248, 193, 0.75);
 }
 
 .markdownContent strong {
   letter-spacing: 1.5px;
-  color: #676767;
+  color: #d87878;
   font-weight: 600;
 }
 
