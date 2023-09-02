@@ -450,3 +450,26 @@ function App() {
 
 export default App;
 ```
+We could use these className only because we have added the cdn link of materialize css into out project.
+
+Once everything in the frontend is done, you can spin-up the frontend project by going to terminal and running `npm start` command. make sure you are in the frontend directory while running the command or else you will get some fat error. You can visit `http://localhost:3000`, you should get this on the home screen.
+
+![Frontend View](/blogs/stripe-payment-integration/frontend.png)
+
+Click on the **Buy Bobblehead Now** 
+
+![Test Mode](/blogs/stripe-payment-integration/test.png)
+
+You can add any dummy email and Card Number in the **Test Mode** is 4242424242424242 and you can add any dummy cvv and exp date as well and then proceed to pay.
+
+![Dummy Values](/blogs/stripe-payment-integration/dummy.png)
+
+![Payment Success](/blogs/stripe-payment-integration/paymentSuccess.png)
+
+If you are getting some errors in the console, please troubleshoot.
+
+## 🤩 Congrats! You did it
+
+Great! You have successfully completed this project.
+You deserve a toast 🥂. Now you can proceed with some new ideas.
+If you have been following up and have created something, make sure to showcase your project connect with me on [LinkedIn](https://www.linkedin.com/in/abhayashankar/).
