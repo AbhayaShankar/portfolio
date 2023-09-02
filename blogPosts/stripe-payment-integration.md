@@ -454,7 +454,16 @@ export default App;
 ```
 We could use these className only because we have added the cdn link of materialize css into out project.
 
+```js
+const makePayment = async (token) => {
+    const body = {
+      token,
+      product,
+    };
+```
+In this bit of code, you might be wondering where is this `token` coming from. Actually this token is automatically created for you by `StrikeCheckout`, you just need to ensure that your prop containing token is actually named as **token** and that's it.
 
+Then in that we create a body containing our token and product details, configure headers as `"Content-Type": "application/json"` and then the main part where we send a fetch request to our backend server and getting the response. Then we `await` response and we get back the data.
 
 Once everything in the frontend is done, you can spin-up the frontend project by going to terminal and running `npm start` command. make sure you are in the frontend directory while running the command or else you will get some fat error. You can visit `http://localhost:3000`, you should get this on the home screen.
 
@@ -472,7 +481,7 @@ You can add any dummy email and Card Number in the **Test Mode** is 424242424242
 
 ![Payment Success](/blogs/stripe-payment-integration/paymentSuccess.png)
 
-If you are getting some errors in the console, please troubleshoot.
+If you are getting some errors in the console, please **Troubleshoot**.
 
 ## 🤩 Congrats! You did it
 
