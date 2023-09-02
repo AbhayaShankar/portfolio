@@ -20,7 +20,12 @@ const PostContent = ({ post }) => {
   const words = content.split(" ").length;
   const timeToRead = (words / 180).toPrecision(3);
 
-  const displayContent = md.render(content);
+  const openInNewTab = (html) => {
+    const result = html.replace(/<a href+/g, "<a target='_blank' href");
+    return result;
+  };
+
+  const displayContent = openInNewTab(md.render(content));
 
   return (
     <article className={classes.content}>

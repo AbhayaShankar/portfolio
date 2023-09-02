@@ -429,6 +429,8 @@ function App() {
     });
 
     const data = await response.json();
+    
+    // Display data for checking
     console.log(data);
   };
 
@@ -452,9 +454,13 @@ export default App;
 ```
 We could use these className only because we have added the cdn link of materialize css into out project.
 
+
+
 Once everything in the frontend is done, you can spin-up the frontend project by going to terminal and running `npm start` command. make sure you are in the frontend directory while running the command or else you will get some fat error. You can visit `http://localhost:3000`, you should get this on the home screen.
 
 ![Frontend View](/blogs/stripe-payment-integration/frontend.png)
+
+One more thing you should remember that both our frontend and backend should be up and running. We have not deployed our app so its not active. Until it's running, we will not get success payment transaction.
 
 Click on the **Buy Bobblehead Now** 
 
