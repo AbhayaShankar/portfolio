@@ -143,6 +143,10 @@ This will ensure that when you will be publishing your project to maybe your git
 
 Well Kudos! You successfully created the backend setup for this project. Give yourself a pat on the back, and lets move forward with the backend logic.
 
+After setting up your frotend and backend, you should be ready with something like this...
+
+![Project Setup](/blogs/stripe-payment-integration/setup.png)
+
 ## 🧠 Backend Logic
 
 Once the basic setup is done, now we wanna setup routes and logic for the backend. Moving on with the basic setup for `index.js` file : 
@@ -352,9 +356,13 @@ app.post("/payment", async (req, res) => {
 
 Well that's basically all we had to do for our Backend setup. Although it's quite basic, as you dive deep into this, you will get to know a lot more and crucial todos and not-todos but we are good for now. Now let's jump back to our Frontend.
 
-## 🐬 Dive into Frontend
+## 🐬 Diving into Frontend
 
-You can do basic cleanups like `App.js`, `reportWebVitals.js`, `setupTests.js` etc. But I am not gonna do all that. We will proceed with the Logic in Frontend not the Stylings and stuffs which I am guessing you are capable of. You can find the **source code** [here](https://github.com/AbhayaShankar/Stripe/tree/main/frontend) if you have any doubt or feel stuck somewhere.
+Frontend is all about appealing to the eye, but at the same time where users can get easy access and smooth experience. We are not going to build a full stack E-commerce app or something, just the important part of how to use stripe as a payment. So, we will be starting off with quite simple.
+
+Let's move back into our **Frontend** folder and there first we wanna do is some basic cleanups. We will be removing files and content which is not important for our project. Although it's not like the end of the world but its good to remove fies and stuff which unnecessarily takes up your space. If you have worked with **CRA Template** you must be quite familiar to this process.
+
+Removing content inside `App.js`, `reportWebVitals.js`, `setupTests.js` etc. But I am not gonna do all that. We will proceed with the Logic in Frontend not the Stylings and stuffs which I am guessing you are capable of. You can find the **source code** [here](https://github.com/AbhayaShankar/Stripe/tree/main/frontend) if you have any doubt or feel stuck somewhere.
 
 Now before proceeding forward we will install two more dependencies into our frontend project.
 1. [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout)
