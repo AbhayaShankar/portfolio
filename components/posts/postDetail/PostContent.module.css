@@ -50,9 +50,15 @@
   width: 100%;
   height: auto;
   /* padding: 10px 30px; */
-  opacity: 0.85;
+  opacity: 0.95;
   border-radius: 6px;
   margin: 0 auto;
+}
+
+.markdownContent .img_zoom {
+  transform: scale(1.25);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .markdownContent a {
