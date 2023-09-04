@@ -1,4 +1,3 @@
-
 ## CUSTOM CURSOR
 
 ### HTML
