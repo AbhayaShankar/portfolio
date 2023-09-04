@@ -132,7 +132,20 @@ and add the following **script** in the `package.json` file
   },
 ```
 
+One final thing to do before we start implementing our backend logic. Create a `.gitignore` file inside both **Backend** root folder and **Frontend** root folder and add these below code inside them both.
+
+```js
+/node_modules
+/.env
+```
+
+This will ensure that when you will be publishing your project to maybe your github repo or while deployment, items inside .gitignore will be ignored and will not be accessible to other people. This is crucial as you don't want your secret keys being open to other developers and also you don't want to push your node_modules to your github repo as well.
+
 Well Kudos! You successfully created the backend setup for this project. Give yourself a pat on the back, and lets move forward with the backend logic.
+
+After setting up your frotend and backend, you should be ready with something like this...
+
+![Project Setup](/blogs/stripe-payment-integration/setup.png)
 
 ## 🧠 Backend Logic
 
@@ -233,3 +246,253 @@ This will spin up the server, open up the console and if you can see `Server is 
 Now inorder to use Stripe, you need to first create an account on [Stripe](https://dashboard.stripe.com/register). If you have an account already then you can login and access the stripe dashboard which will look something like this.
 
 ![Stripe Dashboard](/blogs/stripe-payment-integration/dashboard.png)
+
+Now once you have successfully created an account, move into **Developers** tab and look for two things mainly -
+- Publishable Key
+- Secret Key
+
+![Secret Keys](/blogs/stripe-payment-integration/secretKeys.png)
+
+Take these two values and save this somewhere safe and we will use these later in the `index.js` backend setup. Make sure you don't share these keys specially the secret keys as this would lead to security issue for your configuration.
+
+Now move back into your **Backend** folder where we have just created our basic route. There you want to add a function at the very top of the `index.js` file.
+
+```js
+require("dotenv").config();
+```
+
+This bit of code will enable us to access our `.env` variables in our project so as to keep our secret keys as a secret.
+Create a new file inside the **Backend** folder and name it `.env` like this : 
+
+![Secret Keys](/blogs/stripe-payment-integration/env.png)
+
+Copy your secret key from Stripe Developers dashboard and paste it inside the .env variable just like in the above presented example.
+
+Remember - **Secret_Key** goes into *Backend* `.env` and **Publishable_Key** goes into *Frontend* `.env`. You can access these variables using `process.env.[Your_secret_key]`.
+
+Add secret key inside your stripe variable in `index.js` file.
+
+```js
+const stripe = require("stripe")(process.env.STRIPE_KEY);
+```
+
+Once this setup is done, let's proceed forward.
+
+📮 Adding a POST Route
+
+Now we wanna create a post route which we will hit from the frontend in which we will create customer from stripe and create a charge for the customer.
+
+Let's start with the basic setup then we will add up more functions as we proceed forward.
+
+```js
+app.get("/payment" , async (req, res) => {
+  try{
+    // Our Logic Here...
+    res.status(201).json({msg : "Success"})
+  }catch(err){
+    console.log(err)
+  }
+})
+```
+Now this is a very basic setup for a post route where we will add our logic in the try block. So without wasting any time, let's move forward with this.
+
+1. First we want to destructure `product` and `token` which we will be getting from our frontend. Then you can check whether or not you are getting the value or not, but wait till we actually setup our frontend. 
+   
+2. Then we will create an **idemPotencyKey** which ensures that transaction for a particular bill is generated only once and we don't generate different bill for the same request.
+   
+3. Then we will create a customer using Stripe. Now this will return a promise so we will use **Async/Await**. If you are not familiar with async/await you can look up to this documentation of [Javascript.info](https://javascript.info/async).
+    
+4. This create customer  will take in few values where we will pass on the email and source which we will getting from our token. Once this is complete we will get back our customer.
+   
+5. Once our customer is ready, we can add a charge on the purchase. This will also return a promise, so will use `await` again. This will also take in some values where **first** one is the options which we wanna extract out of which few are compulsory like `amount` , `currency`, `customer` and the **second** one is our `idemPotencyKey`
+
+```js
+const charge = await stripe.charges.create({options} , {idempotencyKey})
+```
+
+Add the following code block into our post route, which I will explain you each and every step of configuration.
+
+```js
+app.post("/payment", async (req, res) => {
+  const { product, token } = req.body;
+
+  // Check whether we are getting value or not.
+  console.log("Product", product);
+  console.log("Price", product.price);
+
+  // Special key for ensuring a user is charged only once for his/her products.
+  const idemPotencyKey = uuidv4();
+
+  try {
+    const customer = await stripe.customers.create({
+      email: token.email,
+      source: token.id,
+    });
+
+    const charge = await stripe.charges.create(
+      {
+        // Multiply by 100 because stripe takes in cent as default value and we want to have in dollars.
+        amount: product.price * 100,
+        currency: "usd",
+        customer: customer.id,
+        receipt_email: token.email,
+        description: `Purchase of ${product.name}`,
+        shipping: {
+          name: token.card.name,
+          address: {
+            country: token.card.address_country,
+          },
+        },
+      },
+      { idemPotencyKey }
+    );
+
+    res.status(200).json(charge);
+  } catch (err) {
+    console.log(err);
+  }
+});
+```
+
+Well that's basically all we had to do for our Backend setup. Although it's quite basic, as you dive deep into this, you will get to know a lot more and crucial todos and not-todos but we are good for now. Now let's jump back to our Frontend.
+
+## 🐬 Diving into Frontend
+
+Frontend is all about appealing to the eye, but at the same time where users can get easy access and smooth experience. We are not going to build a full stack E-commerce app or something, just the important part of how to use stripe as a payment. So, we will be starting off with quite simple.
+
+Let's move back into our **Frontend** folder and there first we wanna do is some basic cleanups. We will be removing files and content which is not important for our project. Although it's not like the end of the world but its good to remove fies and stuff which unnecessarily takes up your space. If you have worked with **CRA Template** you must be quite familiar to this process.
+
+Removing content inside `App.js`, `reportWebVitals.js`, `setupTests.js` etc. But I am not gonna do all that. We will proceed with the Logic in Frontend not the Stylings and stuffs which I am guessing you are capable of. You can find the **source code** [here](https://github.com/AbhayaShankar/Stripe/tree/main/frontend) if you have any doubt or feel stuck somewhere.
+
+Now before proceeding forward we will install two more dependencies into our frontend project.
+1. [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout)
+2. **CDN** for `MaterializeCSS`. 
+
+Open the terminal, make sure you are inside the frontend directory and then run the following command to install `react-stripe-checkout`.
+
+```bash
+npm i react-stripe-checkout
+```
+
+After that add this `<Link>` inside the `index.html` in Public folder of frontend.
+
+```html
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+/>
+```
+
+Add the necessary import statements and then we will create a state for our product. Ideally this will be dynamic but we are hardcoding this for now.
+
+```js
+import React, { useState } from "react";
+import "./App.css";
+import StripeCheckout from "react-stripe-checkout";
+import cover from "./cover.webp";
+
+
+function App() {
+  const [product, setProduct] = useState({
+    name: "Luffy gear 5 Bobblehead",
+    price: 35,
+    productBy: "Abhaya++",
+  });
+
+  return (
+    <div className="App">
+      <p>Luffy Gear 5</p>
+      <img src={cover} alt="cover-img" />
+      <span>{product.name}</span>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Now For the main part - Incorporating Stripe in our Frontend where we will pass our taken value which will be accessible in our backend as well. We will be using the **StripeCheckout** which will take in a few values where two are compulsory `stripeKey` and `token` and this has to named as mentioned. You can [refer](https://www.npmjs.com/package/react-stripe-checkout) the docs.
+
+Let's create a function **makePayment** which will send response to our backend with our token and product details. Backend will then create a charge for the Customer and once validated everything will send back a response to our frontend saying that payment is successful.
+
+```js
+function App() {
+
+// ... our product state
+
+  const makePayment = async (token) => {
+    const body = {
+      token,
+      product,
+    };
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    const response = await fetch("http://localhost:5000/payment", {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body),
+    });
+
+    const data = await response.json();
+    
+    // Display data for checking
+    console.log(data);
+  };
+
+  return (
+    <div className="App">
+      <p>Luffy Gear 5</p>
+      <img src={cover} alt="cover-img" />
+      <span>{product.name}</span>
+      <StripeCheckout
+        stripeKey={process.env.REACT_APP_KEY}
+        token={makePayment}
+        name="Buy Bobblehead"
+      >
+        <button className="btn-large red darken-4"> Buy BobbleHead Now</button>
+      </StripeCheckout>
+    </div>
+  );
+}
+
+export default App;
+```
+We could use these className only because we have added the cdn link of materialize css into out project.
+
+```js
+const makePayment = async (token) => {
+    const body = {
+      token,
+      product,
+    };
+```
+In this bit of code, you might be wondering where is this `token` coming from. Actually this token is automatically created for you by `StrikeCheckout`, you just need to ensure that your prop containing token is actually named as **token** and that's it.
+
+Then in that we create a body containing our token and product details, configure headers as `"Content-Type": "application/json"` and then the main part where we send a fetch request to our backend server and getting the response. Then we `await` response and we get back the data.
+
+Once everything in the frontend is done, you can spin-up the frontend project by going to terminal and running `npm start` command. make sure you are in the frontend directory while running the command or else you will get some fat error. You can visit `http://localhost:3000`, you should get this on the home screen.
+
+![Frontend View](/blogs/stripe-payment-integration/frontend.png)
+
+One more thing you should remember that both our frontend and backend should be up and running. We have not deployed our app so its not active. Until it's running, we will not get success payment transaction.
+
+Click on the **Buy Bobblehead Now** 
+
+![Test Mode](/blogs/stripe-payment-integration/test.png)
+
+You can add any dummy email and Card Number in the **Test Mode** is 4242424242424242 and you can add any dummy cvv and exp date as well and then proceed to pay.
+
+![Dummy Values](/blogs/stripe-payment-integration/dummy.png)
+
+![Payment Success](/blogs/stripe-payment-integration/paymentSuccess.png)
+
+If you are getting some errors in the console, please **Troubleshoot**.
+
+## 🤩 Congrats! You did it
+
+Great! You have successfully completed this project.
+You deserve a toast 🥂. Now you can proceed with some new ideas.
+If you have been following up and have created something, make sure to showcase your project connect with me on [LinkedIn](https://www.linkedin.com/in/abhayashankar/).
