@@ -7,12 +7,21 @@ function Cursor() {
   const requestRef = useRef();
   const previousTimeRef = useRef();
   let [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [hover, setHover] = useState(false);
 
   let cursorVisible = useState(false);
   let cursorEnlarged = useState(false);
 
   const [width, setWidth] = useState(null);
   const [height, setHeight] = useState(null);
+
+  Router.events.on("routeChangeStart", () => {
+    setHover(false);
+  });
+
+  Router.events.on("routeChangeComplete", () => {
+    setHover(true);
+  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -87,7 +96,7 @@ function Cursor() {
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [hover]);
 
   let { x, y } = mousePosition;
   const winDimensions = { width, height };
