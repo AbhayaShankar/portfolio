@@ -185,7 +185,7 @@
 
 @keyframes showMenu {
   0% {
-    transform: translatex(150px);
+    transform: translateY(-150px);
   }
 
   100% {

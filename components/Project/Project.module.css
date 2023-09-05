@@ -10,10 +10,11 @@
 
 .graveyard {
   max-width: 850px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start !important;
+  padding: 0.4rem 0.8rem;
 }
 
 .graveyard p {
@@ -153,5 +154,9 @@
 
   .featuredProj .text {
     font-size: var(--size-5);
+  }
+
+  .graveyard {
+    padding: 0;
   }
 }
