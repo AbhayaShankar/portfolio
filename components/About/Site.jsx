@@ -20,7 +20,13 @@ const Site = () => {
           </text>
         </li>
         <li>
-          Developed and design tweaked by me using <text> NextJS</text>
+          Developed and design tweaked by me using{" "}
+          <text>
+            <Link href={"https://nextjs.org/"} target="_blank">
+              {" "}
+              NextJs
+            </Link>
+          </text>
         </li>
         <li>
           Hosted by <text> Hostinger </text>with deployment via{" "}

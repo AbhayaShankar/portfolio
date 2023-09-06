@@ -7,8 +7,10 @@ function Layout(props) {
   return (
     <AppContext>
       <Navbar />
-      <CustomCursor />
-      <main>{props.children}</main>
+      <main>
+        <CustomCursor />
+        {props.children}
+      </main>
     </AppContext>
   );
 }

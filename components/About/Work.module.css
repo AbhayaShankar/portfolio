@@ -19,6 +19,10 @@
   margin-bottom: 20px;
 }
 
+.works h1 {
+  font-size: 21px;
+}
+
 .work > p {
   color: var(--color-grey-200);
   margin: 10px 0 0;
@@ -122,6 +126,10 @@
   .work {
     flex-direction: row;
     margin-bottom: 0;
+  }
+
+  .works h1 {
+    font-size: var(--size-8);
   }
 
   .position {

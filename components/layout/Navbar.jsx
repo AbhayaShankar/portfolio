@@ -70,6 +70,12 @@ const Navbar = () => {
         />
         {isMenuActive && (
           <div className={classes.stickyMenu}>
+            <img
+              onClick={() => setIsMenuActive(false)}
+              className={classes.close_btn}
+              src="/close.png"
+              alt="close-btn"
+            />
             <nav className={classes.menu_right_navbar}>
               <ul>
                 <li>
@@ -104,12 +110,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-            <img
-              onClick={() => setIsMenuActive(false)}
-              className={classes.close_btn}
-              src="/close.png"
-              alt="close-btn"
-            />
           </div>
         )}
       </header>
