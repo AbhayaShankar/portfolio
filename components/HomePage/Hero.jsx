@@ -37,7 +37,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <h1>Hi! I'm Abhaya. </h1>
+      <h1>UI/UX. Full-Stack. Freelance. </h1>
       <p>
         I'm Abhaya, an India based professional Frontend Developer with over 1
         &#189; years of experience in ReactJS/NextJS Development. I specialize

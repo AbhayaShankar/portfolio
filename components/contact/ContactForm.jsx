@@ -118,9 +118,9 @@ const ContactForm = () => {
     const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
     const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
 
-    setCardStyle({
-      transform: `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`,
-    });
+    // setCardStyle({
+    //   transform: `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`,
+    // });
   };
 
   const resetStyles = () => {

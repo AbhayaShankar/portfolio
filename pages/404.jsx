@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import error from "../public/404.png";
@@ -27,7 +26,6 @@ const Error = () => {
       <h1>Oops! The page you are trying to find is unavailable.</h1>
       <p>Redirecting back to home in {redirect} </p>
       <Image src={error} width={250} height={250} alt="error-img" />
-      {/* <Link href="/"></Link> */}
     </div>
   );
 };
