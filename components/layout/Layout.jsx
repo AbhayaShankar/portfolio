@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import React from "react";
 import AppContext from "../../context/context";
 import CustomCursor from "../CustomCursor";
+import Info from "./Info";
 
 function Layout(props) {
   return (
@@ -9,6 +10,7 @@ function Layout(props) {
       <Navbar />
       <main>
         <CustomCursor />
+        <Info />
         {props.children}
       </main>
     </AppContext>
