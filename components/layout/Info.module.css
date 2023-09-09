@@ -3,9 +3,9 @@
 }
 
 .btn {
-  padding: 0.65rem 1rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  /* border: 1px dotted var(--color-grey-600); */
   border: 0;
   position: fixed;
   bottom: 50px;
@@ -13,9 +13,12 @@
   z-index: 100;
   color: var(--color-grey-200);
   background-color: var(--color-grey-800);
-  font-size: 20px;
+}
+
+.btn svg {
+  font-size: 30px;
 }
 
 .btn:hover {
-  /* background-color: red; */
+  background-color: red;
 }

@@ -123,8 +123,8 @@
   }
 
   .hero h1 {
-    font-size: var(--size-14);
-    line-height: 72px;
+    font-size: var(--size-12);
+    line-height: 52px;
   }
 
   .hero p {
