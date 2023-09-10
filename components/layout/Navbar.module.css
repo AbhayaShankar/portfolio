@@ -113,14 +113,12 @@
   font-size: 16px;
   font-family: "PT Mono", monospace;
   font-weight: 800;
-  /* font-family: "Rubik Glitch", cursive; */
   color: #b4b4b4;
   letter-spacing: 3.5px;
   cursor: pointer;
   transition: color 0.3s ease;
   text-align: right;
   margin-right: 20px;
-  width: fit-content;
   background-color: #e2e2e2;
   border-radius: 4px;
   padding: 3px 8px;
@@ -133,10 +131,6 @@
 
 .menu_right_navbar ul:first-child {
   margin-top: 65px;
-}
-
-.menu_right_navbar ul li:hover {
-  /* color: #e2e2e2; */
 }
 
 .menu_right_navbar ul li a {
@@ -185,11 +179,11 @@
 
 @keyframes showMenu {
   0% {
-    transform: translatex(150px);
+    transform: translateX(100%);
   }
 
   100% {
-    transform: translateY(0px);
+    transform: translateX(0%);
   }
 }
 

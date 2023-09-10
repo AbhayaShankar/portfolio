@@ -3,6 +3,7 @@ import React from "react";
 import AppContext from "../../context/context";
 import CustomCursor from "../CustomCursor";
 import Info from "./Info";
+import Info from "./Info";
 
 function Layout(props) {
   return (
