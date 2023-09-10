@@ -51,10 +51,16 @@
   border-radius: 8px;
 }
 
-.right_navbar ul:last-child li a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.right_navbar button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-family: "PT Mono", monospace;
+  font-weight: 900;
+  color: #b4b4b4;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .right_navbar ul li a:hover {

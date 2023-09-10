@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Context } from "../../context/context";
 import { useRouter } from "next/router";
 import { BsDownload } from "react-icons/bs";
+import AnimateButton from "./Component";
 
 const Navbar = () => {
   const { isMenuActive, setIsMenuActive } = useContext(Context);
@@ -57,7 +58,7 @@ const Navbar = () => {
             </li>
             <li onClick={handleResume}>
               <Link href={"/"}>
-                Resume <BsDownload />
+                <AnimateButton />
               </Link>
             </li>
           </ul>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { animated, useSpring } from "react-spring";
 import classes from "./Info.module.css";
-import { ImInfo } from "react-icons/im";
 
 const Info = ({ rotation = 0, timing = 150, children }) => {
+  const [status, setStatus] = useState(false);
   const [isBooped, setIsBooped] = useState(false);
 
   const style = useSpring({
@@ -15,13 +15,16 @@ const Info = ({ rotation = 0, timing = 150, children }) => {
       friction: 10,
     },
   });
+
   useEffect(() => {
     if (!isBooped) {
       return;
     }
+
     const timeoutId = window.setTimeout(() => {
       setIsBooped(false);
     }, timing);
+
     return () => {
       window.clearTimeout(timeoutId);
     };
@@ -31,15 +34,39 @@ const Info = ({ rotation = 0, timing = 150, children }) => {
     setIsBooped(true);
   };
 
+  const handleStatus = () => {
+    setStatus(true);
+    console.log("Entered");
+  };
+
+  const exitStatus = () => {
+    setStatus(false);
+    console.log("Exit");
+  };
+
+  const handleMouseEnter = () => {
+    handleStatus();
+    trigger();
+  };
+
   return (
     <div className={classes.info}>
       <animated.span
-        onMouseEnter={trigger}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={exitStatus}
         style={style}
         className={classes.btn}
       >
-        <ImInfo />
+        {children}
       </animated.span>
+
+      <div className={classes.status}>
+        {status && (
+          <h3>
+            Portfolio is not up-to-date with recent projects and Experiences.
+          </h3>
+        )}
+      </div>
     </div>
   );
 };
