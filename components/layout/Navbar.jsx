@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Context } from "../../context/context";
 import { useRouter } from "next/router";
 import { BsDownload } from "react-icons/bs";
-import AnimateButton from "./Component";
+import AnimateButton from "./AnimateButton";
 
 const Navbar = () => {
   const { isMenuActive, setIsMenuActive } = useContext(Context);
