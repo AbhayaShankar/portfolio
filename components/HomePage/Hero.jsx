@@ -37,7 +37,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <h1>UI/UX. Full-Stack. Freelance. </h1>
+      <h1>UI/UX. Front-end. Freelance. </h1>
       <p>
         I'm Abhaya, an India based professional Frontend Developer with over 1
         &#189; years of experience in ReactJS/NextJS Development. I specialize
@@ -49,7 +49,7 @@ const Hero = () => {
         using Express JS.
         <br />
         <br />
-        Currently I am working at Capgemini Inc. as a React Frontend Developer.
+        Currently I am working at Capgemini Inc. as a Frontend Developer.
       </p>
       <div className={classes.socials}>
         <Link href={"https://github.com/AbhayaShankar"} target="blank">
