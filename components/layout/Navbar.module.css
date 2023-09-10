@@ -54,6 +54,7 @@
 .right_navbar button {
   background-color: transparent;
   border: none;
+  outline: none;
   font-size: 16px;
   font-family: "PT Mono", monospace;
   font-weight: 900;
@@ -61,6 +62,16 @@
   letter-spacing: 2.5px;
   cursor: pointer;
   transition: color 0.3s ease;
+  cursor: none;
+}
+
+.right_navbar ul li a button:hover {
+  color: #e2e2e2;
+}
+
+.right_navbar button span {
+  display: flex;
+  align-items: center;
 }
 
 .right_navbar ul li a:hover {

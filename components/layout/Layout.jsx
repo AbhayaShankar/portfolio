@@ -8,8 +8,8 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 function Layout(props) {
   return (
     <AppContext>
-      <Navbar />
       <CustomCursor />
+      <Navbar />
       <main>
         <Info rotation={20} timing={200}>
           <IoInformationCircleOutline />

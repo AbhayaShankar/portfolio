@@ -3,7 +3,7 @@ import useBoop from "./Boop";
 import { BsDownload } from "react-icons/bs";
 
 export default function AnimateButton() {
-  const [style, trigger] = useBoop({ y: 3 });
+  const [style, trigger] = useBoop({ y: 5 });
   return (
     <button onMouseEnter={trigger}>
       Resume
