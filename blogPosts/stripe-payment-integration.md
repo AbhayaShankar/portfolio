@@ -15,6 +15,9 @@ My name is Abhaya Shankar and I'll be guiding you for this short project.
 ## 📖 What You will be learning ?
 
 1. How to Integrate Stripe Payment Gateway in your React Project.
+2. Configuring your project environment.
+3. Do's and Dont's in the project.
+4. Why we use the packages and what is their significance.
 
 ## 🤏 Prerequisites
 
@@ -101,17 +104,17 @@ This will take hardly 30-40 secs to install and once done you should have `packa
 The package version may vary depending upon the latest release, but if you are having versions above these, you dont need to stress over this.
 
 Let's understand why exactly do we require these packages.
-- Cors - used for cross origin resource sharing with which a front-end client can make requests for resources to an external back-end server. The single-origin policy does not allow cross-origin requests and CORS headers are required to bypass this feature. To learn more about this, you can head over [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+- **Cors** - used for cross origin resource sharing with which a front-end client can make requests for resources to an external back-end server. The single-origin policy does not allow cross-origin requests and CORS headers are required to bypass this feature. To learn more about this, you can head over [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
-- Express - additional package built on top of node which makes our life easier. Listening to the server. To deep dive into Expressjs, you can also recommend the [documentation](https://expressjs.com/en/starter/installing.html) or this [blog](https://vegibit.com/node-js-blog-tutorial/).
+- **Express** - additional package built on top of node which makes our life easier. Listening to the server. To deep dive into Expressjs, you can also recommend the [documentation](https://expressjs.com/en/starter/installing.html) or this [blog](https://vegibit.com/node-js-blog-tutorial/).
 
-- Stripe - for Stripe Payment integration. Refer [docs](https://stripe.com/docs) for more info.
+- **Stripe** - for Stripe Payment integration. Refer [docs](https://stripe.com/docs) for more info.
 
-- uuid - It is used for generating a unique id for each request, so that we can ensure for every transaction request we are generating a payment flow.
+- **uuid** - It is used for generating a unique id for each request, so that we can ensure for every transaction request we are generating a payment flow.
 
-- nodemon - It is a package which re-spins the server if any changes are made to the project and saved. Not a required package but it makes our life easier. You can install this package as a dev dependecy also if you dont want this to publish in the production. Here's how you can do this - run the `npm i --save-dev nodemon`.
+- **nodemon** - It is a package which re-spins the server if any changes are made to the project and saved. Not a required package but it makes our life easier. You can install this package as a dev dependecy also if you dont want this to publish in the production. Here's how you can do this - run the `npm i --save-dev nodemon`.
 
-- dotenv - This package helps us to configure and use env variables inside our project to safeguard our private keys and values.
+- **dotenv** - This package helps us to configure and use env variables inside our project to safeguard our private keys and values.
 
 
 Now once the Basic setup is clear, you just wanna change a script in `package.json` file and we will good to go.
@@ -139,7 +142,9 @@ One final thing to do before we start implementing our backend logic. Create a `
 /.env
 ```
 
-This will ensure that when you will be publishing your project to maybe your github repo or while deployment, items inside .gitignore will be ignored and will not be accessible to other people. This is crucial as you don't want your secret keys being open to other developers and also you don't want to push your node_modules to your github repo as well.
+This will ensure that when you will be publishing your project to maybe your github repo or while deployment.
+
+> Items inside .gitignore will be ignored and will not be accessible to other people. This is crucial as you don't want your secret keys being open to other developers and also you don't want to push your node_modules to your github repo as well.
 
 Well Kudos! You successfully created the backend setup for this project. Give yourself a pat on the back, and lets move forward with the backend logic.
 
@@ -250,6 +255,9 @@ Now inorder to use Stripe, you need to first create an account on [Stripe](https
 Now once you have successfully created an account, move into **Developers** tab and look for two things mainly -
 - Publishable Key
 - Secret Key
+> **Publishable Key** is used in Stripe's client-side code to identify your Stripe account and create secure payment tokens. It is used for handling payment information securely in the browser without exposing sensitive data.
+
+> **Secret Key** is private key used in Stripe's server-side code to authenticate and interact with the Stripe API on your behalf. It must be kept confidential and never shared or exposed to the client side to maintain security.
 
 ![Secret Keys](/blogs/stripe-payment-integration/secretKeys.png)
 

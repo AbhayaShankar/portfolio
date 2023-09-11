@@ -10,7 +10,7 @@
   max-width: 70rem;
   margin: 0 auto;
   text-align: center;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
   padding: var(--size-8) 0 var(--size-20);
 }
 

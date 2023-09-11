@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-// import ReactMarkdown from "react-markdown";
 import PostHeader from "./PostHeader";
 import classes from "./PostContent.module.css";
 import { md } from "../../../helpers/markdown-it";

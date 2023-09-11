@@ -159,10 +159,6 @@
   border-radius: 80px;
 }
 
-.menu_right_navbar ul li a:hover {
-  /* color: #e2e2e2; */
-}
-
 .menu_right_navbar .resume a {
   display: flex;
   align-items: center;

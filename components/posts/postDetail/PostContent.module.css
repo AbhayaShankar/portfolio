@@ -110,8 +110,31 @@
 }
 
 .markdownContent ul li {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.25px;
+}
+
+.markdownContent ol li {
+  font-size: 17px;
+  letter-spacing: 0.25px;
+}
+
+.markdownContent blockquote {
+  padding: 20px 20px 20px 40px;
+  margin: 40px 0;
+  line-height: 2;
+  background-color: #39548022;
+  position: relative;
+}
+
+.markdownContent blockquote p:before {
+  content: "";
+  height: 100%;
+  width: 4px;
+  background-color: #1265a5;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .markdownContent button {
