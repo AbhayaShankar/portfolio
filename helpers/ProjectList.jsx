@@ -12,6 +12,7 @@ const ProjectsList = [
     skills: [
       "NextJS",
       "Typescript",
+      "Tailwind",
       "Clerk",
       "Stripe",
       "Shadcn/ui",
