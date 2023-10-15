@@ -3,6 +3,28 @@ import Project from "../components/Project/Project";
 
 const ProjectsList = [
   {
+    id: 0,
+    name: "Genius-AI",
+    desc: "Designed and Developed a Robust User Friendly AI SaaS Application – Genius using Typescript, Next Js. With this App, you can leverage the power of AI for generating Images, Video, Music and Code along with your own chat assistant. Rich features like Authentication, Payment Integration and Customer Support. ",
+    shortdesc:
+      "Developed a AI Saas application - Genius for generating Images, Video, Music and Code and chat assistant using Next Js and Typescript.",
+    url: "/projects/genius-ai.png",
+    skills: [
+      "NextJS",
+      "Typescript",
+      "Clerk",
+      "Stripe",
+      "Shadcn/ui",
+      "Crisp",
+      "Prisma",
+      "OpenAI",
+    ],
+    link: "https://genius-art.vercel.app/",
+    featured: true,
+    // note: "App is hosted on free render server. Please give it 15-30s to spin up.",
+    source: "https://github.com/AbhayaShankar/genius-saas-ai",
+  },
+  {
     id: 1,
     name: "Jobster - JobQuest",
     desc: "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS. Full stack app that includes login/register, Create, update, and delete job entries based on status: applied, Interviewed, or Declined and finally visual insights for analyzing your application history. ",
@@ -18,7 +40,7 @@ const ProjectsList = [
       "Styled Components",
     ],
     link: "https://jobquest-h6so.onrender.com/",
-    featured: true,
+    featured: false,
     note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/Jobster",
   },
