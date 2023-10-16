@@ -23,9 +23,11 @@ const Error = () => {
 
   return (
     <div className="error">
-      <h1>Oops! The page you are trying to find is unavailable.</h1>
-      <p>Redirecting back to home in {redirect} </p>
-      <Image src={error} width={250} height={250} alt="error-img" />
+      <div>
+        <h1>Oops! The page you are trying to find is unavailable.</h1>
+        <p>Redirecting back to home in {redirect} </p>
+      </div>
+      <Image src={error} width={500} height={500} alt="error-img" />
     </div>
   );
 };
