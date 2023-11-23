@@ -8,7 +8,7 @@ const about = () => {
       <Head>
         <title>About - Abhaya Shankar</title>
         <meta
-          name="description"
+          name="About - Abhaya"
           content="Abhaya Shankar Portfolio - Subscribe to the blog app so that you never miss any latest blog."
         />
       </Head>

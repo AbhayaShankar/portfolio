@@ -11,7 +11,7 @@ const HomePage = ({ posts }) => {
       <Head>
         <title>Abhaya Shankar</title>
         <meta
-          name="description"
+          name="Abhaya Shankar - Frontend Developer"
           content="I'm Abhaya, an India based professional Frontend Developer with over 2 years of experience in ReactJS/NextJS Development. I specialize in creating responsive user interfaces for web-based applications that prioritize design and user experience. I write blogs to help out other developers and guide them on the path to web development."
         />
       </Head>

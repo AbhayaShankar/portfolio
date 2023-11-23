@@ -2,12 +2,13 @@ import React, { Fragment } from "react";
 import PostContent from "../../components/posts/postDetail/PostContent";
 import { getPostsData, getPostsFiles } from "../../lib/posts-utils";
 import Head from "next/head";
+import { convertHyphenToCapitalized } from "../../lib/camelCase";
 
 const SinglePostPage = ({ post }) => {
   return (
     <Fragment>
       <Head>
-        <title>{post.slug} - Abhaya Shankar</title>
+        <title>{convertHyphenToCapitalized(post.slug)} - Abhaya Shankar</title>
         <meta name="description" content={post.excerpt} />
       </Head>
       <PostContent post={post} />

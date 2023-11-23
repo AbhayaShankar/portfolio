@@ -9,7 +9,7 @@ const ContactPage = () => {
       <Head>
         <title>Contact - Abhaya Shankar</title>
         <meta
-          name="description"
+          name="Contact - Abhaya Shankar"
           content="Abhaya Shankar Portfolio - Subscribe to the blog app so that you never miss any latest blog."
         />
       </Head>
