@@ -39,10 +39,10 @@ const Hero = () => {
       </div>
       <h1>UI/UX. Front-end. Freelance. </h1>
       <p>
-        I'm Abhaya, an India based professional Frontend Developer with over 1
-        &#189; years of experience in ReactJS/NextJS Development. I specialize
-        in creating responsive user interfaces for web-based applications that
-        prioritize design and user experience.
+        I'm Abhaya Shankar, an India based professional Frontend Developer with
+        over 2{/* &#189;  */} years of experience in ReactJS/NextJS Development.
+        I specialize in creating responsive user interfaces for web-based
+        applications that prioritize design and user experience.
         <br />
         <br />I love building projects and contributing to Open Source. I am
         learning and getting more hands-on expertise on Backend Technologies
