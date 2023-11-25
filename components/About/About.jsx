@@ -13,9 +13,9 @@ const About = () => {
       <div className={classes.intro}>
         <h3>Hey! Folks on the Web...</h3>
         <p>
-          I'm Abhaya, an India based professional Frontend Developer with over 1
-          &#189; years of experience in ReactJS/NextJS Development. I specialize
-          in creating responsive user interfaces for web-based applications that
+          I'm Abhaya, an India based professional Frontend Developer with around
+          2 years of experience in ReactJS/NextJS Development. I specialize in
+          creating responsive user interfaces for web-based applications that
           prioritize design and user experience.
           <br />
           <br />I love building projects and contributing to Open Source. I am
