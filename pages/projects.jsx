@@ -5,6 +5,7 @@ import { ProjectsList } from "../helpers/ProjectList";
 import Wrapper from "../components/Wrapper/Wrapper";
 import Wavy from "../components/Wrapper/Wavy";
 import Graveyard from "../components/Project/Graveyard";
+import { Head } from "next/document";
 
 const Projects = () => {
   return (
