@@ -5,11 +5,23 @@ import Head from "next/head";
 import { convertHyphenToCapitalized } from "../../lib/camelCase";
 
 const SinglePostPage = ({ post }) => {
+  const imagePath = `/blogs/${post.slug}/${post.image}`;
+
   return (
     <Fragment>
       <Head>
         <title>{convertHyphenToCapitalized(post.slug)} - Abhaya Shankar</title>
         <meta name="description" content={post.excerpt} />
+        <meta property="og:title" content={post.title} />
+        <meta
+          property="og:image"
+          content={`https://www.abhayashankar.com${imagePath}`}
+        />
+        <meta property="og:description" content={post.excerpt} />
+        <meta
+          property="og:url"
+          content={`https://www.abhayashankar.com/blogs/${post.slug}`}
+        />
       </Head>
       <PostContent post={post} />
     </Fragment>

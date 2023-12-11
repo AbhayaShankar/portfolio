@@ -14,7 +14,7 @@ const PostContent = ({ post }) => {
   const day = moment(date, "YYYY-MM-DD");
   const formattedDate = day.format("MMMM DD, YYYY");
 
-  const shareUrl = `abhayablog.vercel.app/blogs/${slug}`;
+  const shareUrl = `www.abhayashankar.com/blogs/${slug}`;
 
   const words = content.split(" ").length;
   const timeToRead = (words / 180).toPrecision(3);
