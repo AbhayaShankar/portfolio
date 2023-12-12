@@ -12,6 +12,16 @@ const ContactPage = () => {
           name="Contact - Abhaya Shankar"
           content="Abhaya Shankar Portfolio - Subscribe to the blog app so that you never miss any latest blog."
         />
+        <meta property="og:title" content={"Abhaya Shankar - Contact"} />
+        {/* Change the Image here for preview... */}
+        <meta
+          property="og:image"
+          content={`https://www.abhayashankar.com/contact.jpg`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.abhayashankar.com/contact`}
+        />
       </Head>
       <Wrapper
         title={"Contact"}

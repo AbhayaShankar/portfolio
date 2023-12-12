@@ -16,6 +16,16 @@ const Projects = () => {
           name="Projects - Abhaya Shankar"
           content="List of some of the key projects I have worked upon and tech stacks used."
         />
+        <meta property="og:title" content={"Abhaya Shankar - Projects"} />
+        {/* Change the Image here for preview... */}
+        <meta
+          property="og:image"
+          content={`https://www.abhayashankar.com/project.jpg`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.abhayashankar.com/projects`}
+        />
       </Head>
       <Wrapper
         title={"Projects"}

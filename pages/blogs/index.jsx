@@ -9,6 +9,16 @@ const AllPostsPage = ({ posts }) => {
       <Head>
         <title>Blogs - Abhaya Shankar</title>
         <meta name="description" content="Blogs by Abhaya Shankar" />
+        <meta property="og:title" content={"Abhaya Shankar - Blogs"} />
+        {/* Change the Image here for preview... */}
+        <meta
+          property="og:image"
+          content={`https://www.abhayashankar.com/blog.jpg`}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.abhayashankar.com/blogs`}
+        />
       </Head>
       <AllPosts posts={posts} />
     </Fragment>
