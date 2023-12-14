@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Hero.module.css";
 import Image from "next/image";
-import abhayaS from "../../public/abhayaS.png";
 import profileImg from "../../public/profile.png";
-import { FaLinkedinIn, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
 import Wavy from "../Wrapper/Wavy";

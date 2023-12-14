@@ -18,7 +18,7 @@ const HomePage = ({ posts }) => {
         {/* Change the Image here for preview... */}
         <meta
           property="og:image"
-          content={`https://www.abhayashankar.com/home-profile.png`}
+          content={`https://www.abhayashankar.com/home.png`}
         />
         <meta property="og:url" content={`https://www.abhayashankar.com`} />
       </Head>

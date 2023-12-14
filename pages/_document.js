@@ -4,8 +4,6 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        {/* <link rel="shortcut icon" href="/Logo.png" /> */}
-        {/* <link rel="stylesheet" type="text/css" href="../styles/nprogress.css" /> */}
         <Head />
         <body>
           <Main />
