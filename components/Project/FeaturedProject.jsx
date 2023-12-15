@@ -22,7 +22,7 @@ const FeaturedProject = () => {
               <div key={id} className={classes.project}>
                 <Link href={link} target="blank">
                   <div className={classes.image}>
-                    <Image src={url} alt={name} width={275} height={200} />
+                    <Image src={url} alt={name} width={300} height={200} />
                   </div>
                   <div className={classes.content}>
                     <h3>{name}</h3>

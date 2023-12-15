@@ -27,7 +27,7 @@ const PostItem = (props) => {
         <li className={classes.post} onClick={() => setIsMenuActive(false)}>
           <Link href={`/blogs/${slug}`}>
             <div className={classes.image}>
-              <Image src={imagePath} alt={title} width={275} height={200} />
+              <Image src={imagePath} alt={title} width={300} height={200} />
             </div>
             <div className={classes.content}>
               {isPublished ? (
@@ -44,7 +44,7 @@ const PostItem = (props) => {
         // UnPublished blog
         <li className={classes.post2} onClick={() => setIsMenuActive(false)}>
           <div className={classes.image}>
-            <Image src={imagePath} alt={title} width={275} height={200} />
+            <Image src={imagePath} alt={title} width={300} height={200} />
           </div>
           <div className={classes.content}>
             {isPublished ? (
