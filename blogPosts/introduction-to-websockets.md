@@ -21,13 +21,14 @@ My name is Abhaya Shankar and I will be your instructor for this short crash cou
 
 ## Chapters we will be covering in this blog
 
-1. Which protocol do websockets use and why is it important ?
-2. What is the difference between websockets, HTTP Polling, HTTP Streaming, and SSE ?
-3. Why should we use websockets in the first place...
-4. How exactly do websockets work?
-5. How to create websockets.
-6. Real-time Examples where Web sockets are used.
-7. Scenarios where you should be using websockets and where not to.
+1. What are widely used network protocols and how do they work ?
+2. Which protocol do websockets use and why is it important ?
+3. What is the difference between HTTP Polling, HTTP Streaming, SSE, and Web Sockets ?
+4. Why should we use websockets in the first place...
+5. How exactly do websockets work?
+6. How to create websockets.
+7. Real-time Examples where Web sockets are used.
+8. Scenarios where you should be using websockets and where not to.
 
 Before we start our topic on websockets, it's essential to know about the different protocols and why the need for web sockets came in the first place.
 
@@ -35,19 +36,19 @@ There are fair share of protocols used on day-to-day basis but we remain to seem
 
 1. **HTTP/HTTPS** : Which stands for HyperText Transfer Protocol ( HTTP ) is an Application layer protocol used for transmitting hypertexts docs such as HTML. It is the foundation of data communication on the World Wide Web and is essential for web development. Both HTTP and HTTPS are used for transferring data over the web.
 
-The key difference between HTTP and HTTPS is **Security**. HTTPS stands for HyperText Transfer Protocol Secure. It uses a secure, encrypted connection, typically using SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encryption ensures that the data exchanged between the client and server is encrypted, providing confidentiality and integrity.
+The key difference between _HTTP_ and _HTTPS_ is **Security**. HTTPS stands for HyperText Transfer Protocol Secure. It uses a secure, encrypted connection, typically using SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encryption ensures that the data exchanged between the client and server is encrypted, providing confidentiality and integrity.
 
 2. **TCP/IP** : Which stands for Transmission Control Protocol / Internet Protocol specifies how devices exchange data over the internet. They are the fundamental suite of protocols for communication on the internet. TCP ensures reliable, ordered, and error-checked delivery of data.
 
-The TCP defines how application create communication channels and also manages how the data can be broken down into different packets/packages to be then transmitted over the internet and then re-assemble at the destination.
+The _TCP_ defines how application create communication channels and also manages how the data can be broken down into different packets/packages to be then transmitted over the internet and then re-assemble at the destination.
 
-IP defines how to address and route each packet/packages to ensures they are received at the destination.
+_IP_ defines how to address and route each packet/packages to ensures they are received at the destination.
 
 They are designed for network reliability and auto recovery from failures. If suppose a packet which has to be received at the destination, for some reason didn't arrive at the destination, then the TCP/IP will ensure to look for the lost packet and recover it over the internet.
 
 > In Short **TCP** is designed to ensure reliable and ordered delivery of data. If a packet is lost in transit, TCP employs retransmission mechanisms, flow control, and congestion control to recover the lost data. These mechanisms contribute to the robustness and reliability of **TCP/IP-based** communication over networks, making it suitable for applications that require accurate and complete data delivery.
 
-3. **UDP** : Stands for User Datagram Protocol. It's working is quite similar to TCP/IP. Here also the data is broken down into packets ( referred to as **datagrams** ) in case of UDP prtocols but UDP is connectionless, meaning it does not establish a connection before sending data. Each datagram is independent of others, making it faster but less reliable than connection-oriented protocols like TCP. It doesn't have much error checking as compared to TCP. Moreover, in transit if a datagram is lost, it is not traceable, meaning it cannot be recovered.
+3. **UDP** : Stands for User Datagram Protocol. Its working is quite similar to TCP/IP. Here also the data is broken down into packets ( referred to as **datagrams** ) in the case of UDP protocols but UDP is connectionless, meaning it does not establish a connection before sending data. Each datagram is independent of others, making it faster but less reliable than connection-oriented protocols like TCP. It doesn't have much error checking as compared to TCP. Moreover, in transit, if a datagram is lost, it is not traceable, meaning it cannot be recovered.
 
 > In short, **UDP** is preferred for scenarios where speed and low latency are more critical than ensuring every piece of data is delivered. Its simplicity and reduced overhead make it suitable for real-time applications and situations where occasional packet loss can be tolerated.
 
