@@ -5,7 +5,7 @@ slug: "introduction-to-websockets"
 image: "websocket.png"
 excerpt: "An Introductory blog to Web Sockets - All you need to know to start working with web sockets."
 isFeatured: true
-isPublished: false
+isPublished: true
 ---
 
 ## 👋 Welcome to Introduction to Web Sockets
@@ -29,13 +29,33 @@ My name is Abhaya Shankar and I will be your instructor for this short crash cou
 6. Real-time Examples where Web sockets are used.
 7. Scenarios where you should be using websockets and where not to.
 
-> In the modern era where internet is used more extensively than anything else, you might have used **Whatsapp**, **Facebook** and **Instagram**. Real-time messaging is one of the key features which was why there messaging social platforms are widely used.
-
 Before we start our topic on websockets, it's essential to know about the different protocols and why the need for web sockets came in the first place.
 
 There are fair share of protocols used on day-to-day basis but we remain to seem unfamiliarised with them. Let's quickly talk about them and we will then jump back to our discussion here. We are going to talk about all the protocols but our discussion will be limited to the protocols which concerns to this topic. To name a few they are **HTTP/HTTPS**, **TCP**, **IP** and **UDP**.
 
-I believe you would know or atleast heard of HTTP/HTTPS protocol. The working of which is simple where a client sends a request to the server and the request is then processed and if everything is good, server will then send the response. If any error or issue with the request, it will send back a 403/404/500 response error.
+1. **HTTP/HTTPS** : Which stands for HyperText Transfer Protocol ( HTTP ) is an Application layer protocol used for transmitting hypertexts docs such as HTML. It is the foundation of data communication on the World Wide Web and is essential for web development. Both HTTP and HTTPS are used for transferring data over the web.
+
+The key difference between HTTP and HTTPS is **Security**. HTTPS stands for HyperText Transfer Protocol Secure. It uses a secure, encrypted connection, typically using SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encryption ensures that the data exchanged between the client and server is encrypted, providing confidentiality and integrity.
+
+2. **TCP/IP** : Which stands for Transmission Control Protocol / Internet Protocol specifies how devices exchange data over the internet. They are the fundamental suite of protocols for communication on the internet. TCP ensures reliable, ordered, and error-checked delivery of data.
+
+The TCP defines how application create communication channels and also manages how the data can be broken down into different packets/packages to be then transmitted over the internet and then re-assemble at the destination.
+
+IP defines how to address and route each packet/packages to ensures they are received at the destination.
+
+They are designed for network reliability and auto recovery from failures. If suppose a packet which has to be received at the destination, for some reason didn't arrive at the destination, then the TCP/IP will ensure to look for the lost packet and recover it over the internet.
+
+> In Short **TCP** is designed to ensure reliable and ordered delivery of data. If a packet is lost in transit, TCP employs retransmission mechanisms, flow control, and congestion control to recover the lost data. These mechanisms contribute to the robustness and reliability of **TCP/IP-based** communication over networks, making it suitable for applications that require accurate and complete data delivery.
+
+3. **UDP** : Stands for User Datagram Protocol. It's working is quite similar to TCP/IP. Here also the data is broken down into packets ( referred to as **datagrams** ) in case of UDP prtocols but UDP is connectionless, meaning it does not establish a connection before sending data. Each datagram is independent of others, making it faster but less reliable than connection-oriented protocols like TCP. It doesn't have much error checking as compared to TCP. Moreover, in transit if a datagram is lost, it is not traceable, meaning it cannot be recovered.
+
+> In short, **UDP** is preferred for scenarios where speed and low latency are more critical than ensuring every piece of data is delivered. Its simplicity and reduced overhead make it suitable for real-time applications and situations where occasional packet loss can be tolerated.
+
+Hope, all that made sense to you. Now once we are familiar with these terms. Let's move back to our discussion about web sockets.
+
+> In the modern era where internet is used more extensively than anything else, you might have used **Whatsapp**, **Facebook** and **Instagram**. Real-time messaging is one of the key features which was why there messaging social platforms are widely used.
+
+I believe now you know about or atleast heard of HTTP/HTTPS protocol. The working of which is simple where a client sends a request to the server and the request is then processed and if everything is good, server will then send the 200 OK response. If any error or issue with the request, it will send back a 403/404/500 response error depending upon the type of error.
 
 If all these seems gibberish to you, make sure you atleast have a basic knowledge of this. You can refer this [Link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 
