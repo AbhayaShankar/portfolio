@@ -19,16 +19,25 @@ isPublished: true
 Hello Everyone, hope you liked the story 😂
 My name is Abhaya Shankar and I will be your instructor for this short crash course where I will teach you all you need to know before you start working with websockets.
 
-## Chapters we will be covering in this blog
+## 📖 What You will be learning ?
 
 1. What are widely used network protocols and how do they work ?
-2. Which protocol do websockets use and why is it important ?
-3. What is the difference between HTTP Polling, HTTP Streaming, SSE, and Web Sockets ?
-4. Why should we use websockets in the first place...
-5. How exactly do websockets work?
-6. How to create websockets.
-7. Real-time Examples where Web sockets are used.
-8. Scenarios where you should be using websockets and where not to.
+2. What is the difference between HTTP Polling, HTTP Streaming, SSE, and Web Sockets ?
+3. Why should we use websockets in the first place...
+4. How exactly do websockets work?
+5. How to create websockets.
+6. Real-time Examples where Web sockets are used.
+7. Scenarios where you should be using websockets and where not to.
+
+## 🤏 Prerequisites
+
+- If you have worked with javascript and React, then you will be good to go.
+- Basic knowledge of Nodejs. (Beginners also can follow this)
+- You need to have [Node](https://nodejs.org/en) installed.
+- Interest to learn something new 💡.
+- And a cup of coffee. ☕
+
+### 🛜 Network Protocols and their Working
 
 Before we start our topic on websockets, it's essential to know about the different protocols and why the need for web sockets came in the first place.
 
@@ -73,11 +82,26 @@ I would then ask the waiter for a menu to check which ramen they sell and upon t
 
 Such is the working of the HTTP connections. Now if I wanted to add eggs to the ramen, I would have to call the waiter and let him pass on the message to the chef, and for every request, I would have to call the waiter again and again.
 
-Such was the issue which Abhaya from the story was facing while he was chatting with his girlfriend.
+So here's the issue : The kitchen can’t send a waiter to you; it can only give the waiter a dish, or bad news, when you send the waiter over. So, for the client to get updates, the only possible way is to send request to the server.
 
-What if I could have a way to communicate with the chef in the kitchen directly ? Interesting right then no need of contacting the waiter again and again yeah ?
+Such was the issue which Abhaya from the story was facing while he was chatting with his girlfriend. Abhaya was sending message to the server as some request with the payload, server received the message and stored in the database. But his girlfriend had no idea whether Abhaya had sent any message or not. Only way she can get the latest message is by again sending a request to the server to get back the latest response, only then can server send back the new messages.
+
+What if we could have a way to communicate with the chef in the kitchen directly ? Interesting right then no need of contacting the waiter again and again yeah ?
 
 Let's take a food truck instead of a restaurant then what would happen. I would directly talk to the chef of the food truck and would tell the chef that I want to eat ramen, if he knows he would directly tell me if he knows or not. I wouldn't wait for the response to come back and if yes, he knows how to prepare later if I want to add eggs I would directly tell him that I want eggs, please add them too. This type of conversation is more profound and better. Don't you think so ?
+
+Well, you know we are getting to web sockets right. 😂
+But before going to that topic, let's discuss what other work around can be for these scenarios if not web sockets or why the need for web sockets arise.
+
+## 🌐 HTTP Polling, HTTP Streaming and SSE
+
+1. **HTTP Polling** : One dead simple approach to work around this issue was polling. Polling is basically categorised into 2 parts namely _SHORT POLLING_ and _LONG POLLING_.
+
+- Short Polling is very simple, just keep spamming server after every fixed amount of time, let's say 1000ms to get back any new messages. In this client keeps calling the server for latest data is any and is acheived using _setTimeout_ and _setInterval_. Downfall of this is that it consumes server resources with a barrage of requests, and most requests will return empty if the data isn’t frequently updated.
+
+- Overcoming this issue came Long Polling. In this method, the server also receives a request, but will respond back till it gets any new data from the server. Till then it will be in pending state and won't complete till the request is resolved termed as _hanging_. Long polling is more efficient than pinging the server repeatedly since it saves the hassle of parsing request headers, querying for new data, and sending often-empty responses. However, the server must now keep track of multiple requests and their order. Also, requests can time out, ensuring low latency, and new requests need to be issued periodically.
+
+2. **HTTP Streaming** :
 
 ![HTTP connection vs Web Socket Connection](/blogs/introduction-to-websockets/http-vs-websocket.png)
 
