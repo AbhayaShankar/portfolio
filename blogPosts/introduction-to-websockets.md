@@ -107,7 +107,7 @@ But before going to that topic, let's discuss what other work around can be for 
 
 3. **SSE** : SSE stands for [Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events). Another technique for sending messages which leverages the Javascript [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) interface. SSE is a standardized form of HTTP Streaming concept. EventSource opens a persistent, one-directional connection with the server over HTTP using a special text/event-stream header and listens for messages.
 
-- This is _almost_ what we’re looking for—we can now receive updates from the server! Because they’re one-directional, Server-Sent Events (SSE) are great for apps where you don’t need to send the server any data. For example, the Facebook News Feed: whenever new posts come in, the server pushes them to the timeline.
+- This is _almost_ what we’re looking for. Now we can now receive updates from the server! Because they’re one-directional, Server-Sent Events (SSE) are great for apps where you don’t need to send the server any data. For example, the Facebook News Feed: whenever new posts come in, the server pushes them to the timeline.
 
 ## 🪄 Working of Web Sockets
 

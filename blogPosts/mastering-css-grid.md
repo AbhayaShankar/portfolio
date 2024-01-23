@@ -6,7 +6,6 @@ image: "1.png"
 excerpt: "CSS Grid is a powerful layout system that allows you to create complex, responsive layouts with ease."
 isFeatured: false
 isPublished: true
-
 ---
 
 # Mastering CSS Grid
@@ -45,6 +44,7 @@ Once you've defined your grid container and your rows and columns, you can start
   grid-column: 2 / 3;
 }
 ```
+
 In the above example, we've defined an element with the class item and placed it in the second column of the first row.
 
 ## 🕳️ Creating Grid Gaps
@@ -53,7 +53,7 @@ If you have worked with css flexbox, you would know how gaps in flexbox works, s
 
 To create gaps between grid rows and columns, you can use the `grid-row-gap` and `grid-column-gap` properties, respectively.
 
-```css 
+```css
 .grid-container {
   display: grid;
   grid-template-rows: 100px 200px;
@@ -94,6 +94,7 @@ Grid areas allow you to name specific areas of your grid and place elements in t
   grid-area: footer;
 }
 ```
+
 In the above example, we've defined a grid container with three rows and two columns, and we've named specific areas using the `grid-template-areas` property. We've then placed elements in those areas using the `grid-area` property.
 
 ## 🎉 Conclusion
