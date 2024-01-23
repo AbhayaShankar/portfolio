@@ -23,7 +23,7 @@ My name is Abhaya Shankar and I will be your instructor for this short crash cou
 
 1. What are widely used network protocols and how do they work ?
 2. What is the difference between HTTP Polling, HTTP Streaming, SSE, and Web Sockets ?
-3. Why should we use websockets in the first place...
+3. Working of Web Sockets...
 4. How exactly do websockets work?
 5. How to create websockets.
 6. Real-time Examples where Web sockets are used.
@@ -101,11 +101,19 @@ But before going to that topic, let's discuss what other work around can be for 
 
 - Overcoming this issue came Long Polling. In this method, the server also receives a request, but will respond back till it gets any new data from the server. Till then it will be in pending state and won't complete till the request is resolved termed as _hanging_. Long polling is more efficient than pinging the server repeatedly since it saves the hassle of parsing request headers, querying for new data, and sending often-empty responses. However, the server must now keep track of multiple requests and their order. Also, requests can time out, ensuring low latency, and new requests need to be issued periodically.
 
-2. **HTTP Streaming** :
+2. **HTTP Streaming** :This mechanism saved the pain of network latency because the initial request is kept open indefinitely. The request is never terminated, even after the server pushes the data. The first three lifecycle methods of [HTTP streaming](https://gist.github.com/CMCDragonkai/6bfade6431e9ffb7fe88) are the same in HTTP long polling.
+
+- When the response is sent back to the client, however, the request is never terminated; the server keeps the connection open and sends new updates whenever there’s a change.
+
+3. **SSE** : SSE stands for [Server Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events). Another technique for sending messages which leverages the Javascript [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) interface. SSE is a standardized form of HTTP Streaming concept. EventSource opens a persistent, one-directional connection with the server over HTTP using a special text/event-stream header and listens for messages.
+
+- This is _almost_ what we’re looking for—we can now receive updates from the server! Because they’re one-directional, Server-Sent Events (SSE) are great for apps where you don’t need to send the server any data. For example, the Facebook News Feed: whenever new posts come in, the server pushes them to the timeline.
+
+## 🪄 Working of Web Sockets
 
 ![HTTP connection vs Web Socket Connection](/blogs/introduction-to-websockets/http-vs-websocket.png)
 
-Hope you get the point. Web Sockets are such connections where the client directly communicates with the server. If the server would want to transmit/send any data to the client it would do so directly.
+Web Sockets are such connections where the client and the server communicates with an open channel. If the server would want to transmit/send any data to the client it would do so directly.
 
 Now if the client or server anyone closes the channel, the connection is closed.
 Ex. If you have had your fair share of food and you would want to go now. You ( client ) will close this channel and the connection will be closed If the Shop owner wants to close the shop, then he will terminate the channel and the connection will be closed.
