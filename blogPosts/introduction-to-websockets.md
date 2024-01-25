@@ -16,7 +16,7 @@ isPublished: true
 >
 > _This lead Abhaya to go back to the fundamentals of the Request and Response and the channel by which this communication is made. He then decided to make a new type of connection which will ensure the connection to be open till he and his girlfriend chat and not to close this till they had shared all their stories. This type of connection later came to be known as **Web Socket Connections**._
 
-Hello Everyone, hope you liked the story 😂
+Hello Everyone!, hope you liked the story 😂
 My name is Abhaya Shankar and I will be your instructor for this short crash course where I will teach you all you need to know before you start working with websockets.
 
 ## 📖 What You will be learning ?
@@ -109,7 +109,20 @@ But before going to that topic, let's discuss what other work around can be for 
 
 - This is _almost_ what we’re looking for. Now we can now receive updates from the server! Because they’re one-directional, Server-Sent Events (SSE) are great for apps where you don’t need to send the server any data. For example, the Facebook News Feed: whenever new posts come in, the server pushes them to the timeline.
 
+4. Web Sockets : Web Sockets are the technology that is built on full-duplex connection i.e. it allows client and server to communicate with each other in real time over TCP connection. The **Keyword** here is _two-way_ communication. Web Sockets allow client and server to trigger communication with one another gaining upper hand on Polling, Streaming and SSE Events.
+
+Moreover, the server can keep track of each client and push messages to a subset of clients. With this technology, now Abhaya and his girlfriend can chat without any disturbances.
+
+> **Key Points** About Web Sockets
+>
+> - Web Sockets are **Bi-directional** in nature
+> - Web Sockets uses **TCP** connection
+> - Connection developed using web sockets will last as long as client and server don't close the connection.
+> - Web Sockets uses **HTTP** to initiate the connection.
+
 ## 🪄 Working of Web Sockets
+
+For establishing a web socket connection, first the client sends a request to the server. Upon receiving the request, server then returns back a response and till this response is valid, the open connection persists till any of the client disconnects. This process is called **Handshake**. With every new request, a new TCP connection is generated and the previous connection is terminated.
 
 ![HTTP connection vs Web Socket Connection](/blogs/introduction-to-websockets/http-vs-websocket.png)
 
