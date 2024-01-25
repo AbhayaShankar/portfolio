@@ -120,6 +120,10 @@ Moreover, the server can keep track of each client and push messages to a subset
 > - Connection developed using web sockets will last as long as client and server don't close the connection.
 > - Web Sockets uses **HTTP** to initiate the connection.
 
+## 🪄 Wooaahh! You made it this far..
+
+Give yourself a pat on the back. You did great. If you are this far, only a few more to go till you get a complete gist of the technology we are trying to learn. You are awesome! Take a sip of coffee or tea and let's continue... 🤩🤩
+
 ## 🪄 Working of Web Sockets
 
 For establishing a web socket connection, first the client sends a request to the server. Upon receiving the request, server then returns back a response and till this response is valid, the open connection persists till any of the client disconnects. This process is called **Handshake**. With every new request, a new TCP connection is generated and the previous connection is terminated.
@@ -132,3 +136,10 @@ Now if the client or server anyone closes the channel, the connection is closed.
 Ex. If you have had your fair share of food and you would want to go now. You ( client ) will close this channel and the connection will be closed If the Shop owner wants to close the shop, then he will terminate the channel and the connection will be closed.
 
 ![Web Socket Connection Working](/blogs/introduction-to-websockets/websocket-connection.png)
+
+## 🤩 Congratulations! You did it 🔥🔥
+
+Great! You have successfully completed this comprehensive blog on web sockets.
+You deserve a toast 🥂. Now you can proceed with some new ideas to create a chat App using web sockets. If you have been following up and have created something, make sure to showcase your project connect with me on [LinkedIn](https://www.linkedin.com/in/abhayashankar/).
+
+Here's the **LINK** to the new blog for how to create and start working with web sockets.
