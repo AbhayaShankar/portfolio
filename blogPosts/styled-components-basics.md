@@ -8,7 +8,6 @@ isFeatured: true
 isPublished: false
 ---
 
-
 ## 👋 Welcome to Styled Components
 
 My name is Abhaya Shankar and I'll be guiding you for this short project.
@@ -18,5 +17,3 @@ My name is Abhaya Shankar and I'll be guiding you for this short project.
 1. How to incorporate styled components in your React Project.
 
 ## 🤏 Prerequisites
-
-

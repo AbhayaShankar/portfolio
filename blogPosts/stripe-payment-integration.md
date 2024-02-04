@@ -37,24 +37,23 @@ Well anyway, Hope you have your coffee. Take a sip of your coffee and let's buil
 
 ## 🚀 Starting Off...
 
- For Stripe Payment Integration we require 2 basic things - a frontend where user can enter his card details and continue to pay and a backend where the validation checks and authentication is taken care of for smooth transaction process.
-
+For Stripe Payment Integration we require 2 basic things - a frontend where user can enter his card details and continue to pay and a backend where the validation checks and authentication is taken care of for smooth transaction process.
 
 ## 🔧 Basic Frontend Setup
 
-- FRONTEND : CRA Template  
+- FRONTEND : CRA Template
 
 ```bash
   npx create-react-app frontend
 ```
 
-  Let this install all the dependencies and create a basic CRA template. This will take 15-30 sec of time depending upon your processor and network speed, it might take more. So wait till these gets installed and in the meanwhile lets proceed with the backend setup as well.
+Let this install all the dependencies and create a basic CRA template. This will take 15-30 sec of time depending upon your processor and network speed, it might take more. So wait till these gets installed and in the meanwhile lets proceed with the backend setup as well.
 
 ## 🔧 Basic Backend Setup
 
 - BACKEND - Setup
 
-``` bash
+```bash
 mkdir backend
 cd backend
 npm init -y
@@ -104,6 +103,7 @@ This will take hardly 30-40 secs to install and once done you should have `packa
 The package version may vary depending upon the latest release, but if you are having versions above these, you dont need to stress over this.
 
 Let's understand why exactly do we require these packages.
+
 - **Cors** - used for cross origin resource sharing with which a front-end client can make requests for resources to an external back-end server. The single-origin policy does not allow cross-origin requests and CORS headers are required to bypass this feature. To learn more about this, you can head over [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 - **Express** - additional package built on top of node which makes our life easier. Listening to the server. To deep dive into Expressjs, you can also recommend the [documentation](https://expressjs.com/en/starter/installing.html) or this [blog](https://vegibit.com/node-js-blog-tutorial/).
@@ -116,10 +116,9 @@ Let's understand why exactly do we require these packages.
 
 - **dotenv** - This package helps us to configure and use env variables inside our project to safeguard our private keys and values.
 
-
 Now once the Basic setup is clear, you just wanna change a script in `package.json` file and we will good to go.
 
-You  wanna delete this **script** 
+You wanna delete this **script**
 
 ```js
 "scripts": {
@@ -154,7 +153,7 @@ After setting up your frotend and backend, you should be ready with something li
 
 ## 🧠 Backend Logic
 
-Once the basic setup is done, now we wanna setup routes and logic for the backend. Moving on with the basic setup for `index.js` file : 
+Once the basic setup is done, now we wanna setup routes and logic for the backend. Moving on with the basic setup for `index.js` file :
 
 Note : you can call this whatever you want. Most prefer this to call `server.js`, but you can call this anything.
 
@@ -198,11 +197,10 @@ Here we initialised the cors, express, uuid and stripe. Then we setup a middlewa
 We cheated our way to send the response using `res.send()`, which we ideally don't use. Instead you could also send a proper response something like this :
 
 ```js
-app.get("/" , (req, res) => {
-  res.status(200).json({success : true, msg: "IT WORKS"});
-})
+app.get("/", (req, res) => {
+  res.status(200).json({ success: true, msg: "IT WORKS" });
+});
 ```
-
 
 ```js
 // index.js
@@ -241,8 +239,9 @@ const start = async () => {
 start();
 ```
 
-Copy paste the file into `index.js` and then spin the server by running the command 
-```bash 
+Copy paste the file into `index.js` and then spin the server by running the command
+
+```bash
 npm start
 ```
 
@@ -253,9 +252,10 @@ Now inorder to use Stripe, you need to first create an account on [Stripe](https
 ![Stripe Dashboard](/blogs/stripe-payment-integration/dashboard.png)
 
 Now once you have successfully created an account, move into **Developers** tab and look for two things mainly -
+
 - Publishable Key
 - Secret Key
-> **Publishable Key** is used in Stripe's client-side code to identify your Stripe account and create secure payment tokens. It is used for handling payment information securely in the browser without exposing sensitive data.
+  > **Publishable Key** is used in Stripe's client-side code to identify your Stripe account and create secure payment tokens. It is used for handling payment information securely in the browser without exposing sensitive data.
 
 > **Secret Key** is private key used in Stripe's server-side code to authenticate and interact with the Stripe API on your behalf. It must be kept confidential and never shared or exposed to the client side to maintain security.
 
@@ -270,13 +270,13 @@ require("dotenv").config();
 ```
 
 This bit of code will enable us to access our `.env` variables in our project so as to keep our secret keys as a secret.
-Create a new file inside the **Backend** folder and name it `.env` like this : 
+Create a new file inside the **Backend** folder and name it `.env` like this :
 
 ![Secret Keys](/blogs/stripe-payment-integration/env.png)
 
 Copy your secret key from Stripe Developers dashboard and paste it inside the .env variable just like in the above presented example.
 
-Remember - **Secret_Key** goes into *Backend* `.env` and **Publishable_Key** goes into *Frontend* `.env`. You can access these variables using `process.env.[Your_secret_key]`.
+Remember - **Secret_Key** goes into _Backend_ `.env` and **Publishable_Key** goes into _Frontend_ `.env`. You can access these variables using `process.env.[Your_secret_key]`.
 
 Add secret key inside your stripe variable in `index.js` file.
 
@@ -293,29 +293,26 @@ Now we wanna create a post route which we will hit from the frontend in which we
 Let's start with the basic setup then we will add up more functions as we proceed forward.
 
 ```js
-app.get("/payment" , async (req, res) => {
-  try{
+app.get("/payment", async (req, res) => {
+  try {
     // Our Logic Here...
-    res.status(201).json({msg : "Success"})
-  }catch(err){
-    console.log(err)
+    res.status(201).json({ msg: "Success" });
+  } catch (err) {
+    console.log(err);
   }
-})
+});
 ```
+
 Now this is a very basic setup for a post route where we will add our logic in the try block. So without wasting any time, let's move forward with this.
 
-1. First we want to destructure `product` and `token` which we will be getting from our frontend. Then you can check whether or not you are getting the value or not, but wait till we actually setup our frontend. 
-   
+1. First we want to destructure `product` and `token` which we will be getting from our frontend. Then you can check whether or not you are getting the value or not, but wait till we actually setup our frontend.
 2. Then we will create an **idemPotencyKey** which ensures that transaction for a particular bill is generated only once and we don't generate different bill for the same request.
-   
 3. Then we will create a customer using Stripe. Now this will return a promise so we will use **Async/Await**. If you are not familiar with async/await you can look up to this documentation of [Javascript.info](https://javascript.info/async).
-    
-4. This create customer  will take in few values where we will pass on the email and source which we will getting from our token. Once this is complete we will get back our customer.
-   
+4. This create customer will take in few values where we will pass on the email and source which we will getting from our token. Once this is complete we will get back our customer.
 5. Once our customer is ready, we can add a charge on the purchase. This will also return a promise, so will use `await` again. This will also take in some values where **first** one is the options which we wanna extract out of which few are compulsory like `amount` , `currency`, `customer` and the **second** one is our `idemPotencyKey`
 
 ```js
-const charge = await stripe.charges.create({options} , {idempotencyKey})
+const charge = await stripe.charges.create({ options }, { idempotencyKey });
 ```
 
 Add the following code block into our post route, which I will explain you each and every step of configuration.
@@ -373,8 +370,9 @@ Let's move back into our **Frontend** folder and there first we wanna do is some
 Removing content inside `App.js`, `reportWebVitals.js`, `setupTests.js` etc. But I am not gonna do all that. We will proceed with the Logic in Frontend not the Stylings and stuffs which I am guessing you are capable of. You can find the **source code** [here](https://github.com/AbhayaShankar/Stripe/tree/main/frontend) if you have any doubt or feel stuck somewhere.
 
 Now before proceeding forward we will install two more dependencies into our frontend project.
+
 1. [react-stripe-checkout](https://www.npmjs.com/package/react-stripe-checkout)
-2. **CDN** for `MaterializeCSS`. 
+2. **CDN** for `MaterializeCSS`.
 
 Open the terminal, make sure you are inside the frontend directory and then run the following command to install `react-stripe-checkout`.
 
@@ -386,8 +384,8 @@ After that add this `<Link>` inside the `index.html` in Public folder of fronten
 
 ```html
 <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
 />
 ```
 
@@ -398,7 +396,6 @@ import React, { useState } from "react";
 import "./App.css";
 import StripeCheckout from "react-stripe-checkout";
 import cover from "./cover.webp";
-
 
 function App() {
   const [product, setProduct] = useState({
@@ -425,8 +422,7 @@ Let's create a function **makePayment** which will send response to our backend 
 
 ```js
 function App() {
-
-// ... our product state
+  // ... our product state
 
   const makePayment = async (token) => {
     const body = {
@@ -445,7 +441,7 @@ function App() {
     });
 
     const data = await response.json();
-    
+
     // Display data for checking
     console.log(data);
   };
@@ -468,6 +464,7 @@ function App() {
 
 export default App;
 ```
+
 We could use these className only because we have added the cdn link of materialize css into out project.
 
 ```js
@@ -477,6 +474,7 @@ const makePayment = async (token) => {
       product,
     };
 ```
+
 In this bit of code, you might be wondering where is this `token` coming from. Actually this token is automatically created for you by `StrikeCheckout`, you just need to ensure that your prop containing token is actually named as **token** and that's it.
 
 Then in that we create a body containing our token and product details, configure headers as `"Content-Type": "application/json"` and then the main part where we send a fetch request to our backend server and getting the response. Then we `await` response and we get back the data.
@@ -487,7 +485,7 @@ Once everything in the frontend is done, you can spin-up the frontend project by
 
 One more thing you should remember that both our frontend and backend should be up and running. We have not deployed our app so its not active. Until it's running, we will not get success payment transaction.
 
-Click on the **Buy Bobblehead Now** 
+Click on the **Buy Bobblehead Now**
 
 ![Test Mode](/blogs/stripe-payment-integration/test.png)
 

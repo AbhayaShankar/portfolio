@@ -3,9 +3,15 @@ import PostItem from "./PostItem";
 import classes from "./PostGrid.module.css";
 
 const PostGrid = ({ posts }) => {
+  console.log(posts);
+
+  const isPublishedBlog = posts.filter((post) => post.isPublished);
+  const isNotPublishedBlog = posts.filter((post) => !post.isPublished);
+  const featuredPostArray = [...isNotPublishedBlog, ...isPublishedBlog];
+
   return (
     <ul className={classes.grid}>
-      {posts.map((post) => (
+      {featuredPostArray.map((post) => (
         <PostItem key={post.slug} post={post} />
       ))}
     </ul>

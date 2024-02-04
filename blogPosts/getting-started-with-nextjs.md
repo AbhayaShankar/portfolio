@@ -6,7 +6,6 @@ image: "1.avif"
 excerpt: "NEXTJS is the React framework for production - it makes building fullstack React apps and sites a breeze  and ships with built-in SSR/SSG."
 isFeatured: false
 isPublished: true
-
 ---
 
 # My Blog for Next.js
@@ -31,10 +30,10 @@ In Next.js, you can create pages using the `pages` directory. Each file in the `
 
 ```js
 function HomePage() {
-  return <h1>Welcome to my blog!</h1>
+  return <h1>Welcome to my blog!</h1>;
 }
 
-export default HomePage
+export default HomePage;
 ```
 
 In the above example, we've created a simple home page component that displays a welcome message.
@@ -43,18 +42,19 @@ In the above example, we've created a simple home page component that displays a
 
 Next.js allows you to use dynamic routing to create dynamic pages in your application. You can do this by creating a file with square brackets in the `pages` directory. For example, you can create a `pages/posts/[slug].js` file to represent a dynamic post page.
 
-```js 
-import { useRouter } from 'next/router'
+```js
+import { useRouter } from "next/router";
 
 function PostPage() {
-  const router = useRouter()
-  const { slug } = router.query
+  const router = useRouter();
+  const { slug } = router.query;
 
-  return <h1>Post: {slug}</h1>
+  return <h1>Post: {slug}</h1>;
 }
 
-export default PostPage
+export default PostPage;
 ```
+
 In the above example, we've created a dynamic post page component that uses the `useRouter` hook to get the current post slug from the router query.
 
 ## Fetching Data in Next.js
@@ -67,25 +67,26 @@ function HomePage({ posts }) {
     <>
       <h1>Welcome to my blog!</h1>
       <ul>
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.id}>{post.title}</li>
         ))}
       </ul>
     </>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  const posts = await res.json()
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
 
   return {
     props: {
-      posts
-    }
-  }
+      posts,
+    },
+  };
 }
 ```
+
 In the above example, we've used `getStaticProps` to fetch a list of posts from a JSON API and pass them as a prop to the home page component.
 
 ## Conclusion

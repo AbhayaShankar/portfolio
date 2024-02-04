@@ -6,8 +6,6 @@ image: "1.webp"
 excerpt: "WebAssembly is a low-level bytecode format for the web that promises to bring native-like performance to web applications."
 isFeatured: false
 isPublished: false
-
-
 ---
 
 # The Future of Web Development: Web Assembly
@@ -28,7 +26,7 @@ There are several benefits to using Web Assembly in web development such as:
 
 2. Web Assembly is designed to work alongside JavaScript, not replace it. This means that developers can continue to use JavaScript for tasks such as DOM manipulation and user interface interactions, while using Web Assembly for performance-intensive tasks such as game engines, scientific simulations, or media codecs.
 
-3.  Web Assembly is a portable technology, meaning that developers can write code once and run it on multiple platforms without the need for recompilation. This makes it a versatile tool for creating cross-platform applications that run seamlessly across desktop and mobile devices.
+3. Web Assembly is a portable technology, meaning that developers can write code once and run it on multiple platforms without the need for recompilation. This makes it a versatile tool for creating cross-platform applications that run seamlessly across desktop and mobile devices.
 
 ## 🔥Getting Started with Web Assembly
 
@@ -41,11 +39,11 @@ Additionally, there are several open-source projects and libraries available tha
 To load and run a Web Assembly module in JavaScript, you can use the `WebAssembly.instantiateStreaming()` method. This method loads the Web Assembly module from a URL and returns a promise that resolves to a Web Assembly instance.
 
 ```js
-const url = 'example.wasm';
+const url = "example.wasm";
 fetch(url)
-  .then(response => response.arrayBuffer())
-  .then(buffer => WebAssembly.instantiate(buffer))
-  .then(module => {
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => WebAssembly.instantiate(buffer))
+  .then((module) => {
     // Use the Web Assembly module here
   });
 ```
@@ -54,14 +52,14 @@ fetch(url)
 
 To pass data between JavaScript and Web Assembly, you can use the `WebAssembly.Memory` object to allocate and read/write memory in the Web Assembly module.
 
-``` js 
+```js
 // Allocate memory in the Web Assembly module
 const memory = new WebAssembly.Memory({ initial: 1 });
 const wasmModule = new WebAssembly.Module(wasmCode);
 const wasmInstance = new WebAssembly.Instance(wasmModule, {
   env: {
-    memory
-  }
+    memory,
+  },
 });
 
 // Write data to the allocated memory in the Web Assembly module
@@ -70,14 +68,14 @@ data.set([0, 1, 2, 3]);
 
 // Read data from the allocated memory in the Web Assembly module
 const result = wasmInstance.exports.add(2, 3);
-console.log(result);    
+console.log(result);
 ```
 
 ## Calling JavaScript Functions from Web Assembly
 
 To call JavaScript functions from Web Assembly, you can use the `WebAssembly.Module` and `WebAssembly.Instance` constructors to create an interface that exports JavaScript functions to the Web Assembly module.
 
-```js 
+```js
 // Define a JavaScript function to be exported to the Web Assembly module
 function add(a, b) {
   return a + b;
@@ -86,8 +84,8 @@ function add(a, b) {
 // Create an interface that exports the JavaScript function to the Web Assembly module
 const imports = {
   env: {
-    add
-  }
+    add,
+  },
 };
 const wasmModule = new WebAssembly.Module(wasmCode);
 const wasmInstance = new WebAssembly.Instance(wasmModule, imports);
