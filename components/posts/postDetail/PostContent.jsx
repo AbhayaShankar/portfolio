@@ -6,7 +6,7 @@ import { Context } from "../../../context/context";
 import moment from "moment";
 
 const PostContent = ({ post }) => {
-  const { title, image, content, slug, date } = post;
+  const { title, image, content, slug, date, isPublished } = post;
   const { setIsMenuActive } = useContext(Context);
 
   const imagePath = `/blogs/${slug}/${image}`;
@@ -24,7 +24,10 @@ const PostContent = ({ post }) => {
     return result;
   };
 
-  const displayContent = openInNewTab(md.render(content));
+  const displayContent =
+    content.length > 100
+      ? openInNewTab(md.render(content))
+      : "<center><h3>This blog is not yet out. Kindly wait and come back later.</h3></center>";
 
   return (
     <article className={classes.content}>
