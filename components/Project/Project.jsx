@@ -5,7 +5,17 @@ import { BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
 import Head from "next/head";
 
-const Project = ({ id, url, name, desc, link, skills, note, source }) => {
+const Project = ({
+  id,
+  url,
+  name,
+  desc,
+  link,
+  skills,
+  note,
+  source,
+  videosrc,
+}) => {
   // Trimmed Link for websites.
   const trimmedLink = link.split("/")[2];
 
@@ -37,6 +47,10 @@ const Project = ({ id, url, name, desc, link, skills, note, source }) => {
             </Link>
             <Link href={source} target="blank" className={classes.link}>
               <span>Source Code</span>
+              <BiLinkExternal />{" "}
+            </Link>
+            <Link href={videosrc} target="blank" className={classes.link}>
+              <span>Sample Video</span>
               <BiLinkExternal />{" "}
             </Link>
           </div>

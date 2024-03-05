@@ -1,5 +1,5 @@
-import FeaturedProject from "../components/Project/FeaturedProject";
-import Project from "../components/Project/Project";
+// import FeaturedProject from "../components/Project/FeaturedProject";
+// import Project from "../components/Project/Project";
 
 const ProjectsList = [
   {
@@ -24,6 +24,7 @@ const ProjectsList = [
     featured: true,
     // note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/genius-saas-ai",
+    videosrc: "",
   },
   {
     id: 1,
@@ -44,6 +45,7 @@ const ProjectsList = [
     featured: false,
     note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/Jobster",
+    videosrc: "",
   },
   {
     id: 2,
@@ -57,6 +59,7 @@ const ProjectsList = [
     featured: true,
     note: "",
     source: "https://github.com/AbhayaShankar/estate-empires",
+    videosrc: "",
   },
   {
     id: 3,
@@ -78,6 +81,7 @@ const ProjectsList = [
     featured: true,
     note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/AnimxStore",
+    videosrc: "/projects/animxstore-vid.mp4",
   },
   {
     id: 4,
@@ -91,6 +95,7 @@ const ProjectsList = [
     featured: false,
     note: "",
     source: "https://github.com/AbhayaShankar/Cinetrek",
+    videosrc: "",
   },
   // {
   //   id: 5,
@@ -101,7 +106,7 @@ const ProjectsList = [
   //   link: "https://mern-quizzies.vercel.app/",
   //   featured: false,
   //   note: "",
-  //   source: "https://github.com/AbhayaShankar/Assessment-App",
+  // source: "https://github.com/AbhayaShankar/Assessment-App",
   // },
 ];
 
