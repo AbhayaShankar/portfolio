@@ -13,6 +13,11 @@ isPublished: true
 > _Suppose you are playing a multiplayer online game 🎮 and for some reason, you lose your network, and your game lags and after 10-12s it comes back online. Now during these 10-12s, you would have lost many data but do you want to start the game as if you pressed "𝐏𝐚𝐮𝐬𝐞 and 𝐏𝐥𝐚𝐲" or do you want it to be "𝐋𝐢𝐯𝐞" to get back to the fight._
 >
 > Which among the two would you prefer ? And I am pretty damn sure we all will be choosing "**Live**" one. Such is the use case of webRTC which stands for Real time communication for the web.
+>
+> This is the use case of UDP protocols and we want the same "𝐋𝐢𝐯𝐞" feature say in Video calling, gaming, or online video chat platforms like Omegle.
+> In these kinds of services, we don't bother to worry about the data lost during poor network connection or other issues, we just want to be up-to-date with the action.
+
+If you are unfamiliar with the concept of protocol and its use case, you can refer this [blog post](introduction-to-websockets).
 
 ## 📖 What You will be learning ?
 
