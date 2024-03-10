@@ -4,6 +4,29 @@
 const ProjectsList = [
   {
     id: 0,
+    name: "Fitness-Hub",
+    desc: "Designed and developed a gym website using NextJs and Typescript. ",
+    shortdesc: "",
+    url: "/projects/fitness-hubb.png",
+    skills: [
+      "NextJS",
+      "Typescript",
+      "Tailwind",
+      "Clerk",
+      "Stripe",
+      "Shadcn/ui",
+      "Crisp",
+      "Prisma",
+      "OpenAI",
+    ],
+    link: "https://fitness-hubb.vercel.app/",
+    featured: true,
+    // note: "App is hosted on free render server. Please give it 15-30s to spin up.",
+    source: "https://github.com/AbhayaShankar/Fitness-Hub.",
+    videosrc: "/projects/fitness-hub-vid.mp4",
+  },
+  {
+    id: 1,
     name: "Genius-AI",
     desc: "Designed and Developed a Robust User Friendly AI SaaS Application – Genius using Typescript, Next Js. With this App, you can leverage the power of AI for generating Images, Video, Music and Code along with your own chat assistant. Rich features like Authentication, Payment Integration and Customer Support. ",
     shortdesc:
@@ -24,10 +47,10 @@ const ProjectsList = [
     featured: true,
     // note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/genius-saas-ai",
-    videosrc: "",
+    videosrc: "/projects/genius-vid.mp4",
   },
   {
-    id: 1,
+    id: 2,
     name: "Jobster - JobQuest",
     desc: "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS. Full stack app that includes login/register, Create, update, and delete job entries based on status: applied, Interviewed, or Declined and finally visual insights for analyzing your application history. ",
     shortdesc:
@@ -48,7 +71,7 @@ const ProjectsList = [
     videosrc: "",
   },
   {
-    id: 2,
+    id: 3,
     name: "Estates Empire",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your dream space using the features of this app, where you can filter based upon various choices like area, ratings, price and sort them according to your needs.",
     shortdesc:
@@ -62,7 +85,7 @@ const ProjectsList = [
     videosrc: "",
   },
   {
-    id: 3,
+    id: 4,
     name: "AnimxStore",
     desc: "Your Everyday go-to Anime E-commerce Website built using React JS and Sass, Backend using strapi and cloudinary - deployed on render. Offering a wide-range of High Quality Products. Filter from categories, Add to Cart, Checkout and Pay to get your Product. Payment is integrated using Stripe",
     shortdesc:
@@ -84,7 +107,7 @@ const ProjectsList = [
     videosrc: "/projects/animxstore-vid.mp4",
   },
   {
-    id: 4,
+    id: 5,
     name: "Cinetrek",
     desc: "Designed and Developed a Movie Website using React JS and Material UI - Discover, Explore and Enjoy Movies with Cinetrek. Search, look for popular movies and read out reviews of the movie and decide your poison.",
     shortdesc:
