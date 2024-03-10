@@ -23,7 +23,7 @@ const ProjectsList = [
     featured: true,
     // note: "App is hosted on free render server. Please give it 15-30s to spin up.",
     source: "https://github.com/AbhayaShankar/Fitness-Hub.",
-    videosrc: "/projects/fitness-hub-vid.mp4",
+    videosrc: "/projects/fitness-hubb-vid.mp4",
   },
   {
     id: 1,
