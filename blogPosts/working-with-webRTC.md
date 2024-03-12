@@ -64,9 +64,11 @@ Can we construct a way such that devices can establish peer connection with othe
 
 There can a discussion on why do we need public IP addresses right ? Well, lets take an analogy for this.
 
-> Suppose I have recently moved out to New Jersey and my parents are visiting my home for the first time. They called me and asked me where exactly do I live. Usually I call it "𝐇𝐨𝐦𝐞". I told similarly to me father also and got a scolding from him. Idiot! I also call my home as "𝐇𝐨𝐦𝐞". Don't tell me your private IP address but your Public IP address. Then I called up directory guy and asked him what is my public IP address. He then answered with _"1313 Manchester St Toms River, New Jersey"_.
+> Suppose I have recently moved out to New Jersey and my parents are visiting my home for the first time. They called me and asked me where exactly do I live. Usually I call it "𝐇𝐨𝐦𝐞". I told similarly to my father also and got a scolding from him. Idiot! I also call my home as "𝐇𝐨𝐦𝐞". Don't tell me your private IP address but your Public IP address. Then I called up directory guy and asked him what is my public IP address. He then answered with _"1313 Manchester St Toms River, New Jersey"_.
 >
 > You see, private IP address are provided to you by router and can be same for any other devices connected with some other router sitting in Japan.This is not reliable and may create issues while connecting. So we require public IP address.
+>
+> ![Nat-masking-IP](/blogs/working-with-webRTC/private-vs-public.png)
 
 **STUN Servers** - Session Traversal Utilities for NAT. They are servers that help devices discover their public IP addresses and navigate the complexities introduced by NAT, enabling efficient communication over the internet, especially in real-time communication applications. There are a bunch of STUN servers and almost all are free or very negligible cost. Ex:- Google Stun Server, twilio Stun server etc.
 
@@ -87,6 +89,29 @@ Any request with that ICE candidate will redirect the network back to the client
 Similarly, the other client will also send a request to STUN server and get it's ICE candidate so that it is also aware of it's own public IP address.
 
 ![Nat-masking-IP](/blogs/working-with-webRTC/stun-ice.png)
+
+## 🛤️ Adding Tracks
+
+Now, we have the route by which they can establish the peer connection. This answers the **Question 1** of _"Where you are?"_
+let's now take a step forward and look at the **Question 2**: _"What are you sending?"_
+
+WebRTC stands for Real Time Communication for the Web and what real-time communication is there if there is no data ( Tracks ) to send through.
+
+`getUserMedia` is a JavaScript function. It is part of the WebRTC API, which allows web applications to access audio and video input devices. When we are ready to send data over to the other side via UDP, this is what we will be transmitting for the real time communication.
+
+## 🫴 Creating Offer
+
+Probably the most important part of webRTC feature. This is where we define all our data and send the whole thing through.
+WebRTC has an object called `RTCSessionDescription`. The `RTCSessionDescription` consists of two fields:
+
+1. **type** ( offer/answer )
+2. **SDP** ( Session Description Protocol )
+
+- Type : It is of type string which can be either or two "offer" or "answer". In Layman language, it basically filters who is who. So, whoever is the one sending the feed will be creating a new offer and the one responding to the offer will generate its corresponding answer.
+
+- SDP : It has the codex of the timing feed and all the other important things you don't need to wonder and take care of the video/audio stream.
+
+![Nat-masking-IP](/blogs/working-with-webRTC/rtc-session-desc.png)
 
 ## 🤩 Congratulations! You did it 🔥🔥
 
