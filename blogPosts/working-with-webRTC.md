@@ -5,7 +5,7 @@ slug: "working-with-webRTC"
 image: "webRTC-cover.jpg"
 excerpt: "An Introductory blog to Web Sockets - All you need to know to start working with web sockets."
 isFeatured: false
-isPublished: false
+isPublished: true
 ---
 
 ## 👋 Welcome to Working with webRTCs 🌐
@@ -56,7 +56,7 @@ Now your router is aware of the public IP address. When multiple devices are con
 
 When a device from the local network wants to communicate with the internet, the router replaces the private IP address of the device with its own public IP address before sending the request to the internet. The router then maintains a table to keep track of the translations, ensuring that responses from the internet are correctly directed back to the originating device within the local network.
 
-![Nat-masking-IP](/blogs/working-with-webRTC/getting-public-ip.png)
+![Getting-public-IP](/blogs/working-with-webRTC/getting-public-ip.png)
 
 Can we construct a way such that devices can establish peer connection with other devices ? The Answer is "**YES**". How you ask ? Let's take it up from here on...
 
@@ -68,7 +68,7 @@ There can a discussion on why do we need public IP addresses right ? Well, lets 
 >
 > You see, private IP address are provided to you by router and can be same for any other devices connected with some other router sitting in Japan.This is not reliable and may create issues while connecting. So we require public IP address.
 >
-> ![Nat-masking-IP](/blogs/working-with-webRTC/private-vs-public.png)
+> ![Private-vs-Public](/blogs/working-with-webRTC/private-vs-public.png)
 
 **STUN Servers** - Session Traversal Utilities for NAT. They are servers that help devices discover their public IP addresses and navigate the complexities introduced by NAT, enabling efficient communication over the internet, especially in real-time communication applications. There are a bunch of STUN servers and almost all are free or very negligible cost. Ex:- Google Stun Server, twilio Stun server etc.
 
@@ -84,11 +84,11 @@ It is just a fancy way of telling : _"Hey Dad! here's how you can get to me. I a
 
 Any request with that ICE candidate will redirect the network back to the client. Hence estavlishing a way to get to the client.
 
-![Nat-masking-IP](/blogs/working-with-webRTC/stun-ice-candidate.png)
+![Stun_ICE_Candidate](/blogs/working-with-webRTC/stun-ice-candidate.png)
 
 Similarly, the other client will also send a request to STUN server and get it's ICE candidate so that it is also aware of it's own public IP address.
 
-![Nat-masking-IP](/blogs/working-with-webRTC/stun-ice.png)
+![Stun_ICE](/blogs/working-with-webRTC/stun-ice.png)
 
 ## 🛤️ Adding Tracks
 
@@ -111,7 +111,35 @@ WebRTC has an object called `RTCSessionDescription`. The `RTCSessionDescription`
 
 - SDP : It has the codex of the timing feed and all the other important things you don't need to wonder and take care of the video/audio stream.
 
-![Nat-masking-IP](/blogs/working-with-webRTC/rtc-session-desc.png)
+![RTCSessionDesc](/blogs/working-with-webRTC/rtc-session-desc.png)
+
+Now the flow looks something like this :
+
+1. Client 1 sends a request to the STUN Server and get backs a response as an ICE Candidate.
+2. Client 1 then creates a new offer as type "**offer**" and its associated SDP.
+3. We will send the entire envelope of the data over to client 2 via **SOME_RELIABLE_PROTOCOL**.
+4. Client 2 sends a request to the STUN Server and and gets back its response as an ICE Candidate too.
+5. Client 2 similarly creates a new offer as type "**answer**" and its associated SDP.
+6. Then sends back the entire envelope of the data over to Client 1.
+7. Once all this is done, client 1 is aware of the route to reach to client 2 and vice versa and we are then ready to establish an **UDP** connection.
+
+But where does all this info is stored (RTCSessionDescription, Tracks and ICE candidate) ?
+
+Let's introduce 2 new terms "`setLocalDescription`" and "`setRemoteDescription`".
+
+## ♾️ Signalling Server
+
+Once all the data has been received from the server and RTCSessionDescription, we will then store all the information inside localDescription using `setLocalDescription` and whatever we receive from the client 2 will be stored in remoteDescription using `setRemoteDescription`.
+
+Now that localDescription has been set, We can't just send it across the wire. We need a secure and reliable way of sending the data over to the other side and what is more secure and reliable than using websockets ( TCP Protocol ).
+
+> Note: WebSocket connection is not a part of WebRTC Connection, we could have used any other insecure connection as well to pass-on the data but the only use case of websockets here is to communicate the data back and forth between peers and once that is done, we can remove the websocket connection.
+
+Here websocket connection works as a **Signalling Server**.
+
+![Signalling-Server](/blogs/working-with-webRTC/signalling-server.png)
+
+![Local-Remote-Desc](/blogs/working-with-webRTC/local-remote-desc.png)
 
 ## 🤩 Congratulations! You did it 🔥🔥
 
