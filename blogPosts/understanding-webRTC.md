@@ -1,9 +1,9 @@
 ---
 title: "Understanding WebRTC"
-date: "2024-01-18"
+date: "2024-03-12"
 slug: "understanding-webRTC"
 image: "webRTC-cover.jpg"
-excerpt: "An Introductory blog to Web Sockets - All you need to know to start working with web sockets."
+excerpt: "A Comprehensive blog on WebRTC - All you need to know to start working with webRTCs. Mission Successful 🚀"
 isFeatured: false
 isPublished: true
 ---
