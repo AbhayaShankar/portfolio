@@ -1,14 +1,14 @@
 ---
-title: "Working with WebRTC"
+title: "Understanding WebRTC"
 date: "2024-01-18"
-slug: "working-with-webRTC"
+slug: "understanding-webRTC"
 image: "webRTC-cover.jpg"
 excerpt: "An Introductory blog to Web Sockets - All you need to know to start working with web sockets."
 isFeatured: false
 isPublished: true
 ---
 
-## 👋 Welcome to Working with webRTCs 🌐
+## 👋 Welcome to webRTCs fundamentals 🌐
 
 > _Suppose you are playing a multiplayer online game 🎮 and for some reason, you lose your network, and your game lags and after 10-12s it comes back online. Now during these 10-12s, you would have lost many data but do you want to start the game as if you pressed "𝐏𝐚𝐮𝐬𝐞 and 𝐏𝐥𝐚𝐲" or do you want it to be "𝐋𝐢𝐯𝐞" to get back to the fight._
 >
@@ -42,13 +42,13 @@ There are things we need to know or rather questions we need to ask before estab
 
 - 𝐐𝐮𝐞𝐬𝐭 2: 𝐖𝐡𝐚𝐭 𝐚𝐫𝐞 𝐲𝐨𝐮 𝐬𝐞𝐧𝐝𝐢𝐧𝐠? ( 𝘕𝘦𝘦𝘥 𝘤𝘰𝘮𝘮𝘶𝘯𝘪𝘤𝘢𝘵𝘪𝘰𝘯 𝘣𝘦𝘵𝘸𝘦𝘦𝘯 𝘊𝘭𝘪𝘦𝘯𝘵𝘴 𝘴𝘰 𝘵𝘩𝘢𝘵 𝘵𝘩𝘦𝘺 𝘢𝘳𝘦 𝘢𝘸𝘢𝘳𝘦 𝘰𝘧 𝘵𝘩𝘦 𝘸𝘢𝘺 𝘵𝘩𝘦𝘺 𝘯𝘦𝘦𝘥 𝘵𝘰 𝘤𝘰𝘯𝘯𝘦𝘤𝘵 𝘢𝘯𝘥 𝘵𝘩𝘦 𝘥𝘢𝘵𝘢 𝘰𝘯𝘦 𝘪𝘴 𝘴𝘦𝘯𝘥𝘪𝘯𝘨. )
 
-![Questions to answer](/blogs/working-with-webRTC/questions-why-webrtc.png)
+![Questions to answer](/blogs/understanding-webRTC/questions-why-webrtc.png)
 
 In order to establish a connection _( we will term this as "**Peer Connection**" )_, Clients should be aware of their public IP address which they are actually aware of. Now can we get the IP address ? Answer is "**NO**". Why you ask ? Because of something known as **NAT** ( Network Address Translation ).
 
 By sharing a single IP address among multiple computers on a local network, NAT conserves the limited number of publicly routable IPv4 addresses. NAT also provides a layer of security for private networks because it hides devices' actual IP addresses behind a single public IP address. So , it is being basically masked behind NAT.
 
-![Nat-masking-IP](/blogs/working-with-webRTC/client-pc.png)
+![Nat-masking-IP](/blogs/understanding-webRTC/client-pc.png)
 
 For better explanation, let's say that you have got three devices, a mac machine, an android mobile and a iPad connected to a router which is connected to the internet.
 
@@ -56,7 +56,7 @@ Now your router is aware of the public IP address. When multiple devices are con
 
 When a device from the local network wants to communicate with the internet, the router replaces the private IP address of the device with its own public IP address before sending the request to the internet. The router then maintains a table to keep track of the translations, ensuring that responses from the internet are correctly directed back to the originating device within the local network.
 
-![Getting-public-IP](/blogs/working-with-webRTC/getting-public-ip.png)
+![Getting-public-IP](/blogs/understanding-webRTC/getting-public-ip.png)
 
 Can we construct a way such that devices can establish peer connection with other devices ? The Answer is "**YES**". How you ask ? Let's take it up from here on...
 
@@ -68,7 +68,7 @@ There can a discussion on why do we need public IP addresses right ? Well, lets 
 >
 > You see, private IP address are provided to you by router and can be same for any other devices connected with some other router sitting in Japan.This is not reliable and may create issues while connecting. So we require public IP address.
 >
-> ![Private-vs-Public](/blogs/working-with-webRTC/private-vs-public.png)
+> ![Private-vs-Public](/blogs/understanding-webRTC/private-vs-public.png)
 
 **STUN Servers** - Session Traversal Utilities for NAT. They are servers that help devices discover their public IP addresses and navigate the complexities introduced by NAT, enabling efficient communication over the internet, especially in real-time communication applications. There are a bunch of STUN servers and almost all are free or very negligible cost. Ex:- Google Stun Server, twilio Stun server etc.
 
@@ -84,11 +84,11 @@ It is just a fancy way of telling : _"Hey Dad! here's how you can get to me. I a
 
 Any request with that ICE candidate will redirect the network back to the client. Hence estavlishing a way to get to the client.
 
-![Stun_ICE_Candidate](/blogs/working-with-webRTC/stun-ice-candidate.png)
+![Stun_ICE_Candidate](/blogs/understanding-webRTC/stun-ice-candidate.png)
 
 Similarly, the other client will also send a request to STUN server and get it's ICE candidate so that it is also aware of it's own public IP address.
 
-![Stun_ICE](/blogs/working-with-webRTC/stun-ice.png)
+![Stun_ICE](/blogs/understanding-webRTC/stun-ice.png)
 
 ## 🛤️ Adding Tracks
 
@@ -111,7 +111,7 @@ WebRTC has an object called `RTCSessionDescription`. The `RTCSessionDescription`
 
 - SDP : It has the codex of the timing feed and all the other important things you don't need to wonder and take care of the video/audio stream.
 
-![RTCSessionDesc](/blogs/working-with-webRTC/rtc-session-desc.png)
+![RTCSessionDesc](/blogs/understanding-webRTC/rtc-session-desc.png)
 
 Now the flow looks something like this :
 
@@ -137,9 +137,21 @@ Now that localDescription has been set, We can't just send it across the wire. W
 
 Here websocket connection works as a **Signalling Server**.
 
-![Signalling-Server](/blogs/working-with-webRTC/signalling-server.png)
+![Signalling-Server](/blogs/understanding-webRTC/signalling-server.png)
 
-![Local-Remote-Desc](/blogs/working-with-webRTC/local-remote-desc.png)
+Upon passing this information now we both peers have their corresponding localDescription and remoteDescription.
+For Client 1 :- **localDescription** (its own client 1's), **remoteDescription** (client 2's).
+For Client 2 :- **localDescription** (its own client 2's), **remoteDescription** (client 1's)
+
+![Local-Remote-Desc](/blogs/understanding-webRTC/local-remote-desc.png)
+
+Once both peers have received their offer and answer along with ICE candidate, the need of websockets are no longer required and we can then successfully establish an UDP connection.
+
+![UDP-Established](/blogs/understanding-webRTC/establishing-udp-conn.png)
+
+Phew! That was a lot to take in. So, do go through them again if you need to look back. If you have any queries, send me a ["**HI**"](https://www.linkedin.com/in/abhayashankar/) on linkedin and I will try to help you out.
+
+That was great, You are great... Continue here to read a follow-up blog post on [working with webRTC](working-with-webRTC) where I will help you understand how you can use all this and build a **Video Calling App**.
 
 ## 🤩 Congratulations! You did it 🔥🔥
 
