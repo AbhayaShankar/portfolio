@@ -13,21 +13,23 @@ const About = () => {
       <div className={classes.intro}>
         <h3>Hey! Folks on the Web...</h3>
         <p>
-          I'm Abhaya, an India based professional Frontend Developer with{" "}
+          I'm Abhaya, an India based professional Full Stack MERN Developer with{" "}
           <strong>2+ </strong>
-          years of experience in ReactJS/NextJS Development with typescript. I
-          specialize in creating responsive user interfaces for web-based
-          applications that prioritize design and user experience.
+          years of experience in ReactJS/NextJS, ExpessJs Development with
+          typescript. I specialize in creating seamless and responsive user
+          interfaces for web-based applications that prioritize design and user
+          experience. Proven ability to collaborate effectively and deliver
+          high-quality web solutions.
           <br />
           <br />I love building projects and contributing to Open Source. I am
-          learning and getting more hands-on expertise on Backend Technologies
-          using Express JS, WebSockets and WebRTC.
+          learning and getting more hands-on expertise on Blockchain
+          Technologies using EthersJs.
           <br />
           <br />
-          Currently I am working at Capgemini Inc. as a React Frontend Developer
-          where I am Maintaining clean code structure, focusing on code quality,
-          performance and adding new features such as Dashboards, Analytics and
-          Reporting.
+          Currently I am working at Capgemini Inc. as a React Developer where I
+          am handling SEO, building Dashboards, maintaining clean code
+          structure, focusing on code quality, performance and adding new
+          features such as Analytics and Reporting.
           <br />
           <br />
           Just after college completed, I worked as a frontend developer at
@@ -45,8 +47,13 @@ const About = () => {
           In my most recent project, I have developed a full stack app for a gym
           - fitness hub using NextJS with Typescript.
           <br />
-          <br />I am currently immersed in learning Express and Node.js, which
-          is paving the way for my journey as a Full Stack Developer.
+          <br />
+          I have dwelved deeper into Backend technologies like websockets and
+          webRTCs and build some cool chat Applications and Video conferencing
+          apps as well.
+          <br />
+          <br />I am currently immersed in learning blockchain Development
+          paving my way into the web3 world.
           <br />
           <br />
           Apart from my work, I share interest in weightlifting, armwrestling,

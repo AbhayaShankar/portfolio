@@ -36,19 +36,21 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <h1>UI/UX. Front-end. Freelance. </h1>
+      <h1>UI/UX. Full-Stack. Freelance. </h1>
       <p>
-        I'm Abhaya Shankar, an India based professional Frontend Developer with
-        over 2{/* &#189;  */} years of experience in ReactJS/NextJS Development.
-        I specialize in creating responsive user interfaces for web-based
-        applications that prioritize design and user experience.
+        I'm Abhaya Shankar, an India based professional Full Stack Developer
+        with over 2{/* &#189;  */} years of experience in ReactJS/NextJS,
+        ExpressJs and Typescript Development. I specialize in creating seamless
+        and responsive user interfaces for web-based applications that
+        prioritize design and user experience. Proven ability to collaborate
+        effectively and deliver high-quality web solutions.
         <br />
         <br />I love building projects and contributing to Open Source. I am
-        learning and getting more hands-on expertise on Backend Technologies
-        using Express JS.
+        learning and getting more hands-on expertise on Blockchain Technologies
+        using EthersJs.
         <br />
         <br />
-        Currently I am working at Capgemini Inc. as a Frontend Developer.
+        Currently I am working at Capgemini Inc. as a React Developer.
       </p>
       <div className={classes.socials}>
         <Link href={"https://github.com/AbhayaShankar"} target="blank">
