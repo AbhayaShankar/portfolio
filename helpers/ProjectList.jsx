@@ -1,6 +1,3 @@
-// import FeaturedProject from "../components/Project/FeaturedProject";
-// import Project from "../components/Project/Project";
-
 const ProjectsList = [
   {
     id: 0,
@@ -42,7 +39,7 @@ const ProjectsList = [
   },
   {
     id: 2,
-    name: "Jobster - JobQuest",
+    name: "Jobster-JobQuest",
     desc: "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS. Full stack app that includes login/register, Create, update, and delete job entries based on status: applied, Interviewed, or Declined and finally visual insights for analyzing your application history. ",
     shortdesc:
       "Developed a Job Search Companion for tracking and managing your job applications using React JS and Express JS.",
@@ -63,7 +60,7 @@ const ProjectsList = [
   },
   {
     id: 3,
-    name: "Estates Empire",
+    name: "Estates-Empire",
     desc: "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your dream space using the features of this app, where you can filter based upon various choices like area, ratings, price and sort them according to your needs.",
     shortdesc:
       "Designed and Developed a Robust Real Estate Web App using Next JS and Chakra UI. Rent or Buy your Dream Home.",
@@ -111,17 +108,6 @@ const ProjectsList = [
     source: "https://github.com/AbhayaShankar/Cinetrek",
     videosrc: "",
   },
-  // {
-  //   id: 5,
-  //   name: "MERN Quizzies",
-  //   desc: "A Simple Quiz App for MCQ Tests using React and Redux  ",
-  //   url: "/projects/mern-quizz.png",
-  //   skills: ["ReactJS", "Redux"],
-  //   link: "https://mern-quizzies.vercel.app/",
-  //   featured: false,
-  //   note: "",
-  // source: "https://github.com/AbhayaShankar/Assessment-App",
-  // },
 ];
 
 const workExp = [
