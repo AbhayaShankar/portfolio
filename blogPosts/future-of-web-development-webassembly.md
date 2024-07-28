@@ -2,7 +2,7 @@
 title: "The Future of Web Development: Web Assembly"
 date: "2023-09-01"
 slug: "future-of-web-development-webassembly"
-image: "1.webp"
+image: "web-assembly.png"
 excerpt: "WebAssembly is a low-level bytecode format for the web that promises to bring native-like performance to web applications."
 isFeatured: false
 isPublished: false
