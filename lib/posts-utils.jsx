@@ -36,16 +36,6 @@ export function getAllPosts() {
 
   let NewSortedPosts = [];
 
-  /*
-
-  const notPublishedBlog = sortedPosts.find((elem) => !elem.isPublished);
-  
-  console.log(notPublishedBlog);
-  
-  NewSortedPosts.push(notPublishedBlog);
-  
-  */
-
   sortedPosts.map((item) => {
     if (!item.isPublished) {
       NewSortedPosts.push(item);
@@ -58,9 +48,6 @@ export function getAllPosts() {
     }
   });
 
-  // NewSortedPosts.push({ ...sortedPosts }.filter(sortedPosts.isPublished));
-
-  // return NewSortedPosts;
   return sortedPosts;
 }
 
