@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.0.1",
+    "dotenv": "^16.4.5",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.8.0",
     "markdown-it": "^13.0.1",

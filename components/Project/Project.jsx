@@ -19,10 +19,6 @@ const Project = ({
   // Trimmed Link for websites.
   const trimmedLink = link.split("/")[2];
 
-  const loaderProp = ({ src }) => {
-    return src;
-  };
-
   return (
     <Fragment>
       <Head>
@@ -38,7 +34,7 @@ const Project = ({
           width={900}
           height={7500}
           alt={name}
-          loader={loaderProp}
+          loader={imageLoader}
         />
         <div className={classes.projDetails}>
           <h2>{name}</h2>
