@@ -502,6 +502,35 @@ module.exports = {
 };
 ```
 
+### Data Intergrity in Blockchain Data Structures
+
+If a blockchain is just a distributed database, how does the data it stores maintain data integrity? In other words, how do we make sure the state of the data is never corrupted in any way (ie, data lost, data maliciously manipulated, etc)?
+
+> Since data is an input variable for the hash of each block, changing the data will change that block's hash. The new hash will not have three leading zeros, and therefore becomes invalid. In the same way, blockchains like Bitcoin and Ethereum, protect the integrity of any data held inside blocks in their chains; manipulating data in a block that has been nested deeply in the chain is a fool's errand.
+
+> To give an example: In Bitcoin's genesis block, Satoshi sent Hal Finney `10 BTC`. Manipulating this value from `10 BTC` to `20 BTC` (Maybe Hal wants some more BTC!) would require **IMMENSE** computational power. It's a number so large that humans are not able to grasp how big it is.
+
+**Q. Why is so much computational power required to manipulate data in early blockchain blocks?**
+
+Let's look at a simple scenario:
+
+1. The Bitcoin genesis block hash is `000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f`
+
+2. Mallory (crypto term for malicious actor!) manipulates a piece of data, producing a brand new hash for the same block: `eb3e5df5eefceb8950e4a444507ce7df1cc534f54a5113f2792ab64830392db0`
+
+Because of this change, Mallory has causes a data mutation of the genesis block hash! 😱This is where the blockchain data structure is very powerful with data integrity: since the hash of the genesis block changed to be invalid, the block that was previously pointing to it (Block #1) no longer does (because pointers are based on block hashes!). This effect trickles down all the way to the end of the blockchain.
+
+At this point, Mallory has caused a data mutation along the entire chain just by changing one tiny piece of data. In order to continue pushing, Mallory now needs to:
+
+3. Hash the genesis block data until a "**valid hash**" is found
+   So Mallory, now attacking the chain data integrity, must now hash the manipulated block many times in order to find a hash that meets the Bitcoin network difficulty target at the time.
+
+4. Once a valid hash is found on the manipulated block, **Mallory must repeat the hashing process for EVERY block thereafter in order to successfully "attack" the chain**.
+
+> This would take Mallory _trillions and trillions_ of years of constant computation via hashing. All while the rest of the miner network continues to hash
+
+5. Attack unsuccessful! The blockchain data integrity remains intact.
+
 ## 🤩 Congrats! You did it
 
 Great! You have successfully completed this blog. This was a very difficult topic to understand and I hope you have learned something new.
