@@ -10,7 +10,7 @@ isPublished: true
 
 ## 👋 Welcome to Blockchain Integration
 
-My name is Abhaya Shankar and I'll be guiding you for this short project.
+My name is Abhaya Shankar and I'll be guiding you for this brief introduction to Blockchain.
 
 ## 📖 What You will be learning ?
 
@@ -25,15 +25,17 @@ My name is Abhaya Shankar and I'll be guiding you for this short project.
 
 ## 🤏 Prerequisites
 
-- If you have worked with javascript and React, then you will be good to go.
-- Basic knowledge of Nodejs. (Beginners also can follow this)
+- This will be a beginner level course.
+- Basic knowledge of `javascript`. (Beginners also can follow this)
 - You need to have [Node](https://nodejs.org/en) installed.
 - Make sure you install the dependent packages.
-- And a cup of coffee. ☕
+- And a cup of coffee. ☕ ( Trust me you'll need it 😆 )
 
 ## 🚀 Starting Off...
 
 ### 🔗 Introduction to Blockchain
+
+![Blockchain Connection](/blogs/introduction-to-blockchain//blockchain-network.png)
 
 `Blockchain` is a **decentralized**, distributed ledger that records transactions across a network of computers. It is a public, transparent, and secure way to store and transfer data. The blockchain technology is the backbone of cryptocurrencies like Bitcoin and Ethereum.
 
@@ -614,6 +616,8 @@ What would happen now ?
 As soon as Harsh changes the `Block1` and edits it to 3 BTC, the blockchain is invalid. The blockchain is no longer valid. This is because the hash of the previous block ( _for Block #2_ ) is not valid.
 
 Now think these to be somewhere in between the Blockchain where the complexity of solving the hash is so high that it would take someone like Harsh a lot of time to solve it. This is how blockchains work.
+
+![Blockchain Linkage](/blogs/introduction-to-blockchain//blockchain-linkage.png)
 
 ## 🤩 Congrats! You did it
 
