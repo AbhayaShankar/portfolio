@@ -1,11 +1,11 @@
 ---
 title: "Introduction to Blockchain"
-date: "2024-09-18"
+date: "2024-09-26"
 slug: "introduction-to-blockchain"
-image: "stripe.png"
+image: "intro-to-btc.png"
 excerpt: "Blockchain is a decentralized, distributed ledger that records transactions across a network of computers. It is a public, transparent, and secure way to store and transfer data. The blockchain technology is the backbone of cryptocurrencies like Bitcoin and Ethereum."
-isFeatured: false
-isPublished: false
+isFeatured: true
+isPublished: true
 ---
 
 ## 👋 Welcome to Blockchain Integration
@@ -33,7 +33,7 @@ My name is Abhaya Shankar and I'll be guiding you for this short project.
 
 ## 🚀 Starting Off...
 
-### Introduction to Blockchain
+### 🔗 Introduction to Blockchain
 
 `Blockchain` is a **decentralized**, distributed ledger that records transactions across a network of computers. It is a public, transparent, and secure way to store and transfer data. The blockchain technology is the backbone of cryptocurrencies like Bitcoin and Ethereum.
 
@@ -45,11 +45,11 @@ The purpose of a blockchain is to have a network of computers agree upon a commo
 
 > 📖 Generally the term `consensus` is used to describe a network coming to an agreement on the state of the data. You'll hear this word quite often in regards to blockchain!
 
-### Smart Contract Blockchains
+### 🛂 Smart Contract Blockchains
 
 Smart Contract blockchains provide developers with a way to decentralize where the code runs. In this way, code can truly become a public resource. This means code can run without any direct ownership, making it censorship resistant and transparently verifiable.
 
-### Cryptographic Hash Functions
+### #️⃣ Cryptographic Hash Functions
 
 A hash function is a function which takes an input of any size and turns it into a fixed size output.
 
@@ -75,7 +75,7 @@ Two Important use cases of hash functions:
 
 2.Proofs ( Proof of Work and Proof of Stake )
 
-### Public key cryptography :-
+### 🔑🔐 Public key cryptography :-
 
 - **Symmetric key cryptography** is a method of encrypting data using a single key. The key is shared between the sender and the receiver of the message. This method is not very secure and is only used for encrypting small amounts of data.
 
@@ -225,7 +225,7 @@ function getAddress(publicKey) {
 module.exports = getAddress;
 ```
 
-### Proof of Work
+### 🧾 Proof of Work
 
 Proof of Work is a consensus mechanism that is used to validate transactions on a blockchain. It's how a decentralized network like Bitcoin and Ethereum decide what Block/Transaction is **valid** and what isn't and who gets to add it to the blockchain and get rewarded.
 
@@ -265,16 +265,16 @@ A miner gets rewarded for the computational work they do.
 
 ![Block Transaction](/blogs/introduction-to-blockchain/block-transaction.png)
 
-Concentrate over to the nonce value.
+**Concentrate** over to the nonce value.
 
 `0xee26dc20` (hexadecimal) = `3995756064` (decimal).
 Imagine how much of power it actually takes to find a single hash value that staisfies the target. The screenshot actually shows that it took `3993.531 KWU` power to find the hash value that staisfies the target.
 
-### Build A Miner
+### 🏗️ Build A Miner
 
 Now that we have a basic understanding of Proof of Work, let's build a miner. We will mimic the process of mining and add a block to the blockchain. There are several steps to it. We will go through them one by one.
 
-**Step 1 :- The MEMPOOL.**
+**Step 1️⃣ :- The MEMPOOL.**
 
 The mempool is a temporary storage of transactions that are waiting to be added to the blockchain. It is a place where transactions are temporarily stored before they are added to the blockchain. The mempool is not a part of the blockchain itself. It is just a temporary storage.
 
@@ -282,7 +282,7 @@ Users who want to make transactions, have to broadcast their transactions to the
 
 Typically, the miners will take all the transactions with the highest transaction fees and add them to the blockchain. This is called **Priority Fee**. They will add them to the block and try to find a valid **PoW**.
 
-`step1 - adding txn to the mempool`
+🏁 `Task at Hand` - Adding txn to the mempool
 
 ```js
 const SHA256 = require("crypto-js/sha256");
@@ -312,11 +312,11 @@ module.exports = {
 };
 ```
 
-**Step 2 :- MINING BLOCKS**
+**Step 2️⃣ :- MINING BLOCKS**
 
 In Bitcoin, the headers contain a lot of important information about the block such as - the **_Software version_**, the **_timestamp_**, the **_merkle root_**, **_prev Block hash_**, the **_nonce_**, and the **_target difficulty_**.
 
-`Task at Hand` :- Try to update the the mine function to mine a block.
+🏁 `Task at Hand` :- Try to update the the mine function to mine a block.
 For the purposes of this mining exercise, our block will be an object with a single property: an id that is equal to the block height prior to it being mined.
 
 - Update the mine() function to create a new block object with a single property: id
@@ -354,13 +354,13 @@ module.exports = {
 };
 ```
 
-**Step 3 :- BLOCK HASH**
+**Step 3️⃣ :- BLOCK HASH**
 
 Typically, all the information in the header of the block is hashed together to create a unique hash based on those properties.
 
 If anything changes in the header, it will affect the hash. Since each block also contains the hash of the block before it, it will affect every future block as well. Making it extremely difficult to change a previuosu block which is already in the blockchain.
 
-`Task at Hand` :- Add the Hash property to the block object.
+🏁 `Task at Hand` :- Add the Hash property to the block object.
 
 - Stringify the block object using JSON.stringify
 - Take the SHA256 hash of the stringified block object
@@ -399,13 +399,13 @@ module.exports = {
 
 So anytime you change the details of the block, the hash will change.
 
-**Step 4 :- BLOCK SIZE**
+**Step 4️⃣ :- BLOCK SIZE**
 
 In Bitcoin, there is a specific block size limit that cannot be exceeded. The number of transactions that will fit inside of a block varies due to transactions being of all different sizes.
 
 For the purposes of this exercise, we will use the **MAX_TRANSACTIONS** constant.
 
-`Task at Hand` :- Mine Transactions
+🏁 `Task at Hand` :- Mine Transactions
 
 - Inside the mine function, pull transactions off the mempool and include them in the block in an array called transactions
 - Remove each transaction you include in the block from the mempool
@@ -446,13 +446,13 @@ module.exports = {
 };
 ```
 
-**Step 5 :- TARGET DIFFICULTY**
+**Step 5️⃣ :- TARGET DIFFICULTY**
 
 In bitcoin, the difficulty is adjusted every 2016 blocks, which is about every two weeks with the blocks being mined on average every 10 minutes.
 
 At that point, the difficulty is adjusted to attempt to keep the mining intervals around that 10 minute per block mark.
 
-`Task at Hand` :- Target Difficulty and PROOF OF WORK.
+🏁 `Task at Hand` :- Target Difficulty and PROOF OF WORK.
 
 - In the mine function, prior to hashing the block, add a nonce property. This property should start at 0
 - Keep changing the nonce until you find a hash that is less than the TARGET_DIFFICULTY
@@ -502,7 +502,7 @@ module.exports = {
 };
 ```
 
-### Data Intergrity in Blockchain Data Structures
+### 🚨 Data Intergrity in Blockchain Data Structures
 
 If a blockchain is just a distributed database, how does the data it stores maintain data integrity? In other words, how do we make sure the state of the data is never corrupted in any way (ie, data lost, data maliciously manipulated, etc)?
 
@@ -530,6 +530,90 @@ At this point, Mallory has caused a data mutation along the entire chain just by
 > This would take Mallory _trillions and trillions_ of years of constant computation via hashing. All while the rest of the miner network continues to hash
 
 5. Attack unsuccessful! The blockchain data integrity remains intact.
+
+### 🕋 BLockChain Data Structures
+
+Blockchain data structures are a collection of data structures that are used to store and verify data in a blockchain. These data structures are designed to be efficient and secure. We will mimic the data structures of a blockchain and build a simple blockchain. This is how a **Block** is structured and **Blockchain** is a collection of blocks.
+
+Key things to note about the Blockchain data structures:
+
+1. The Blockchain is a collection of blocks.
+2. Each block contains a hash of the previous block.
+3. The hash of the previous block is used to validate the integrity of the blockchain.
+
+if the hash of the previous block is not valid, the blockchain is invalid.
+So the consensus mechanism is to validate the integrity of the blockchain by checking the hash of the previous block. This makes extremely difficult to change a previous block which is already in the blockchain. Let's say I am Mallory and I want to change the previous block of Block #X which is in between the Blockchain. I would have to hash the entire blockchain from Block #X to the current block inorder to satisfy the consensus mechanism.
+
+Let's take a look at the Block and Blockchain data structures.
+
+`Block.js`
+
+```js
+const SHA256 = require("crypto-js/sha256");
+
+class Block {
+  // data
+  constructor(data) {
+    this.data = data;
+  }
+
+  toHash() {
+    // a hash!
+    return SHA256(this.data + this.previousHash);
+  }
+}
+
+module.exports = Block;
+```
+
+`Blockchain.js`
+
+```js
+const Block = require("./Block");
+
+class Blockchain {
+  constructor() {
+    this.chain = [this.createNewBlock()];
+  }
+
+  createNewBlock() {
+    return new Block("");
+  }
+
+  // Adding a block to the chain.
+  addBlock(block) {
+    block.previousHash = this.chain[this.chain.length - 1].toHash();
+    this.chain.push(block);
+  }
+
+  // Validating if every block in the chain is valid. If not, the chain is invalid.
+  isValid() {
+    for (let i = this.chain.length - 1; i > 0; i--) {
+      let block = this.chain[i];
+      let prevBlock = this.chain[i - 1];
+      if (block.previousHash.toString() !== prevBlock.toHash().toString()) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+module.exports = Blockchain;
+```
+
+Let's go over to [BLOCKCHAIN.DEMO](https://blockchaindemo.io/) and understand how these work and what will happen if we try to change a previous block.
+
+![Block Demo 1](/blogs/introduction-to-blockchain/blockchain-demo-1.png)
+
+Now let's say. Harsh wanted to scam me and he wants more BTC! 💰. He changed the `Block1` and edited it to 3 BTC. 😮.
+What would happen now ?
+
+![Block Demo 2](/blogs/introduction-to-blockchain/blockchain-demo-2.png)
+
+As soon as Harsh changes the `Block1` and edits it to 3 BTC, the blockchain is invalid. The blockchain is no longer valid. This is because the hash of the previous block ( _for Block #2_ ) is not valid.
+
+Now think these to be somewhere in between the Blockchain where the complexity of solving the hash is so high that it would take someone like Harsh a lot of time to solve it. This is how blockchains work.
 
 ## 🤩 Congrats! You did it
 
