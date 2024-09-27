@@ -35,7 +35,7 @@ My name is Abhaya Shankar and I'll be guiding you for this brief introduction to
 
 ### 🔗 Introduction to Blockchain
 
-![Blockchain Connection](/blogs/introduction-to-blockchain//blockchain-network.png)
+![Blockchain Connection](/blogs/introduction-to-blockchain//blockchain-network.jpg)
 
 `Blockchain` is a **decentralized**, distributed ledger that records transactions across a network of computers. It is a public, transparent, and secure way to store and transfer data. The blockchain technology is the backbone of cryptocurrencies like Bitcoin and Ethereum.
 
