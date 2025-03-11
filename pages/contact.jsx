@@ -7,21 +7,45 @@ const ContactPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Contact - Abhaya Shankar</title>
+        <title>
+          Contact - Abhaya Shankar, Reach Out for Web Development Projects and
+          Inquiries
+        </title>
         <meta
-          name="Contact - Abhaya Shankar"
-          content="Abhaya Shankar Portfolio - Subscribe to the blog app so that you never miss any latest blog."
+          name="description"
+          content="Contact Abhaya Shankar for web development projects, business ventures, and JavaScript discussions. Reach out with your inquiries or feedback, and I'll respond as soon as possible."
         />
-        <meta property="og:title" content={"Abhaya Shankar - Contact"} />
-        {/* Change the Image here for preview... */}
+        <meta
+          name="keywords"
+          content="Contact, Abhaya Shankar, Web Development, ReactJS, NextJS, JavaScript, Projects, Business Ventures, Inquiries, Feedback"
+        />
+        <meta
+          property="og:title"
+          content="Contact Abhaya Shankar - Web Development Inquiries"
+        />
+        <meta
+          property="og:description"
+          content="Contact Abhaya Shankar for web development projects, business ventures, and JavaScript discussions. Reach out with your inquiries or feedback, and I'll respond as soon as possible."
+        />
         <meta
           property="og:image"
-          content={`https://www.abhayashankar.com/contact.jpg`}
+          content="https://www.abhayashankar.com/contact.jpg"
         />
         <meta
           property="og:url"
-          content={`https://www.abhayashankar.com/contact`}
+          content="https://www.abhayashankar.com/contact"
         />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact Abhaya Shankar",
+              "description": "Contact Abhaya Shankar for web development projects, business ventures, and JavaScript discussions.",
+              "url": "https://www.abhayashankar.com/contact"
+            }
+          `}
+        </script>
       </Head>
       <Wrapper
         title={"Contact"}

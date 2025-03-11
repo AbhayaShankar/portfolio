@@ -7,18 +7,31 @@ const AllPostsPage = ({ posts }) => {
   return (
     <Fragment>
       <Head>
-        <title>Blogs - Abhaya Shankar</title>
-        <meta name="description" content="Blogs by Abhaya Shankar" />
-        <meta property="og:title" content={"Abhaya Shankar - Blogs"} />
-        {/* Change the Image here for preview... */}
+        <title>
+          Blogs by Abhaya Shankar - Web Development, UI/UX, ReactJS, NextJS, and
+          More Blogs...
+        </title>
+        <meta
+          name="description"
+          content="Explore Abhaya Shankar's web development blog for insights, tutorials, and tips on ReactJS, NextJS, JavaScript, and more. Stay updated with the latest trends and best practices in web development."
+        />
+        <meta
+          name="keywords"
+          content="ReactJS, NextJS, JavaScript, Web Development, Blog, Tutorials, Tips, Front-end Development, Abhaya Shankar"
+        />
+        <meta
+          property="og:title"
+          content="Abhaya Shankar's Web Development Blog"
+        />
+        <meta
+          property="og:description"
+          content="Explore Abhaya Shankar's web development blog for insights, tutorials, and tips on ReactJS, NextJS, JavaScript, and more."
+        />
         <meta
           property="og:image"
-          content={`https://www.abhayashankar.com/blog.jpg`}
+          content="https://www.abhayashankar.com/blog.jpg"
         />
-        <meta
-          property="og:url"
-          content={`https://www.abhayashankar.com/blogs`}
-        />
+        <meta property="og:url" content="https://www.abhayashankar.com/blogs" />
       </Head>
       <AllPosts posts={posts} />
     </Fragment>

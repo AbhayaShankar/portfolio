@@ -13,11 +13,15 @@ const Projects = () => {
       <Head>
         <title>Projects - Abhaya Shankar</title>
         <meta
+          name="description"
+          content="Explore Abhaya Shankar's ReactJS and NextJS project portfolio. Showcasing responsive web applications, e-commerce sites, and more. Learn about the technologies used and my experiences in web development."
+        />
+        <meta
           name="Projects - Abhaya Shankar"
           content="List of some of the key projects I have worked upon and tech stacks used."
         />
         <meta property="og:title" content={"Abhaya Shankar - Projects"} />
-        {/* Change the Image here for preview... */}
+        {/* TODO: Change the Image here for preview... */}
         <meta
           property="og:image"
           content={`https://www.abhayashankar.com/project.jpg`}
@@ -25,6 +29,10 @@ const Projects = () => {
         <meta
           property="og:url"
           content={`https://www.abhayashankar.com/projects`}
+        />
+        <meta
+          name="keywords"
+          content="ReactJS, NextJS, Project Portfolio, Web Applications, E-commerce, Responsive Design, UI/UX, JavaScript, Front-end Development, Abhaya Shankar"
         />
       </Head>
       <Wrapper
