@@ -64,7 +64,7 @@ const SinglePostPage = ({ post }) => {
       <Head>
         <title>{convertHyphenToCapitalized(post.slug)} - Abhaya Shankar</title>
         <meta name="description" content={post.excerpt} />
-        <meta name="keywords" content={extractKeywords(post.content)} />
+        <meta name="keywords" content={extractKeywords(post.excerpt)} />
         <meta property="og:title" content={post.title} />
         <meta
           property="og:image"
