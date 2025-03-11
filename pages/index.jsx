@@ -12,12 +12,13 @@ const HomePage = ({ posts }) => {
         <title>
           Abhaya Shankar - React/Next.js Full Stack Developer - India
         </title>
-        <description>
-          Abhaya Shankar is an India-based Full Stack Developer specializing in
+        <meta
+          name="description"
+          content="Abhaya Shankar is an India-based Full Stack Developer specializing in
           ReactJS and NextJS. I create responsive web applications with a focus
           on design and user experience. Check out my blogs for web development
-          tips and guidance.
-        </description>
+          tips and guidance."
+        />
         <meta
           name="Abhaya Shankar - Full Stack Developer"
           content="I'm Abhaya, an India based professional Full Stack Developer with over 2 years of experience in ReactJS/NextJS Development. I specialize in creating responsive user interfaces for web-based applications that prioritize design and user experience. I write blogs to help out other developers and guide them on the path to web development."
@@ -33,7 +34,7 @@ const HomePage = ({ posts }) => {
         <meta property="og:url" content="https://www.abhayashankar.com" />
         <meta
           name="keywords"
-          content="ReactJS, NextJS, Full Stack Developer, Web Development, India, Responsive Design, User Experience, JavaScript, Front-end Developer, Back-end Developer"
+          content="ReactJS, NextJS, Full Stack Developer, Web Development, India, Responsive Design, User Experience, JavaScript, Front-end Developer, Back-end Developer, UI/UX, Portfolio, Blog, Web Applications, Abhaya Shankar"
         />
       </Head>
       <Hero />

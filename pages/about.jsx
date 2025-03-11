@@ -6,21 +6,31 @@ const about = () => {
   return (
     <Fragment>
       <Head>
-        <title>About - Abhaya Shankar</title>
+        <title>
+          About - Abhaya Shankar, Full Stack Developer and Web Development
+          Expert
+        </title>
         <meta
-          name="About - Abhaya"
-          content="Abhaya Shankar Portfolio - Subscribe to the blog app so that you never miss any latest blog."
+          name="description"
+          content="Learn more about Abhaya Shankar, an India-based Full Stack Developer specializing in ReactJS and NextJS. Discover my experience, skills, and projects in web development."
         />
-        <meta property="og:title" content={"Abhaya Shankar - About"} />
-        {/* Change the Image here for preview... */}
+        <meta
+          name="keywords"
+          content="Abhaya Shankar, Full Stack Developer, ReactJS, NextJS, Web Development, India, Portfolio, JavaScript, Front-end Developer, Back-end Developer"
+        />
+        <meta
+          property="og:title"
+          content="About Abhaya Shankar - Full Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Learn more about Abhaya Shankar, an India-based Full Stack Developer specializing in ReactJS and NextJS. Discover my experience, skills, and projects in web development."
+        />
         <meta
           property="og:image"
-          content={`https://www.abhayashankar.com/about.png`}
+          content="https://www.abhayashankar.com/about.png"
         />
-        <meta
-          property="og:url"
-          content={`https://www.abhayashankar.com/about`}
-        />
+        <meta property="og:url" content="https://www.abhayashankar.com/about" />
       </Head>
       <About />
     </Fragment>

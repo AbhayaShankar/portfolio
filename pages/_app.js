@@ -8,7 +8,13 @@ import { Router } from "next/router";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-  NProgress.configure({ showSpinner: false, easing: "ease", speed: 1000 });
+  NProgress.configure({
+    showSpinner: false,
+    easing: "ease",
+    speed: 1000,
+    template:
+      '<div class="bar" role="progressbar"><div class="peg"></div></div><div class="spinner" role="alert"><div class="spinner-icon"></div></div>',
+  });
 
   // For first time loading of Progressbar
   useEffect(() => {
